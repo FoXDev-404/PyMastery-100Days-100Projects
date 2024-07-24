@@ -48,7 +48,6 @@ Here are some resources that I'm using to help me along the way:
 
 - **Books**
     - [Automate the Boring Stuff with Python](https://automatetheboringstuff.com/)
-    - [Python Crash Course](https://nostarch.com/pythoncrashcourse2e)
 - **Online Courses**
     - [100 Days of Code: The Complete Python Pro Bootcamp](https://www.udemy.com/course/100-days-of-code/)
     - [Python for Everybody](https://www.coursera.org/specializations/python)
