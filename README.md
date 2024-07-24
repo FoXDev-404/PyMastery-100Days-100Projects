@@ -14,7 +14,7 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 
 <a name="day-1-10"></a>
 <details>
-## <summary>Day 1-10</summary>
+<summary>Day 1-10</summary>
 
 
 ### Day 1: Band Name Generator
