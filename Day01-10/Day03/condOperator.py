@@ -9,9 +9,7 @@ a = 10
 b = 20
 mini = a if a < b else b
 print(mini)
-'''
 
-'''
 # Example 2
 age = int(input("Enter your age: "))
 
@@ -21,7 +19,6 @@ else:
     print("You can't vote!")
 
 # Comparison Operators >, <, >=, <=, ==, !=
-'''
 
 # Example 3 [Nested if-else, elif]
 age = int(input("Enter your age: "))
@@ -35,3 +32,17 @@ elif age >= 13:
     print("You are a teenager.")
 else:
     print("You are a kid.")
+'''
+
+# Example 4 [Multiple if statement in succession]
+marks = int(input("Enter your marks: "))
+if marks >= 90:
+    print("Grade A")
+if marks >= 80:
+    print("Grade B")
+if marks >= 70:
+    print("Grade C")
+if marks >= 60:
+    print("Grade D")
+if marks < 60:
+    print("Grade F")
