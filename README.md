@@ -35,7 +35,7 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **Python Primitive Data Types**: Understanding different data types in Python.
   - **Type Error, Type Checking and Type Conversion**: Handling type errors, checking types, and converting between types.
   - **Mathematical Operations in Python**: Performing basic mathematical operations.
-  - **Number Manipulation and F-Strings**: Manipulating numbers and using f-strings for formatted outputs.
+  - **Number Manipulation and F-Strings**: Manipulating numbers and using f-strings for formatted output.
 - **Link to Code**: [Project Code](Day01-10/Day02/projectDay2.py)
 
 ...
