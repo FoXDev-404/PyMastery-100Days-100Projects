@@ -58,6 +58,7 @@ Here are some resources that I'm using to help me along the way:
     - [Stack Overflow](https://stackoverflow.com/)
     - [Reddit - r/learnpython](https://www.reddit.com/r/learnpython/)
 
+
 ## License
 
 This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for more information.
