@@ -1,6 +1,6 @@
 # PyMastery-100Days-100Projects
 
-Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python by taking on an exciting 100-day coding challenge. Over the next 100 days, I'll be building 100 unique projects, diving into areas like data science, web development, automation, game development, and app creation. Each day is a fresh chance to sharpen my coding skills, tackle real-world problems, and become a Python pro. Come along and join me on this amazing journey of learning and growth!
+Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python by taking on an exciting 100-day coding challenge. Over the next 100 days, I'll be building 100 unique projects, diving into areas like data science, web development, automation, game development, and app creation. Each day is a fresh chance to sharpen my coding skills, tackle real-world problems, and become a Python pro. Come along and join me on this amazing journey of learning and growth! 
 
 ---
 
