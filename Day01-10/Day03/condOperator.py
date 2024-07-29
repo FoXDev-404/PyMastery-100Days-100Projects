@@ -32,7 +32,7 @@ elif age >= 13:
     print("You are a teenager.")
 else:
     print("You are a kid.")
-'''
+
 
 # Example 4 [Multiple if statement in succession]
 marks = int(input("Enter your marks: "))
@@ -46,3 +46,21 @@ if marks >= 60:
     print("Grade D")
 if marks < 60:
     print("Grade F")
+'''
+
+# Example 5 [Using conditional operator]. Max of 3 numbers
+input1 = int(input("Enter first number: "))
+input2 = int(input("Enter second number: "))
+input3 = int(input("Enter third number: "))
+
+if input1 > input2:
+    if input1 > input3:
+        print(input1)
+    else:
+        print(input3)
+else:
+    if input2 > input3:
+        print(input2)
+    else:
+        print(input3)
+
