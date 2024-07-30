@@ -46,7 +46,7 @@ if marks >= 60:
     print("Grade D")
 if marks < 60:
     print("Grade F")
-'''
+
 
 # Example 5 [Using conditional operator]. Max of 3 numbers
 input1 = int(input("Enter first number: "))
@@ -63,4 +63,36 @@ else:
         print(input2)
     else:
         print(input3)
+
+'''
+
+# Example 6 [ 4 levels of nested if-else]
+
+a = 10
+b = 20
+c = 30
+d = 40
+
+if a > b:
+    if a > c:
+        if a > d:
+            print(a)
+        else:
+            print(d)
+    else:
+        if c > d:
+            print(c)
+        else:
+            print(d)
+else:
+    if b > c:
+        if b > d:
+            print(b)
+        else:
+            print(d)
+    else:
+        if c > d:
+            print(c)
+        else:
+            print(d)
 
