@@ -64,7 +64,6 @@ else:
     else:
         print(input3)
 
-'''
 
 # Example 6 [ 4 levels of nested if-else]
 
@@ -95,4 +94,12 @@ else:
             print(c)
         else:
             print(d)
+'''
 
+# Example 7 [Using conditional operator]. Age drinking eligibility
+age = int(input("Enter your age: "))
+if age >= 18:
+    print("You can drink.")
+else:
+    print("You can't drink.")
+    
