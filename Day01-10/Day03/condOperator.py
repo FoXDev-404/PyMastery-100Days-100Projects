@@ -102,6 +102,7 @@ if age >= 18:
     print("You can drink.")
 else:
     print("You can't drink.")
+'''
 
 # Example 8 [Using conditional operator]. If marks > 40, pass else fail
 marks = int(input("Enter your marks: "))
@@ -115,4 +116,3 @@ elif marks > 60:
     print("Grade D")
 else:
     print("Grade F")
-'''
