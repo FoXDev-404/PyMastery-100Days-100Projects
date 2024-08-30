@@ -117,23 +117,3 @@ elif marks > 60:
 else:
     print("Grade F")
     
-# Conditional operator in Python
-# Conditional operator is also known as ternary operator
-# if, else, elif are conditional statements in Python
-# Syntax: [on_true] if [expression] else [on_false]
-
-
-# Example 4 [Multiple if statement in succession]
-marks = int(input("Enter your marks: "))
-if marks >= 90:
-    print("Grade A")
-if marks >= 80:
-    print("Grade B")
-if marks >= 70:
-    print("Grade C")
-if marks >= 60:
-    print("Grade D")
-if marks < 60:
-    print("Grade F")
-
-    
