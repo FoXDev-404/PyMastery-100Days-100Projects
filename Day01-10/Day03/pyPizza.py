@@ -1,4 +1,5 @@
-##  Pizza Order System.
+# 3 Day of Code -
+#* Pizza Order System.
 
 print("Hey there! Welcome to InPizza Delivery!")
 print("Which size pizza would you like to order today?")
@@ -12,7 +13,8 @@ cheese = input("Press Y for Yes or N for No: ").lower()
 
 bill = 0
 
-# Calculate the total bill based on size and toppings
+#* Calculate the total bill based on size and toppings
+#* Small: Rs.99, Medium: Rs.199, Large: Rs.299
 if size == "s":
     bill += 99
     if pepperoni == "y":
