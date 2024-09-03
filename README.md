@@ -40,14 +40,19 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 
 
 ### Day 3: Haunted Mansion Escape
-- **Description**: Developed a text-based adventure game where the player navigates through a haunted mansion and makes choices to escape. The game includes different scenarios and outcomes based on player decisions.
+
+- **Description**: Developed a text-based adventure game where the player navigates through a haunted mansion, making choices that influence the outcome. This project focuses on applying control flow, user input, and string manipulation skills learned during the course.
+
 - **What I Learned**:
-  - **Control Flow**: Using `if`, `elif`, and `else` statements to control game flow based on user input.
-  - **User Input**: Capturing and processing user input with the `input()` function.
-  - **String Literals**: Using raw string literals (`r'''...'''`) to handle multi-line ASCII art.
-  - **ASCII Art**: Incorporating ASCII art to enhance the game's visual appeal.
-  - **Game Logic**: Implementing branching logic to create multiple game paths and outcomes.
+  - **Control Flow with `if / else` and Conditional Operators**: Implemented decision-making in the game using conditional statements.
+  - **Introducing the Modulo Operator**: Applied modulo operations in the game’s logic.
+  - **Nested `if` Statements and `elif` Statements**: Used nested conditionals to handle complex game scenarios.
+  - **Multiple `If` Statements in Succession**: Managed sequential conditions to create branching paths in the game.
+  - **Logical Operators**: Utilized logical operators to combine multiple conditions for more dynamic game responses.
+  - **String Literals for ASCII Art**: Employed multi-line string literals to include ASCII art in the game’s narrative.
+
 - **Link to Code**: [Project Code](Day01-10/Day03/projectDay3.py)
+
 
 ...
 
