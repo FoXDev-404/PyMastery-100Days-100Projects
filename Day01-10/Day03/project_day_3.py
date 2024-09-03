@@ -19,10 +19,6 @@ Variables:
 - choice6: Choice of taking or leaving an amulet.
 - reward: Type of reward obtained.
 
-Notes:
-- For educational purposes.
-- Game logic can be expanded for more complexity.
-
 Author: @FoXDev-404 (Rajpal Nishad)
 """
 
