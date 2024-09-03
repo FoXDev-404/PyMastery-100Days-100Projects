@@ -38,6 +38,17 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **Number Manipulation and F-Strings**: Manipulating numbers and using f-strings for formatted output.
 - **Link to Code**: [Project Code](Day01-10/Day02/projectDay2.py)
 
+
+### Day 3: Haunted Mansion Escape
+- **Description**: Developed a text-based adventure game where the player navigates through a haunted mansion and makes choices to escape. The game includes different scenarios and outcomes based on player decisions.
+- **What I Learned**:
+  - **Control Flow**: Using `if`, `elif`, and `else` statements to control game flow based on user input.
+  - **User Input**: Capturing and processing user input with the `input()` function.
+  - **String Literals**: Using raw string literals (`r'''...'''`) to handle multi-line ASCII art.
+  - **ASCII Art**: Incorporating ASCII art to enhance the game's visual appeal.
+  - **Game Logic**: Implementing branching logic to create multiple game paths and outcomes.
+- **Link to Code**: [Project Code](Day01-10/Day03/projectDay3.py)
+
 ...
 
 </details>
