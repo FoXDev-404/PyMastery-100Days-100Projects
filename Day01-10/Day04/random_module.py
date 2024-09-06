@@ -13,8 +13,11 @@ import random
 # random_float2 = random.uniform(1, 100) # 1.0 <= random_float < 100.0
 # print(random_float2)
 
-random_num = random.randint(0, 1)
-if random_num == 0:
-    print("Heads")
-else:
-    print("Tails")
+# random_num = random.randint(0, 1)
+# if random_num == 0:
+#     print("Heads")
+# else:
+#     print("Tails")
+
+random_choice = random.choice([1, 2, 3, 4, 5, 6])
+print(random_choice)
