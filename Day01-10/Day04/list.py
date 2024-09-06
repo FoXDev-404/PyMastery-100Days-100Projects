@@ -23,3 +23,13 @@ print(nested_list)  # [1, [2, 3], [4, 5, 6]]
 squares = [x**2 for x in range(1, 6)]
 print(squares)  # [1, 4, 9, 16, 25]
 
+
+#* Accessing List Items Using Indexing
+# Index starts from 0.
+# Negative index starts from -1.
+# List items can be accessed using slicing.
+
+# Accessing list items
+fruits = ['apple', 'banana', 'cherry']
+print(fruits[0])  # apple # Positive index
+print(fruits[-1])  # cherry # Negative index
