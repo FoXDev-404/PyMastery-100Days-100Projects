@@ -54,8 +54,6 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 - **Link to Code**: [Project Code](Day01-10/Day03/projectDay3.py)
 
 
-### Day 4: Rock Paper Scissors
-
 ...
 
 </details>
