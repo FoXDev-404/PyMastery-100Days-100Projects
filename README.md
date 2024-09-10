@@ -52,15 +52,16 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **Logical Operators**: Utilized logical operators to combine multiple conditions for more dynamic game responses.
   - **String Literals for ASCII Art**: Employed multi-line string literals to include ASCII art in the game’s narrative.
 
-- **Link to Code**: [Project Code](Day01-10/4/projectDay3.py)
+- **Link to Code**: [Project Code](Day01-10/Day03/projectDay3.py)
 
 ### Day 4: Rock Paper Scissors
+
 - **Description**: Built a Rock Paper Scissors game using Python, incorporating user inputs and random choices.
 - **What I Learned**:
   - **Random Module**: Using random functions to generate choices.
   - **Lists**: Appending items and handling nested lists.
   - **Index Errors**: Managing errors when accessing list elements.
-- **Link to Code**: [Project Code](Day01-10/Day03/projectDay4.py)
+- **Link to Code**: [Project Code](Day01-10/Day04/projectDay4.py)
 
 ...
 
