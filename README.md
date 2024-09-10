@@ -54,6 +54,14 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 
 - **Link to Code**: [Project Code](Day01-10/4/projectDay3.py)
 
+### Day 4: Rock Paper Scissors
+- **Description**: Built a Rock Paper Scissors game using Python, incorporating user inputs and random choices.
+- **What I Learned**:
+  - **Random Module**: Using random functions to generate choices.
+  - **Lists**: Appending items and handling nested lists.
+  - **Index Errors**: Managing errors when accessing list elements.
+- **Link to Code**: [Project Code](Day01-10/Day03/projectDay4.py)
+
 ...
 
 </details>
