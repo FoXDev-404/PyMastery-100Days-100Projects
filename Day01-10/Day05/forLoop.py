@@ -21,3 +21,12 @@ for fruit in fruits:
 
 # Printing the list outside the loop will print it only once
 print(fruits)
+
+# Example of using the range function with a for loop
+for number in range(1, 11):
+    print(number)
+
+# Example of using the range function with a for loop and a step
+for number in range(1, 11, 2):
+    print(number)
+    
