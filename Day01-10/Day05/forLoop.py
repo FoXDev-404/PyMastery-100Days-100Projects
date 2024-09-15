@@ -30,3 +30,10 @@ for number in range(1, 11):
 for number in range(1, 11, 2):
     print(number)
     
+# Example of using the range function with a for loop and a step
+for number in range(10, 1, -2):
+    print(number)
+
+# Example of using the range function with a for loop and a step
+for number in range(10, 0, -1):
+    print(number)
