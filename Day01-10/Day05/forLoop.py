@@ -37,3 +37,8 @@ for number in range(10, 1, -2):
 # Example of using the range function with a for loop and a step
 for number in range(10, 0, -1):
     print(number)
+
+# Nested for loop example
+for number in range(3):
+    for num in range(3):
+        print(f"({number}, {num})")
