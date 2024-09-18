@@ -1,44 +1,45 @@
-# for loop in python list
+# Python code showcasing various for loop examples
 
 # Define a list of fruits
 fruits = ["Apple", "Peach", "Pear"]
 
-# For loop to iterate through each fruit in the list
+# Iterate through each fruit in the list and perform actions
 for fruit in fruits:
-    # Print the name of the fruit
-    print(fruit)
-    # Print the fruit name followed by 'pie'
-    print(fruit + " pie")
+    print(fruit)                   # Print the fruit name
+    print(f"{fruit} pie")           # Print the fruit followed by 'pie'
 
-# Example of code outside the loop
-print("This line is outside the for loop.")
+# Demonstrating code outside the loop
+print("\nThis line is outside the for loop.")
 
-# Another example showing the importance of indentation
+# Show the effect of printing the entire list inside and outside a loop
 for fruit in fruits:
-    print(fruit)
-    # Printing the list inside the loop will print it multiple times
-    print(fruits)
+    print(fruit)                   # Print individual fruit
+    print(fruits)                  # Print the entire list multiple times (inside the loop)
 
-# Printing the list outside the loop will print it only once
-print(fruits)
+print(f"\n{fruits}")               # Print the list only once (outside the loop)
 
-# Example of using the range function with a for loop
+# Using range() to print numbers 1 to 10
+print("\nNumbers from 1 to 10:")
 for number in range(1, 11):
     print(number)
 
-# Example of using the range function with a for loop and a step
+# Using range() to print numbers from 1 to 10 with a step of 2
+print("\nNumbers from 1 to 10 (step of 2):")
 for number in range(1, 11, 2):
     print(number)
-    
-# Example of using the range function with a for loop and a step
+
+# Using range() to print numbers from 10 to 2 in reverse (step of -2)
+print("\nNumbers from 10 to 2 (reverse step of 2):")
 for number in range(10, 1, -2):
     print(number)
 
-# Example of using the range function with a for loop and a step
+# Using range() to print numbers from 10 to 1 in reverse
+print("\nNumbers from 10 to 1 (step of -1):")
 for number in range(10, 0, -1):
     print(number)
 
-# Nested for loop example
+# Nested loop example to print combinations of two numbers
+print("\nNested loop example:")
 for number in range(3):
     for num in range(3):
         print(f"({number}, {num})")
