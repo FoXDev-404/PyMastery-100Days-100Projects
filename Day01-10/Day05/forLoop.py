@@ -50,3 +50,12 @@ for number in range(3):
     for num in range(3):
         if number != num:
             print(f"({number}, {num})")
+
+# Nested loop example to print combinations of three numbers with a condition
+print("\nNested loop example with condition:")
+for number in range(3):
+    for num in range(3):
+        for n in range(3):
+            if number != num and num != n and number != n:
+                print(f"({number}, {num}, {n})")
+                
