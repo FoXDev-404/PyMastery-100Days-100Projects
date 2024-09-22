@@ -1,3 +1,19 @@
+"""
+This script demonstrates various uses of for loops in Python, including:
+1. Iterating through a list of fruits and performing actions on each element.
+2. Demonstrating code execution outside the loop.
+3. Showing the effect of printing the entire list inside and outside a loop.
+4. Using the range() function to print sequences of numbers:
+    - From 1 to 10.
+    - From 1 to 10 with a step of 2.
+    - From 10 to 2 in reverse with a step of -2.
+    - From 10 to 1 in reverse with a step of -1.
+5. Nested loop examples:
+    - Printing combinations of two numbers.
+    - Printing combinations of two numbers with a condition.
+    - Printing combinations of three numbers with a condition.
+"""
+
 # Define a list of fruits
 fruits = ["Apple", "Peach", "Pear"]
 
