@@ -1,5 +1,3 @@
-# Python code showcasing various for loop examples
-
 # Define a list of fruits
 fruits = ["Apple", "Peach", "Pear"]
 
@@ -58,4 +56,3 @@ for number in range(3):
         for n in range(3):
             if number != num and num != n and number != n:
                 print(f"({number}, {num}, {n})")
-                
