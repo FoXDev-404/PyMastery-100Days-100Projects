@@ -63,6 +63,19 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **Index Errors**: Managing errors when accessing list elements.
 - **Link to Code**: [Project Code](Day01-10/Day04/projectDay4.py)
 
+### Day 5: Password Generator  
+
+- **Description**: Built a Python script that generates strong, random passwords based on user-defined criteria such as length and character types. This project emphasized the use of loops, list manipulation, and randomization techniques.  
+
+- **What I Learned**:  
+  - **For Loops with Python Lists**: Practiced iterating through lists to process data efficiently.  
+  - **Finding the Highest Score**: Learned to identify the maximum value in a list without using the `max()` function by implementing custom logic.  
+  - **The `range()` Function**: Used `range()` for controlled iteration in loops.  
+  - **FizzBuzz Exercise**: Strengthened logical thinking by solving the classic **FizzBuzz** coding challenge.  
+  - **The `random` Module**: Employed `random` functions to generate secure passwords with letters, numbers, and symbols.  
+  - **String Manipulation and List Operations**: Utilized string joining, list shuffling, and slicing to create strong, dynamic passwords.  
+
+- **Link to Code**: [Project Code](Day01-10/Day05/projectDay5.py)
 ...
 
 </details>
