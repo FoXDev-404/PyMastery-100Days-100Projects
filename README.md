@@ -76,6 +76,25 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **String Manipulation and List Operations**: Utilized string joining, list shuffling, and slicing to create strong, dynamic passwords.  
 
 - **Link to Code**: [Project Code](Day01-10/Day05/projectDay5.py)
+
+### Day 6: Maze Solver
+
+- **Description**: Developed a robot maze solver algorithm for Reeborg's World using the "right-hand rule" technique. This program guides a robot through complex mazes by consistently following the right wall until it reaches the goal.
+
+- **What I Learned**:
+  - **Functions**: Creating and calling custom functions to modularize code.
+  - **While Loops**: Using while loops for condition-based iteration.
+  - **Conditional Logic**: Implementing if/elif/else statements for decision-making.
+  - **Problem-Solving Algorithms**: Applying the right-hand rule for maze navigation.
+  - **Debugging Logic**: Testing and refining algorithmic solutions.
+  - **Working with External Environments**: Writing code for the Reeborg's World platform.
+
+- **Key Concepts**:
+  - **Wall Following Algorithm**: Understanding how the right-hand rule guarantees finding an exit in simply connected mazes.
+  - **Priority-Based Decision Making**: Implementing a clear hierarchy of movement choices.
+  - **State Management**: Tracking the robot's position and orientation relative to walls.
+
+- **Link to Code**: [Project Code](Day01-10/Day06/projectDay6.py)
 ...
 
 </details>
