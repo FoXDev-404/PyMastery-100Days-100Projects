@@ -26,7 +26,8 @@ def calculate_love_score(name1, name2):
     final_score = int(f"{true_score}{love_score}")
     print(f"\n❤️ Love Score = {final_score}")
 
-calculate_love_score("Kanye West", "Kim Kardashian")
+calculate_love_score("Nikhil Pratap Singh", "lovely")
+
 
 '''
 # ***Only Prints the Score***
