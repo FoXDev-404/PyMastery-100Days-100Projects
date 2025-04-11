@@ -95,6 +95,21 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
   - **State Management**: Tracking the robot's position and orientation relative to walls.
 
 - **Link to Code**: [Project Code](Day01-10/Day06/projectDay6.py)
+
+### Day 7: Beginner – Hangman
+
+- **Description**: Built a fully functional Hangman game in Python by breaking down the problem into manageable steps like picking a random word, replacing blanks, checking for win conditions, tracking lives, and improving user experience.
+
+- **What I Learned**:
+  - **Flow Charting**: How to break a complex problem into logical steps using flow charts.
+  - **Random Module**: Using `random.choice()` to pick a word from a list.
+  - **List and String Manipulation**: Replacing blanks with guessed letters and updating the display.
+  - **Control Flow**: Implementing conditions to check win/loss scenarios.
+  - **Life Tracker**: Using variables to represent and decrement player lives.
+  - **User Experience Enhancements**: Improving visuals and interactions (like displaying hangman stages, hearts for lives, and guessed letters).
+
+- **Link to Code**: [Project Code](Day01-10/Day07/projectDay7.py)
+
 ...
 
 </details>
