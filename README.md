@@ -110,6 +110,20 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 
 - **Link to Code**: [Project Code](Day01-10/Day07/projectDay7.py)
 
+### Day 8: Caesar Cipher
+
+- **Description**: Developed a Caesar Cipher encryption/decryption tool where each letter in the plaintext is shifted by a certain number of places down the alphabet. Enhanced the project by organizing it into a single function and implementing a loop that allows the user to run the cipher repeatedly.
+
+- **What I Learned**:
+  - **Function Parameters**: How to pass and use multiple parameters in functions.
+  - **Positional vs Keyword Arguments**: The difference in calling functions using position-based or named arguments.
+  - **Loops and User Interaction**: Implemented a loop to allow repeated encoding/decoding based on user choice.
+  - **String and List Operations**: Shifted characters through an alphabet list using indexing and modulo operations.
+  - **Code Structuring**: Reorganized code to make it more reusable, clean, and modular.
+  - **Handling Non-Alphabet Characters**: Ensured non-alphabet characters (like spaces and punctuation) were preserved during ciphering.
+
+- **Link to Code**: [Project Code](Day01-10/Day08/projectDay8.py)
+
 ...
 
 </details>
