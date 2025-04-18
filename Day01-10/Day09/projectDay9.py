@@ -29,14 +29,13 @@ def secret_auction():
     print("Welcome to the Secret Auction Program!")
     bids = {}
     while True:
-        # Removed clear_screen() here to keep the logo visible initially
         name, bid = get_bidder_info()
         bids[name] = bid
 
         more = input("Is there anyone else who wants to bid? Type 'yes' or 'no': ").strip().lower()
         if more == 'no':
             break
-        clear_screen() # Clear screen only before the next bidder
+        clear_screen()
 
     clear_screen()
     winner, amount = find_highest_bidder(bids)

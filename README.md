@@ -124,6 +124,21 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 
 - **Link to Code**: [Project Code](Day01-10/Day08/projectDay8.py)
 
+### Day 9: Secret Auction Program
+
+- **Description**: Developed a Secret Auction program using dictionaries and control flow. The script allows multiple users to input their bids, stores them in a dictionary, and then determines the highest bidder using a manual loop (instead of built-in `max()`).
+
+- **What I Learned**:
+  - **Python Dictionaries**: Creating, updating, and retrieving data from dictionaries.
+  - **Nesting**: Nesting lists and dictionaries to represent more complex data.
+  - **Control Flow with Loops**: Using `while` loops to collect user data until a condition is met.
+  - **Dictionary Iteration**: Looping through a dictionary to find the highest bidder.
+  - **Function Structuring**: Modularizing code using reusable functions.
+  - **Flow Charts**: Visualizing the logic flow before coding to plan out decisions and inputs.
+  - **User Interaction**: Handling multiple inputs and clearing the screen to simulate an auction environment.
+
+- **Link to Code**: [Project Code](Day01-10/Day09/projectDay9.py)
+
 ...
 
 </details>
