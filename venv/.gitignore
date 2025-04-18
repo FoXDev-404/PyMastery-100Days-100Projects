@@ -159,5 +159,17 @@ celerybeat.pid
 # =====================
 # Custom Project Patterns
 # =====================
-Day*/__pycache__/
-Day*/.ipynb_checkpoints/
+# All __pycache__ directories in project structure
+**/__pycache__/
+**/.ipynb_checkpoints/
+
+# Day-specific patterns
+Day*/*/__pycache__/
+Day*/*/.ipynb_checkpoints/
+
+# Other project-specific files to ignore
+**/art.pyc
+**/*.log
+
+# Don't ignore README files
+!**/README.md
