@@ -1,4 +1,5 @@
 import os
+from art import logo
 
 def clear_screen():
     # Cross-platform screen clear
@@ -24,18 +25,22 @@ def find_highest_bidder(bids):
     return winner, highest_bid
 
 def secret_auction():
+    print(logo)
+    print("Welcome to the Secret Auction Program!")
     bids = {}
     while True:
-        clear_screen()
+        # Removed clear_screen() here to keep the logo visible initially
         name, bid = get_bidder_info()
         bids[name] = bid
 
         more = input("Is there anyone else who wants to bid? Type 'yes' or 'no': ").strip().lower()
         if more == 'no':
             break
+        clear_screen() # Clear screen only before the next bidder
 
     clear_screen()
     winner, amount = find_highest_bidder(bids)
     print(f"🏆 The winner is '{winner}' with a bid of ${amount}!")
 
 secret_auction()
+
