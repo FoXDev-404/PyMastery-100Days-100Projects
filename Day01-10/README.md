@@ -1,9 +1,26 @@
-<a name="day-1-10"></a>
+<a id="day-1-10"></a>
 
-# Days 1-10: Python Fundamentals
+# Days 1–10: Python Fundamentals
 
-## 📅 Day 1-10 Projects [10/10 Completed]
+<details>
+<summary>📋 Quick Navigation</summary>
 
+- [Day 1: Band Name Generator](#day1)
+- [Day 2: Tip Calculator](#day2)
+- [Day 3: Haunted Mansion Escape](#day3)
+- [Day 4: Rock Paper Scissors](#day4)
+- [Day 5: Password Generator](#day5)
+- [Day 6: Maze Solver](#day6)
+- [Day 7: Hangman Game](#day7)
+- [Day 8: Caesar Cipher](#day8)
+- [Day 9: Secret Auction Program](#day9)
+- [Day 10: Calculator App](#day10)
+
+</details>
+
+## 📅 Day 1–10 Projects [10/10 Completed]
+
+<a id="day1"></a>
 ### Day 1: **Band Name Generator** [⭐ Beginner]
 
 - **Description**: A simple Python script that asks the user for their city and pet's name to create a unique band name.
@@ -14,6 +31,7 @@
 - **Link to Code**: [Project Code](Day01/projectDay1.py)
 - **Run it**: `python Day01/projectDay1.py`
 
+<a id="day2"></a>
 ### Day 2: **Tip Calculator** [⭐ Beginner]
 
 - **Description**: Created a tip calculator that calculates how much tip to leave based on a given bill and percentage.
@@ -25,6 +43,7 @@
 - **Link to Code**: [Project Code](Day02/projectDay2.py)
 - **Run it**: `python Day02/projectDay2.py`
 
+<a id="day3"></a>
 ### Day 3: **Haunted Mansion Escape** [⭐⭐ Intermediate]
 
 - **Description**: A text-based adventure game where the player explores a haunted mansion and makes decisions that influence the outcome.
@@ -36,6 +55,7 @@
 - **Link to Code**: [Project Code](Day03/projectDay3.py)
 - **Run it**: `python Day03/projectDay3.py`
 
+<a id="day4"></a>
 ### Day 4: **Rock Paper Scissors** 🎮
 
 - **Description**: A Python implementation of the classic Rock, Paper, Scissors game that involves both user input and random computer choices.
@@ -47,6 +67,7 @@
 - **Link to Code**: [Project Code](Day04/projectDay4.py)
 - **Run it**: `python Day04/projectDay4.py`
 
+<a id="day5"></a>
 ### Day 5: **Password Generator** 🔐
 
 - **Description**: Built a random password generator that allows the user to specify password length and types of characters (letters, numbers, symbols).
@@ -58,6 +79,7 @@
 - **Link to Code**: [Project Code](Day05/projectDay5.py)
 - **Run it**: `python Day05/projectDay5.py`
 
+<a id="day6"></a>
 ### Day 6: **Maze Solver** 🧩
 
 - **Description**: A maze solver using the right-hand rule, where a robot follows the right wall to find the exit.
@@ -69,6 +91,7 @@
 - **Link to Code**: [Project Code](Day06/projectDay6.py)
 - **Run it**: `python Day06/projectDay6.py`
 
+<a id="day7"></a>
 ### Day 7: **Hangman Game** 🎮
 
 - **Description**: A text-based version of Hangman where the user guesses letters to figure out the word.
@@ -80,6 +103,7 @@
 - **Link to Code**: [Project Code](Day07/projectDay7.py)
 - **Run it**: `python Day07/projectDay7.py`
 
+<a id="day8"></a>
 ### Day 8: **Caesar Cipher** 🔐
 
 - **Description**: Implemented the Caesar Cipher encryption technique where each letter is shifted by a specific number of places.
@@ -91,6 +115,7 @@
 - **Link to Code**: [Project Code](Day08/projectDay8.py)
 - **Run it**: `python Day08/projectDay8.py`
 
+<a id="day9"></a>
 ### Day 9: **Secret Auction Program** 💰
 
 - **Description**: A secret auction where users place bids and the highest bidder is selected at the end.
@@ -102,6 +127,7 @@
 - **Link to Code**: [Project Code](Day09/projectDay9.py)
 - **Run it**: `python Day09/projectDay9.py`
 
+<a id="day10"></a>
 ### Day 10: **Calculator App** 🧮
 
 - **Description**: A simple command-line calculator that can perform basic arithmetic operations.
