@@ -29,7 +29,6 @@
   - **String Manipulation**: Combining strings to create a meaningful output.
   - **Variables**: Understanding how to assign values and reuse them in a program.
 - **Link to Code**: [Project Code](Day01/projectDay1.py)
-- **Run it**: `python Day01/projectDay1.py`
 
 <a id="day2"></a>
 ### Day 2: **Tip Calculator** [⭐ Beginner]
@@ -41,7 +40,6 @@
   - **Arithmetic Operations**: Implementing basic operations to calculate the tip.
   - **Formatted Output**: Using f-strings to display the calculated tip neatly.
 - **Link to Code**: [Project Code](Day02/projectDay2.py)
-- **Run it**: `python Day02/projectDay2.py`
 
 <a id="day3"></a>
 ### Day 3: **Haunted Mansion Escape** [⭐⭐ Intermediate]
@@ -53,7 +51,6 @@
   - **Nested Statements**: Handling complex decisions by nesting conditional statements.
   - **Game Design**: Creating branching paths and multiple outcomes for interactivity.
 - **Link to Code**: [Project Code](Day03/projectDay3.py)
-- **Run it**: `python Day03/projectDay3.py`
 
 <a id="day4"></a>
 ### Day 4: **Rock Paper Scissors** 🎮
@@ -65,7 +62,6 @@
   - **Handling User Input**: Validating user choices to prevent errors.
   - **Game Logic**: Determining the winner by comparing user input with the computer's choice.
 - **Link to Code**: [Project Code](Day04/projectDay4.py)
-- **Run it**: `python Day04/projectDay4.py`
 
 <a id="day5"></a>
 ### Day 5: **Password Generator** 🔐
@@ -77,7 +73,6 @@
   - **String Manipulation**: Combining characters into a password.
   - **Lists and String Operations**: Shuffling and joining elements in a list to form the password.
 - **Link to Code**: [Project Code](Day05/projectDay5.py)
-- **Run it**: `python Day05/projectDay5.py`
 
 <a id="day6"></a>
 ### Day 6: **Maze Solver** 🧩
@@ -89,7 +84,6 @@
   - **Conditional Statements**: Using `if` and `elif` to decide the robot's movement.
   - **Algorithm Design**: Applying a maze-solving algorithm to guide the robot.
 - **Link to Code**: [Project Code](Day06/projectDay6.py)
-- **Run it**: `python Day06/projectDay6.py`
 
 <a id="day7"></a>
 ### Day 7: **Hangman Game** 🎮
@@ -101,7 +95,6 @@
   - **Game Loop**: Implementing a loop to continue the game until the user wins or loses.
   - **Control Flow**: Managing win/loss conditions and updating the game interface.
 - **Link to Code**: [Project Code](Day07/projectDay7.py)
-- **Run it**: `python Day07/projectDay7.py`
 
 <a id="day8"></a>
 ### Day 8: **Caesar Cipher** 🔐
@@ -113,7 +106,6 @@
   - **Loops and User Interaction**: Allowing the user to input a string to encode or decode.
   - **Reusability**: Creating a function that can be reused multiple times for different inputs.
 - **Link to Code**: [Project Code](Day08/projectDay8.py)
-- **Run it**: `python Day08/projectDay8.py`
 
 <a id="day9"></a>
 ### Day 9: **Secret Auction Program** 💰
@@ -125,7 +117,6 @@
   - **Flow Control**: Implementing a bidding process where the highest bid is determined.
   - **User Interaction**: Using the `input()` function to gather bids and names.
 - **Link to Code**: [Project Code](Day09/projectDay9.py)
-- **Run it**: `python Day09/projectDay9.py`
 
 <a id="day10"></a>
 ### Day 10: **Calculator App** 🧮
@@ -137,4 +128,3 @@
   - **Recursion**: Implementing recursive functionality to continue calculations.
   - **User Experience**: Designing a user-friendly interface for mathematical operations.
 - **Link to Code**: [Project Code](Day10/projectDay10.py)
-- **Run it**: `python Day10/projectDay10.py`
