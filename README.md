@@ -1,10 +1,49 @@
+<div align="center">
+
 # PyMastery-100Days-100Projects
 
-![Python](https://img.shields.io/badge/Python-3.11-blue.svg)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
-![Progress](https://img.shields.io/badge/Progress-10%25-yellow.svg)
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Progress](https://img.shields.io/badge/Progress-11%25-yellow.svg)](Day01-10/README.md)
+[![Maintenance](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects/graphs/commit-activity)
+[![GitHub stars](https://img.shields.io/github/stars/FoXDev-404/PyMastery-100Days-100Projects?style=social)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects)
 
-Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python by taking on an exciting 100-day coding challenge. Over the next 100 days, I'll be building 100 unique projects across different domains like data science, web development, automation, game development, and app creation. Each day is a fresh opportunity to sharpen my coding skills, solve real-world problems, and grow as a Python developer. Join me on this exciting journey of learning and mastery!
+</div>
+
+## 📋 About This Project
+
+Welcome to **PyMastery-100Days-100Projects**! This repository documents my journey through a 100-day coding challenge to master Python. Each day, I build a new project ranging from:
+
+- 🤖 Automation scripts
+- 🌐 Web development
+- 📊 Data analysis & visualization
+- 🎮 Game development
+- 📱 App creation
+- 🔧 Utility tools
+
+Join me as I strengthen my Python skills by solving real-world problems through daily coding challenges!
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Python 3.11 or higher
+- pip (Python package manager)
+
+### Running the Projects
+
+Each project is self-contained in its own folder:
+
+```bash
+# Clone the repository
+git clone https://github.com/FoXDev-404/PyMastery-100Days-100Projects.git
+
+# Navigate to a specific project
+cd PyMastery-100Days-100Projects/Day01/
+
+# Run a project
+python projectDay1.py
+```
 
 ---
 
@@ -13,7 +52,7 @@ Welcome to **PyMastery-100Days-100Projects**! I'm on a mission to master Python 
 | Days       | Log File                              |
 | ---------- | ------------------------------------- |
 | Day 01-10  | [View Projects →](Day01-10/README.md) |
-| Day 11-20  | [Coming Soon](Day11-20/README.md)     |
+| Day 11-20  | [In Progress →](Day11-20/README.md)   |
 | Day 21-30  | [Coming Soon](Day21-30/README.md)     |
 | ...        | ...                                   |
 | Day 91-100 | [Coming Soon](Day91-100/README.md)    |
