@@ -70,3 +70,15 @@ def create_enemy():
 
 
 create_enemy()
+
+
+# Modifying Global Scope
+
+Enemies = 1
+
+def increase_enemies(enemy):
+    print(f"Enemies inside function: {enemy}")
+    return enemy + 1
+
+Enemies = increase_enemies(Enemies)
+print(f"Enemies outside function: {Enemies}")
