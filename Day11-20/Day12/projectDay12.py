@@ -1,11 +1,11 @@
 # Number Guessing Game
  
 import random
-
+from art import logo
 
 def number_guessing_game():
     actual_num = random.randint(1, 100)
-
+    print(logo)
     print("\nWelcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
 
