@@ -7,6 +7,7 @@
 
 - [Day 11: Blackjack Game](#day-11)
 - [Day 12: Number Guessing Game](#day-12)
+- [Day 13: Debugging Exercises](#day-13)
 
 </details>
 
@@ -78,3 +79,34 @@
 - Guess the number between 1 and 100
 - Receive feedback after each guess
 - Try to find the correct number before running out of attempts
+
+---
+
+<a id="day-13"></a>
+
+### Day 13: **Debugging Exercises** 🐛
+
+- **Description**: A collection of exercises focused on finding and fixing bugs in Python code.
+- **What I Learned**:
+  - **Debugging Techniques** – Identifying and resolving common coding errors
+  - **Print Debugging** – Using strategic print statements to track code execution
+  - **Error Types** – Understanding syntax, logical, and runtime errors
+  - **Problem-Solving** – Developing a methodical approach to troubleshooting
+- **Link to Code**: [Project Code](./Day13/projectDay13.py)
+
+### Features
+
+- Multiple debugging challenges of increasing difficulty
+- Examples of common Python programming errors
+- Solutions with detailed explanations
+- Techniques for identifying and fixing different bug types
+- Documentation of debugging best practices
+
+### Debugging Skills Covered
+
+- Describe the problem before trying to solve it
+- Reproduce the bug consistently to understand it
+- Play computer: trace the code execution manually
+- Fix errors one by one and test after each fix
+- Use print statements strategically to track variable values
+- Take breaks when stuck to gain fresh perspective
