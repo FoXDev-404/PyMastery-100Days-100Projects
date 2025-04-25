@@ -1,3 +1,8 @@
+# The Hiher/Lower Game. This is a game where you compare the number of followers of two different Indian celebrities.
+# The game is played in a loop until the user makes a wrong guess.
+# The user is prompted to guess which celebrity has more followers, and the game keeps track of the score.
+# The game ends when the user makes a wrong guess, and the final score is displayed.
+
 import random
 from higher_lower_art import logo, vs
 
