@@ -31,22 +31,15 @@ def play_game():
     current_celebrity = random.choice(list(indian_celebrities.keys()))
 
     while not game_over:
-        # Select next celebrity (ensuring it's different from current)
         next_celebrity = current_celebrity
         while next_celebrity == current_celebrity:
             next_celebrity = random.choice(list(indian_celebrities.keys()))
 
-        # Display comparison
         display_comparison(current_celebrity, next_celebrity)
 
-        # Get followers
         current_followers = indian_celebrities[current_celebrity]
         next_followers = indian_celebrities[next_celebrity]
 
-        # Debug info (comment out for production)
-        # print(f"DEBUG - A: {current_followers}M, B: {next_followers}M")
-
-        # Get user's guess
         while True:
             user_guess = input("Who has more followers? Type 'A' or 'B': ").lower()
             if user_guess in ['a', 'b']:
@@ -54,24 +47,28 @@ def play_game():
             print("Invalid input. Please type 'A' or 'B'.")
 
         # Check if user is correct
-        is_correct = (user_guess == 'a' and current_followers > next_followers) or (
-                    user_guess == 'b' and next_followers > current_followers)
+        correct_answer = 'a' if current_followers > next_followers else 'b'
+        is_correct = user_guess == correct_answer
 
         clear_screen()
         print(logo)
 
-        # Display results
         if is_correct:
             score += 1
-            print(f"✓ Correct! {current_celebrity.split(',')[0]} has {current_followers}M followers.")
-            print(f"✓ {next_celebrity.split(',')[0]} has {next_followers}M followers.")
+            print(f"✓ Correct!")
+            print(f"{current_celebrity.split(',')[0]}: {current_followers}M followers")
+            print(f"{next_celebrity.split(',')[0]}: {next_followers}M followers")
             print(f"Current score: {score}")
-            # Winner becomes the new current celebrity for comparison
-            current_celebrity = next_celebrity
+
+            # The one with more followers becomes the next Option A
+            if current_followers > next_followers:
+                current_celebrity = current_celebrity
+            else:
+                current_celebrity = next_celebrity
         else:
             print(f"✗ Sorry, that's wrong!")
-            print(f"{current_celebrity.split(',')[0]} has {current_followers}M followers.")
-            print(f"{next_celebrity.split(',')[0]} has {next_followers}M followers.")
+            print(f"{current_celebrity.split(',')[0]}: {current_followers}M followers")
+            print(f"{next_celebrity.split(',')[0]}: {next_followers}M followers")
             print(f"Final score: {score}")
             game_over = True
 
