@@ -8,6 +8,7 @@
 - [Day 11: Blackjack Game](#day-11)
 - [Day 12: Number Guessing Game](#day-12)
 - [Day 13: Debugging Exercises](#day-13)
+- [Day 14: Higher/Lower Game](#day-14)
 
 </details>
 
@@ -110,3 +111,35 @@
 - Fix errors one by one and test after each fix
 - Use print statements strategically to track variable values
 - Take breaks when stuck to gain fresh perspective
+
+---
+
+<a id="day-14"></a>
+
+### Day 14: **Higher/Lower Game** 📊
+
+- **Description**: A fun guessing game where players compare the follower counts of Indian celebrities and decide who has more followers.
+- **What I Learned**:
+  - **Dictionary Data Handling** – Working with complex data structures
+  - **Game State Management** – Managing game progression and score tracking
+  - **UI/UX Design** – Creating a clean and engaging text-based interface
+  - **Random Selection** – Implementing non-repeating random selection
+- **Link to Code**: [Project Code](./Day14/higher_lower.py)
+
+### Features
+
+- Database of Indian celebrities with descriptions and follower counts
+- Dynamic comparison between two randomly selected celebrities
+- Score tracking system that increases with each correct guess
+- Clean interface with screen clearing between rounds
+- Visual separation between game elements using ASCII art
+- Non-repeating selection to ensure varied comparisons
+
+### How to Play
+
+- Run the script using `python higher_lower.py`
+- Compare the two displayed celebrities (A and B)
+- Guess which one has more Instagram followers by typing 'A' or 'B'
+- Each correct guess earns one point and continues the game
+- The game ends when you make an incorrect guess
+- Try to achieve the highest score possible!
