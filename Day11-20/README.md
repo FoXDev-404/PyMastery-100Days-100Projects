@@ -9,6 +9,7 @@
 - [Day 12: Number Guessing Game](#day-12)
 - [Day 13: Debugging Exercises](#day-13)
 - [Day 14: Higher/Lower Game](#day-14)
+- [Day 15: Coffee Machine](#day-15)
 
 </details>
 
@@ -143,3 +144,43 @@
 - Each correct guess earns one point and continues the game
 - The game ends when you make an incorrect guess
 - Try to achieve the highest score possible!
+
+---
+
+<a id="day-15"></a>
+
+### Day 15: **Coffee Machine** ☕
+
+- **Description**: A virtual coffee machine simulation that manages resources, processes coins, and serves different types of coffee.
+- **What I Learned**:
+  - **Resource Management** – Tracking and updating available ingredients
+  - **Financial Transactions** – Handling money inputs and calculating change
+  - **User Interaction** – Creating an interactive command-line interface
+  - **Program Structure** – Organizing code into modular functions
+- **Link to Code**: [Project Code](./Day15/coffee_machine.py)
+
+### Features
+
+- Multiple coffee options (espresso, latte, cappuccino) with different prices and resource requirements
+- Resource tracking for water, milk, and coffee beans
+- Coin processing system accepting different coin denominations
+- Maintenance mode to check current resource levels
+- Change calculation and return system
+- Error handling for insufficient resources or funds
+
+### How to Play
+
+- Run the script using `python coffee_machine.py`
+- Choose from menu options: "espresso", "latte", "cappuccino", "report", or "off"
+- Insert coins when prompted (quarters, dimes, nickels, pennies)
+- Receive your virtual coffee if resources are sufficient and payment is adequate
+- Get change back if you inserted more than required
+- Type "report" to view current resource levels
+- Type "off" to exit the program
+
+### Resource Management
+
+- Each coffee type requires specific amounts of water, milk, and coffee
+- The machine checks if enough resources are available before making coffee
+- Resources are deducted automatically when a drink is successfully made
+- Money collected from sales is tracked and can be viewed in the report
