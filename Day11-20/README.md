@@ -94,7 +94,7 @@
   - **Print Debugging** – Using strategic print statements to track code execution
   - **Error Types** – Understanding syntax, logical, and runtime errors
   - **Problem-Solving** – Developing a methodical approach to troubleshooting
-- **Link to Code**: [Project Code](./Day13/projectDay13.py)
+- **Link to Code**: [Code](./Day13/)
 
 ### Features
 
