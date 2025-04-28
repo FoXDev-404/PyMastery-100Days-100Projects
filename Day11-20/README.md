@@ -10,6 +10,7 @@
 - [Day 13: Debugging Exercises](#day-13)
 - [Day 14: Higher/Lower Game](#day-14)
 - [Day 15: Coffee Machine](#day-15)
+- [Day 16: Coffee Machine Using OOP](#day-16)
 
 </details>
 
