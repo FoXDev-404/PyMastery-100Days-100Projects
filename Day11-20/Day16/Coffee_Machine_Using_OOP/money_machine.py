@@ -1,12 +1,13 @@
 class MoneyMachine:
 
-    CURRENCY = "$"
+    CURRENCY = "₹"
 
     COIN_VALUES = {
-        "quarters": 0.25,
-        "dimes": 0.10,
-        "nickles": 0.05,
-        "pennies": 0.01
+        "₹1": 1,
+        "₹2": 2,
+        "₹5": 5,
+        "₹10": 10,
+        "₹20": 20
     }
 
     def __init__(self):
@@ -20,15 +21,20 @@ class MoneyMachine:
     def process_coins(self):
         """Returns the total calculated from coins inserted."""
         print("Please insert coins.")
+        self.money_received = 0
         for coin in self.COIN_VALUES:
-            self.money_received += int(input(f"How many {coin}?: ")) * self.COIN_VALUES[coin]
+            try:
+                self.money_received += int(input(f"How many {coin} coins?: ")) * self.COIN_VALUES[coin]
+            except ValueError:
+                print("Invalid input. Please enter numbers only.")
+                return self.process_coins()
         return self.money_received
 
     def make_payment(self, cost):
         """Returns True when payment is accepted, or False if insufficient."""
         self.process_coins()
         if self.money_received >= cost:
-            change = round(self.money_received - cost, 2)
+            change = int(self.money_received - cost)
             print(f"Here is {self.CURRENCY}{change} in change.")
             self.profit += cost
             self.money_received = 0
@@ -37,4 +43,4 @@ class MoneyMachine:
             print("Sorry that's not enough money. Money refunded.")
             self.money_received = 0
             return False
-        
+
