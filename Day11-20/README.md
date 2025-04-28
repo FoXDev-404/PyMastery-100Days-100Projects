@@ -184,3 +184,44 @@
 - The machine checks if enough resources are available before making coffee
 - Resources are deducted automatically when a drink is successfully made
 - Money collected from sales is tracked and can be viewed in the report
+
+---
+
+<a id="day-16"></a>
+
+### Day 16: **Coffee Machine Using OOP** ☕
+
+- **Description**: An enhanced coffee machine simulation using Object-Oriented Programming principles, adapted for Indian currency and coin denominations.
+- **What I Learned**:
+  - **OOP Concepts** – Implementing classes and objects for modular code
+  - **Class Collaboration** – Interaction between Menu, CoffeeMaker, and MoneyMachine classes
+  - **Custom Currency Handling** – Accepting Indian coins (₹1, ₹2, ₹5, ₹10, ₹20)
+  - **Code Reusability** – Extending and modifying existing code for new requirements
+- **Link to Code**: [Project Code](./Day16/Coffee_Machine_Using_OOP/main.py)
+
+### Features
+
+- Multiple coffee options (espresso, latte, cappuccino) with Indian prices
+- Accepts Indian coins: ₹1, ₹2, ₹5, ₹10, ₹20
+- Resource tracking for water, milk, and coffee beans
+- Maintenance mode to check current resource levels
+- Change calculation and return system in ₹
+- Error handling for insufficient resources or funds
+- Clean, modular code using OOP principles
+
+### How to Play
+
+- Run the script using `python main.py` inside the `Day16/Coffee_Machine_Using_OOP` directory
+- Choose from menu options: "espresso", "latte", "cappuccino", "report", or "off"
+- Insert coins when prompted (₹1, ₹2, ₹5, ₹10, ₹20)
+- Receive your virtual coffee if resources are sufficient and payment is adequate
+- Get change back if you inserted more than required
+- Type "report" to view current resource levels
+- Type "off" to exit the program
+
+### Resource Management
+
+- Each coffee type requires specific amounts of water, milk, and coffee
+- The machine checks if enough resources are available before making coffee
+- Resources are deducted automatically when a drink is successfully made
+- Money collected from sales is tracked and can be viewed in the report
