@@ -11,6 +11,7 @@
 - [Day 14: Higher/Lower Game](#day-14)
 - [Day 15: Coffee Machine](#day-15)
 - [Day 16: Coffee Machine Using OOP](#day-16)
+- [Day 17: Quiz Game](#day-17)
 
 </details>
 
@@ -226,3 +227,34 @@
 - The machine checks if enough resources are available before making coffee
 - Resources are deducted automatically when a drink is successfully made
 - Money collected from sales is tracked and can be viewed in the report
+
+---
+
+<a id="day-17"></a>
+
+### Day 17: **Quiz Game** 🧠
+
+- **Description**: An interactive quiz application that tests users' knowledge with True/False questions while keeping score.
+- **What I Learned**:
+  - **OOP Implementation** – Creating classes for Question and QuizBrain
+  - **Encapsulation** – Separating concerns between data storage and logic
+  - **Attribute Management** – Tracking question number, score, and progress
+  - **Class Methods** – Implementing functionality like checking answers and progressing through questions
+- **Link to Code**: [Project Code](./Day17/Quiz_Game/)
+
+### Features
+
+- True/False question format with automatic scoring
+- Progress tracking showing current question number
+- Immediate feedback on answer correctness
+- Final score display upon completion
+- Modular design using Object-Oriented Programming
+- Extendable question bank that can be easily modified
+
+### How to Play
+
+- Run the script using `python main.py` in the `Day17/Quiz_Game` directory
+- Read each question carefully and type "True" or "False"
+- Get immediate feedback on whether your answer was correct
+- See your running score after each question
+- Complete all questions to view your final score
