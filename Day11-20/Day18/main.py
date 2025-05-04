@@ -53,36 +53,69 @@
 
 ## =============================================================== ##
 
-# TODO: Draw a Random Walk
-import random
-import turtle
-from turtle import Turtle, Screen
+# # TODO: Draw a Random Walk
+# import random
+# import turtle
+# from turtle import Turtle, Screen
 
-tim = Turtle()
-turtle.colormode(255)
-tim.pensize(10)
-tim.speed("fastest")
+# tim = Turtle()
+# turtle.colormode(255)
+# tim.pensize(10)
+# tim.speed("fastest")
 
-def random_color():
-    r = random.randint(0, 255)
-    g = random.randint(0, 255)
-    b = random.randint(0, 255)
-    random_color = (r, g, b)
-    return random_color
+# def random_color():
+#     r = random.randint(0, 255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#     random_color = (r, g, b)
+#     return random_color
 
-# # Option 1: Turn only by 90° increments
-# directions = [0, 90, 180, 270]  # Forward, Right, Backward, Left
+# # # Option 1: Turn only by 90° increments
+# # directions = [0, 90, 180, 270]  # Forward, Right, Backward, Left
+# # for _ in range(200):
+# #     tim.color(random_color())
+# #     tim.right(random.choice(directions))
+# #     tim.forward(30)
+
+# # Option 2: Use setheading() with absolute directions
+# directions = [0, 90, 180, 270]  # East, North, West, South
 # for _ in range(200):
 #     tim.color(random_color())
-#     tim.right(random.choice(directions))
+#     tim.setheading(random.choice(directions))
 #     tim.forward(30)
 
-# Option 2: Use setheading() with absolute directions
-directions = [0, 90, 180, 270]  # East, North, West, South
-for _ in range(200):
-    tim.color(random_color())
-    tim.setheading(random.choice(directions))
-    tim.forward(30)
+# screen = Screen()
+# screen.exitonclick()
 
-screen = Screen()
-screen.exitonclick()
+## =============================================================== ##
+
+# # TODO: Make a Spirograph
+
+from turtle import Turtle, Screen
+import random
+import turtle
+
+tom = Turtle()
+tom.speed("fastest")
+turtle.colormode(255)
+
+def random_color():
+    r = random.randint(0,255)
+    g = random.randint(0,255)
+    b = random.randint(0,255)
+    color = (r,g,b)
+    return color
+
+shift_size = 5
+times = int(360/shift_size)
+
+for _ in range(times):
+    tom.color(random_color())
+    tom.circle(100)
+    tom.left(shift_size)
+
+
+
+
+Screen = Screen()
+Screen.exitonclick()
