@@ -12,6 +12,7 @@
 - [Day 15: Coffee Machine](#day-15)
 - [Day 16: Coffee Machine Using OOP](#day-16)
 - [Day 17: Quiz Game](#day-17)
+- [Day 18: Hirst Painting Project](#day-18)
 
 </details>
 
@@ -258,3 +259,43 @@
 - Get immediate feedback on whether your answer was correct
 - See your running score after each question
 - Complete all questions to view your final score
+
+---
+
+<a id="day-18"></a>
+
+### Day 18: **Hirst Painting Project** 🎨
+
+- **Description**: A Python program that recreates Damien Hirst's famous spot paintings using the Turtle graphics module.
+- **What I Learned**:
+  - **Turtle Graphics** – Using Python's built-in drawing module for visual outputs
+  - **RGB Color System** – Working with RGB tuples to generate colorful patterns
+  - **Algorithmic Drawing** – Creating structured patterns with nested loops
+  - **Color Extraction** – Using the colorgram package to extract colors from images
+- **Link to Code**: [Project Code](./Day18/Penting_Project/project.py)
+
+### Features
+
+- Creates a 10×10 grid of colored dots resembling Hirst's spot paintings
+- Uses a palette of extracted colors from real artwork
+- Implements optimized drawing with hidden turtle and maximum speed
+- Precise dot positioning with mathematical calculations
+- Randomly selects colors for each dot to create visual interest
+- Clean, well-structured code with clear comments
+
+### How It Works
+
+- The program positions the turtle at the starting point (bottom left corner)
+- It methodically draws dots in a grid pattern, moving right across each row
+- After completing a row, the turtle moves up to begin the next row
+- Each dot is assigned a random color from the extracted palette
+- The drawing continues until the entire 10×10 grid is filled
+- The result is a colorful dot pattern similar to Hirst's famous artwork
+
+### Technical Implementation
+
+- Sets up turtle with penup() to avoid drawing lines between dots
+- Uses dot() method for consistent circle shapes
+- Leverages turtle.colormode(255) to enable RGB color tuples
+- Implements efficient path planning to minimize unnecessary movement
+- Creates reusable color extraction functionality for future projects
