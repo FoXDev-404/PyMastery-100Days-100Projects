@@ -29,6 +29,7 @@ color_list = [(155, 97, 26), (18, 35, 56), (44, 106, 149), (239, 118, 35), (224,
 tom = Turtle()
 tom.speed("fastest")
 tom.penup()
+tom.hideturtle()
 
 # Init: Dot Size and Spacing
 dot_size = 20
