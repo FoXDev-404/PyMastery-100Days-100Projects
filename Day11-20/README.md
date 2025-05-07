@@ -13,6 +13,7 @@
 - [Day 16: Coffee Machine Using OOP](#day-16)
 - [Day 17: Quiz Game](#day-17)
 - [Day 18: Hirst Painting Project](#day-18)
+- [Day 19: Turtle Race](#day-19)
 
 </details>
 
@@ -299,3 +300,44 @@
 - Leverages turtle.colormode(255) to enable RGB color tuples
 - Implements efficient path planning to minimize unnecessary movement
 - Creates reusable color extraction functionality for future projects
+
+---
+
+<a id="day-19"></a>
+
+### Day 19: **Turtle Race** 🏁
+
+- **Description**: An interactive turtle racing game using event listeners and higher-order functions in Python.
+- **What I Learned**:
+  - **Event Listeners** – Using functions like `listen()` and `onkey()` to detect user input
+  - **Higher-Order Functions** – Working with functions that take other functions as parameters
+  - **Multiple Objects** – Creating and managing several turtle instances simultaneously
+  - **Game States** – Tracking race positions, winners, and betting outcomes
+- **Link to Code**: [Project Code](./Day19/turtle_race.py)
+
+### Features
+
+- Colorful racing game with multiple turtles competing simultaneously
+- Keyboard-controlled Etch-A-Sketch application for creative drawing
+- Betting system that allows users to predict the winner
+- Random movement algorithm for unpredictable race outcomes
+- Visual finish line and race announcements
+- Clean UI with clear color differentiation between racers
+
+### How to Play
+
+- Run the script using `python turtle_race.py` in the `Day19` directory
+- Place your bet on which colored turtle you think will win
+- Watch as the turtles race across the screen at random speeds
+- See whether your chosen turtle wins or loses
+- For the Etch-A-Sketch game, use W (forward), S (backward), A (counter-clockwise), D (clockwise), and C (clear)
+
+### Technical Implementation
+
+- Uses `screen.listen()` to enable keyboard event detection
+- Implements `screen.onkey(function, key)` to create keyboard controls
+- Creates multiple turtle objects with different colors and starting positions
+- Uses `random.randint()` to generate varying movement speeds
+- Implements win condition detection when a turtle crosses the finish line
+- Applies coordinate tracking with `xcor()` and `ycor()` methods
+- Demonstrates both procedural and event-driven programming approaches
