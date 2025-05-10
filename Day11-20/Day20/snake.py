@@ -1,7 +1,7 @@
 from turtle import Turtle
 
 STARTING_POSITION = [(0, 0), (-20, 0), (-40, 0)]  # Fixed typo
-MOVE_DISTANCE = 20  # Added missing constant
+MOVE_DISTANCE = 20
 
 class Snake:
     
@@ -11,7 +11,7 @@ class Snake:
         self.head = self.segments[0]
         
     def create_snake(self):
-        for position in STARTING_POSITION:  # Fixed typo in variable name
+        for position in STARTING_POSITION:
             new_segment = Turtle("square")
             new_segment.color("white")
             new_segment.penup()
