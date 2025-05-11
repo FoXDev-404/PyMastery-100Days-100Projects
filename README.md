@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Progress](https://img.shields.io/badge/Progress-11%25-yellow.svg)](Day01-10/README.md)
+[![Progress](https://img.shields.io/badge/Progress-20%25-yellow.svg)](Day11-20/README.md)
 [![Maintenance](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects/graphs/commit-activity)
 [![GitHub stars](https://img.shields.io/github/stars/FoXDev-404/PyMastery-100Days-100Projects?style=social)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects)
 
