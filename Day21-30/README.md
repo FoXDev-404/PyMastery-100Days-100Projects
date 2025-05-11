@@ -3,13 +3,13 @@
 # Days 21–30: Intermediate Python
 
 <details>
-<summary>📋 Quick Navigation</summary>
+<summary>📋 Table of Contents</summary>
 
 - [Day 21: Snake Game](#day-21-snake-game)
 
 </details>
 
-## 📅 Day 11–20 Projects [🚧 In Progress]
+## 📅 Day 21–30 Projects [🚧 In Progress]
 
 ---
 
@@ -19,10 +19,10 @@
 
 - **Description**: A classic Snake game built using Python's Turtle module.
 - **What I Learned**:
-  - Object-Oriented Programming (OOP) principles
-  - Handling keyboard events with `onkey()`
-  - Managing game states and levels
-  - File handling for saving and loading high scores
+  - **Object-Oriented Programming (OOP)** – Designing modular and reusable code
+  - **Keyboard Event Handling** – Using `onkey()` for responsive controls
+  - **Game State Management** – Implementing pause, resume, and level progression
+  - **File Handling** – Saving and loading high scores
 
 ### Features
 
@@ -40,6 +40,15 @@
 4. Collect food to grow the snake and increase your score.
 5. Try to beat your high score!
 
+### Prerequisites
+
+- Python 3.8 or higher
+- Turtle module (pre-installed with Python)
+
 ### Link to Code
 
 [View Code →](Day21/main.py)
+
+---
+
+<!-- Additional sections for Day 22 to Day 30 can follow this structure -->
