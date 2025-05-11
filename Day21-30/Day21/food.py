@@ -19,3 +19,11 @@ class Food(Turtle):
         random_x = random.randint(-280, 280)
         random_y = random.randint(-280, 280)
         self.goto(random_x, random_y)
+
+        # 10% chance of special food (worth more points)
+        if random.random() < 0.1:
+            self.color("gold")
+            self.is_special = True
+        else:
+            self.color("blue")
+            self.is_special = False

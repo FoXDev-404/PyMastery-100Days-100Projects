@@ -56,3 +56,10 @@ class Snake:
     def right(self):
         if self.head.heading() != 180:  # Prevent reversing direction
             self.head.setheading(0)
+    
+    def reset(self):
+        for seg in self.segments:
+            seg.goto(1000, 1000)  # Move off-screen
+        self.segments.clear()
+        self.create_snake()
+        self.head = self.segments[0]
