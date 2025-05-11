@@ -14,6 +14,7 @@
 - [Day 17: Quiz Game](#day-17)
 - [Day 18: Hirst Painting Project](#day-18)
 - [Day 19: Turtle Race](#day-19)
+- [Day 20: Snake Game](#day-20)
 
 </details>
 
@@ -341,3 +342,43 @@
 - Implements win condition detection when a turtle crosses the finish line
 - Applies coordinate tracking with `xcor()` and `ycor()` methods
 - Demonstrates both procedural and event-driven programming approaches
+
+---
+
+<a id="day-20"></a>
+
+### Day 20: **Snake Game** 🐍
+
+- **Description**: A classic Snake game implementation using Python's Turtle graphics module.
+- **What I Learned**:
+  - **OOP Design** – Building a game using object-oriented principles
+  - **Coordinate Systems** – Managing positions and movements on a 2D plane
+  - **Game Loop** – Creating a continuous game loop for smooth gameplay
+  - **Event Handling** – Detecting keyboard input to control the snake
+- **Link to Code**: [Project Code](./Day20/main.py)
+
+### Features
+
+- Snake movement in four directions (up, down, left, right)
+- Direction control prevention to avoid snake reversing into itself
+- Segmented snake body that follows the head
+- Smooth movement animation using Turtle graphics
+- Clean class-based implementation for maintainability
+- Responsive controls with immediate direction changes
+
+### How to Play
+
+- Run the script using `python main.py` in the `Day20` directory
+- Control the snake using the arrow keys
+- Guide the snake around the screen without hitting the walls or itself
+- Try to collect food to grow the snake and increase your score
+- The game ends when the snake collides with the wall or its own tail
+
+### Technical Implementation
+
+- Uses object-oriented programming with a dedicated Snake class
+- Implements segment-based movement where each body part follows the one ahead
+- Uses `setheading()` to control snake direction
+- Prevents illegal moves (like reversing) with directional constraints
+- Manages snake body as a list of turtle objects with coordinated movement
+- Implements efficient movement algorithm to ensure smooth gameplay
