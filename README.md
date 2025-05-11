@@ -52,8 +52,8 @@ python projectDay1.py
 | Days       | Log File                              |
 | ---------- | ------------------------------------- |
 | Day 01-10  | [View Projects →](Day01-10/README.md) |
-| Day 11-20  | [In Progress →](Day11-20/README.md)   |
-| Day 21-30  | [Coming Soon](Day21-30/README.md)     |
+| Day 11-20  | [View Projects →](Day11-20/README.md) |
+| Day 21-30  | [In Progress →](Day21-30/README.md)   |
 | ...        | ...                                   |
 | Day 91-100 | [Coming Soon](Day91-100/README.md)    |
 
