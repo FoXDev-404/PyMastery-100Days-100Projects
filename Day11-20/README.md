@@ -3,7 +3,7 @@
 # Days 11–20: Intermediate Python
 
 <details>
-<summary>📋 Quick Navigation</summary>
+<summary>📋 Table of Contents</summary>
 
 - [Day 11: Blackjack Game](#day-11)
 - [Day 12: Number Guessing Game](#day-12)
@@ -27,7 +27,7 @@
 ### Day 11: **Blackjack Game** 🎮
 
 - **Description**: A text-based implementation of the classic Blackjack card game (also known as 21).
-- **What I Learned**:
+- **Key Learnings**:
   - **Functions with Outputs** – Creating functions that return values
   - **Game Logic** – Implementing complex game rules
   - **Random Module** – Generating random cards
@@ -64,7 +64,7 @@
 ### Day 12: **Number Guessing Game** 🔢
 
 - **Description**: A fun number guessing game where the computer picks a random number and the player tries to guess it.
-- **What I Learned**:
+- **Key Learnings**:
   - **Scope** – Understanding local and global scope in Python
   - **Constants** – Using constants to improve code readability
   - **Difficulty Levels** – Implementing different game difficulties
@@ -94,7 +94,7 @@
 ### Day 13: **Debugging Exercises** 🐛
 
 - **Description**: A collection of exercises focused on finding and fixing bugs in Python code.
-- **What I Learned**:
+- **Key Learnings**:
   - **Debugging Techniques** – Identifying and resolving common coding errors
   - **Print Debugging** – Using strategic print statements to track code execution
   - **Error Types** – Understanding syntax, logical, and runtime errors
@@ -125,7 +125,7 @@
 ### Day 14: **Higher/Lower Game** 📊
 
 - **Description**: A fun guessing game where players compare the follower counts of Indian celebrities and decide who has more followers.
-- **What I Learned**:
+- **Key Learnings**:
   - **Dictionary Data Handling** – Working with complex data structures
   - **Game State Management** – Managing game progression and score tracking
   - **UI/UX Design** – Creating a clean and engaging text-based interface
@@ -157,7 +157,7 @@
 ### Day 15: **Coffee Machine** ☕
 
 - **Description**: A virtual coffee machine simulation that manages resources, processes coins, and serves different types of coffee.
-- **What I Learned**:
+- **Key Learnings**:
   - **Resource Management** – Tracking and updating available ingredients
   - **Financial Transactions** – Handling money inputs and calculating change
   - **User Interaction** – Creating an interactive command-line interface
@@ -197,7 +197,7 @@
 ### Day 16: **Coffee Machine Using OOP** ☕
 
 - **Description**: An enhanced coffee machine simulation using Object-Oriented Programming principles, adapted for Indian currency and coin denominations.
-- **What I Learned**:
+- **Key Learnings**:
   - **OOP Concepts** – Implementing classes and objects for modular code
   - **Class Collaboration** – Interaction between Menu, CoffeeMaker, and MoneyMachine classes
   - **Custom Currency Handling** – Accepting Indian coins (₹1, ₹2, ₹5, ₹10, ₹20)
@@ -238,7 +238,7 @@
 ### Day 17: **Quiz Game** 🧠
 
 - **Description**: An interactive quiz application that tests users' knowledge with True/False questions while keeping score.
-- **What I Learned**:
+- **Key Learnings**:
   - **OOP Implementation** – Creating classes for Question and QuizBrain
   - **Encapsulation** – Separating concerns between data storage and logic
   - **Attribute Management** – Tracking question number, score, and progress
@@ -269,7 +269,7 @@
 ### Day 18: **Hirst Painting Project** 🎨
 
 - **Description**: A Python program that recreates Damien Hirst's famous spot paintings using the Turtle graphics module.
-- **What I Learned**:
+- **Key Learnings**:
   - **Turtle Graphics** – Using Python's built-in drawing module for visual outputs
   - **RGB Color System** – Working with RGB tuples to generate colorful patterns
   - **Algorithmic Drawing** – Creating structured patterns with nested loops
@@ -309,7 +309,7 @@
 ### Day 19: **Turtle Race** 🏁
 
 - **Description**: An interactive turtle racing game using event listeners and higher-order functions in Python.
-- **What I Learned**:
+- **Key Learnings**:
   - **Event Listeners** – Using functions like `listen()` and `onkey()` to detect user input
   - **Higher-Order Functions** – Working with functions that take other functions as parameters
   - **Multiple Objects** – Creating and managing several turtle instances simultaneously
@@ -350,7 +350,7 @@
 ### Day 20: **Snake Game** 🐍
 
 - **Description**: A classic Snake game implementation using Python's Turtle graphics module.
-- **What I Learned**:
+- **Key Learnings**:
   - **OOP Design** – Building a game using object-oriented principles
   - **Coordinate Systems** – Managing positions and movements on a 2D plane
   - **Game Loop** – Creating a continuous game loop for smooth gameplay
