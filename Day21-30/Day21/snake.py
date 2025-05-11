@@ -18,6 +18,22 @@ class Snake:
             new_segment.goto(position)
             self.segments.append(new_segment)
             
+    def add_segment(self):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        new_segment.goto.position()
+        self.segments.append(new_segment)
+    
+    def extend(self):
+        new_segment = Turtle("square")
+        new_segment.color("white")
+        new_segment.penup()
+        self.segments.append(new_segment)
+        self.move()
+        self.segments[-1].goto(self.segments[-2].position())
+        self.segments[-1].setheading(self.segments[-2].heading())
+        
     def move(self):
         for seg_num in range(len(self.segments) - 1, 0, -1):
             new_x = self.segments[seg_num - 1].xcor()
@@ -40,10 +56,3 @@ class Snake:
     def right(self):
         if self.head.heading() != 180:  # Prevent reversing direction
             self.head.setheading(0)
-            
-    def extend(self):
-        new_segment = Turtle("square")
-        new_segment.color("white")
-        new_segment.penup()
-        self.segments.append(new_segment)
-        self.move()
