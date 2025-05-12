@@ -6,6 +6,7 @@
 <summary>📋 Table of Contents</summary>
 
 - [Day 21: Snake Game](#day-21-snake-game)
+- [Day 22: Pong Game](#day-22-pong-game)
 
 </details>
 
@@ -51,4 +52,42 @@
 
 ---
 
-<!-- Additional sections for Day 22 to Day 30 can follow this structure -->
+<a name="day-22-pong-game"></a>
+
+## Day 22: Pong Game 🏓
+
+- **Description**: A recreation of the classic Pong arcade game using Python's Turtle module.
+- **What I Learned**:
+  - **Advanced OOP Concepts** – Implementing multiple classes with inheritance
+  - **Game Physics** – Creating realistic ball movement and paddle collisions
+  - **Two-player Controls** – Managing simultaneous input for different players
+  - **Speed Mechanics** – Progressive difficulty with increasing ball speed
+
+### Features
+
+- Two-player gameplay with separate controls
+- Dynamic ball physics with increasing speed after each hit
+- Score tracking system with winning condition
+- Boundary detection for paddles and ball
+- Visual elements like center court line
+
+### How to Play
+
+1. Run the script using `python main.py` in the `Day22` directory.
+2. Player 1 (left): Use 'W' and 'S' keys to move paddle up and down.
+3. Player 2 (right): Use 'Up' and 'Down' arrow keys to control paddle.
+4. The ball speeds up each time it hits a paddle.
+5. First player to reach 5 points wins the game!
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Turtle module (pre-installed with Python)
+
+### Link to Code
+
+[View Code →](Day22/main.py)
+
+---
+
+<!-- Additional sections for Day 23 to Day 30 can follow this structure -->
