@@ -17,5 +17,6 @@ class Paddle(Turtle):
             self.goto(self.xcor(), new_y)
 
     def go_down(self):
-        new_y = self.ycor() - 20
-        self.goto(self.xcor(), new_y)
+        if self.ycor() > -240:  # Add lower boundary
+            new_y = self.ycor() - 20
+            self.goto(self.xcor(), new_y)
