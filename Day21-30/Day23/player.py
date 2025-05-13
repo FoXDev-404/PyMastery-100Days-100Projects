@@ -16,6 +16,18 @@ class Player(Turtle):
 
     def go_up(self):
         self.forward(MOVE_DISTANCE)
+    
+    def go_left(self):
+        new_x = self.xcor() - MOVE_DISTANCE
+        # Keep player within screen boundaries
+        if new_x > -280:
+            self.goto(new_x, self.ycor())
+    
+    def go_right(self):
+        new_x = self.xcor() + MOVE_DISTANCE
+        # Keep player within screen boundaries
+        if new_x < 280:
+            self.goto(new_x, self.ycor())
         
     def go_to_start(self):
         self.goto(STARTING_POSITION)
