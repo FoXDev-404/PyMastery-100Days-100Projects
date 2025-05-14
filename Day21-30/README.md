@@ -7,6 +7,7 @@
 
 - [Day 21: Snake Game](#day-21-snake-game)
 - [Day 22: Pong Game](#day-22-pong-game)
+- [Day 23: Turtle Crossing Game](#day-23-turtle-crossing-game)
 
 </details>
 
@@ -90,4 +91,46 @@
 
 ---
 
-<!-- Additional sections for Day 23 to Day 30 can follow this structure -->
+<a name="day-23-turtle-crossing-game"></a>
+
+## Day 23: Turtle Crossing Game 🐢
+
+- **Description**: A road crossing game where the player controls a turtle to safely cross a busy road.
+- **What I Learned**:
+  - **State Management** – Implementing different game states (menu, playing, paused, game over)
+  - **Collision Detection** – Detecting collisions between turtle and cars
+  - **Dynamic Difficulty** – Increasing game difficulty as levels progress
+  - **Lives System** – Managing player lives and reset mechanics
+  - **Persistent Data** – Saving and loading high scores between game sessions
+
+### Features
+
+- Intuitive controls for turtle movement (up, left, right)
+- Progressive difficulty with faster traffic at higher levels
+- Multiple lives system with visual feedback
+- High score tracking across game sessions
+- Pause functionality during gameplay
+- Visual road markings and varied car sizes
+
+### How to Play
+
+1. Run the script using `python main.py` in the `Day23` directory.
+2. Press SPACE to start the game from the menu.
+3. Use the UP arrow key to move forward.
+4. Use LEFT and RIGHT arrow keys to dodge traffic.
+5. Press P to pause/resume the game.
+6. Reach the other side to advance to the next level.
+7. Avoid collisions with cars - you have 3 lives!
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Turtle module (pre-installed with Python)
+
+### Link to Code
+
+[View Code →](Day23/main.py)
+
+---
+
+<!-- Additional sections for Day 24 to Day 30 can follow this structure -->
