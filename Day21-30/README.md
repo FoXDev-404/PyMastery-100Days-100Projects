@@ -8,6 +8,7 @@
 - [Day 21: Snake Game](#day-21-snake-game)
 - [Day 22: Pong Game](#day-22-pong-game)
 - [Day 23: Turtle Crossing Game](#day-23-turtle-crossing-game)
+- [Day 24: Mail Merge Project](#day-24-mail-merge-project)
 
 </details>
 
@@ -133,4 +134,43 @@
 
 ---
 
-<!-- Additional sections for Day 24 to Day 30 can follow this structure -->
+<a name="day-24-mail-merge-project"></a>
+
+## Day 24: Mail Merge Project 📧
+
+- **Description**: An automated mail merge system that generates personalized invitation letters from a template.
+- **What I Learned**:
+  - **File I/O Operations** – Reading from and writing to files with context managers
+  - **String Manipulation** – Replacing placeholder text with actual content
+  - **Path Handling** – Working with relative and absolute file paths
+  - **Batch Processing** – Automating the creation of multiple documents
+
+### Features
+
+- Reads names from a list of invited guests
+- Uses a template letter with placeholder for personalization
+- Generates individual invitation letters for each person
+- Demonstrates both relative and absolute path handling
+- Implements efficient file handling with context managers
+- Maintains original formatting while replacing placeholders
+
+### How It Works
+
+1. The program reads a list of names from `./Input/Names/invited_names.txt`
+2. It loads a letter template from `./Input/Letters/starting_letter.txt`
+3. For each name, it replaces the `[name]` placeholder in the template
+4. Individual personalized letters are saved to the output directory
+5. Files are properly closed using context managers for best practice
+
+### Prerequisites
+
+- Python 3.8 or higher
+- No additional packages required
+
+### Link to Code
+
+[View Code →](Day24/mail_merge_project/main.py)
+
+---
+
+<!-- Additional sections for Day 25 to Day 30 can follow this structure -->
