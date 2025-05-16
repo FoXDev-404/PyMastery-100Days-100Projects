@@ -39,9 +39,20 @@ print(temp_list)
 # print(data.condition) # same as above
 
 # Get data in rows
-print(data[data.day == "Monday"]) # get the row where the day is Monday
-print(data[data.temp == data.temp.max()]) # get the row where the temperature is max
+# print(data[data.day == "Monday"]) # get the row where the day is Monday
+# print(data[data.temp == data.temp.max()]) # get the row where the temperature is max
 
-monday = data[data.day == "Monday"] # get the row where the day is Monday
-print(monday.condition) # get the condition of Monday
-print(monday.temp * 9/5 + 32) # convert the temperature to Fahrenheit
+# monday = data[data.day == "Monday"] # get the row where the day is Monday
+# print(monday.condition) # get the condition of Monday
+# print(monday.temp * 9/5 + 32) # convert the temperature to Fahrenheit
+
+
+# Create a dataframe from scratch
+data_dict = {
+    "student": ["Raj", "Nik", "Subh"],
+    "scores": [76, 56, 65]
+}
+
+data = pandas.DataFrame(data_dict)
+print(data)
+data.to_csv("new_data.csv")
