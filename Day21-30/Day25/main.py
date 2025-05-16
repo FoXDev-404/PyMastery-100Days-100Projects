@@ -29,4 +29,19 @@ print(temp_list)
 
 # print(average(temp_list))
 
-print(data["temp"].mean()) # calculate the mean of the temperature
+# print(data["temp"].mean()) # calculate the mean of the temperature
+
+# print(data["temp"].max()) # calculate the max of the temperature
+
+
+# Get data in columns
+# print(data["condition"])
+# print(data.condition) # same as above
+
+# Get data in rows
+print(data[data.day == "Monday"]) # get the row where the day is Monday
+print(data[data.temp == data.temp.max()]) # get the row where the temperature is max
+
+monday = data[data.day == "Monday"] # get the row where the day is Monday
+print(monday.condition) # get the condition of Monday
+print(monday.temp * 9/5 + 32) # convert the temperature to Fahrenheit
