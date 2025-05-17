@@ -9,6 +9,7 @@
 - [Day 22: Pong Game](#day-22-pong-game)
 - [Day 23: Turtle Crossing Game](#day-23-turtle-crossing-game)
 - [Day 24: Mail Merge Project](#day-24-mail-merge-project)
+- [Day 25: Pandas Data Analysis](#day-25-pandas-data-analysis)
 
 </details>
 
@@ -173,4 +174,44 @@
 
 ---
 
-<!-- Additional sections for Day 25 to Day 30 can follow this structure -->
+<a name="day-25-pandas-data-analysis"></a>
+
+## Day 25: Pandas Data Analysis 📊
+
+- **Description**: Data analysis project using the Pandas library to analyze squirrel census data from Central Park.
+- **What I Learned**:
+  - **Pandas Library** – Working with DataFrame objects for data manipulation
+  - **CSV Handling** – Reading from and writing to CSV files with Pandas
+  - **Data Filtering** – Using conditions to filter data from DataFrames
+  - **Data Aggregation** – Counting and summarizing data based on categories
+  - **Data Export** – Converting processed data back to CSV format
+
+### Features
+
+- Reads and processes large CSV datasets
+- Filters data based on specific conditions
+- Performs count operations on categorical data
+- Creates new DataFrames from analysis results
+- Exports processed data to CSV files
+- Demonstrates pandas syntax for data selection and manipulation
+
+### How It Works
+
+1. The program reads squirrel census data from a CSV file
+2. It counts squirrels by their primary fur color (Gray, Cinnamon, Black)
+3. The counts are stored in a new DataFrame with appropriate column names
+4. The summarized data is exported to a new CSV file for easy viewing
+5. Shows multiple ways to access, filter, and analyze data with pandas
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Pandas library (`pip install pandas`)
+
+### Link to Code
+
+[View Code →](Day25/main.py)
+
+---
+
+<!-- Additional sections for Day 26 to Day 30 can follow this structure -->
