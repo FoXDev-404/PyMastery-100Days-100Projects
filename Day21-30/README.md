@@ -10,7 +10,7 @@
 - [Day 23: Turtle Crossing Game](#day-23-turtle-crossing-game)
 - [Day 24: Mail Merge Project](#day-24-mail-merge-project)
 - [Day 25: Pandas Data Analysis](#day-25-pandas-data-analysis)
-- [Day 26: Placeholder Project](#day-26-placeholder-project)
+- [Day 26: NATO Alphabet Project](#day-26-nato-alphabet-project)
 
 </details>
 
@@ -215,30 +215,40 @@
 
 ---
 
-<a name="day-26-placeholder-project"></a>
+<a name="day-26-nato-alphabet-project"></a>
 
-## Day 26: Placeholder Project 🚀
+## Day 26: NATO Alphabet Project 🔤
 
-- **Description**: Project description for Day 26 goes here.
+- **Description**: A program that converts words into their NATO phonetic alphabet equivalents using Python and pandas.
 - **What I Learned**:
-  - Key learning points for Day 26
+  - **Dictionary Comprehensions** – Creating dictionaries efficiently from DataFrames
+  - **User Input Validation** – Handling invalid input gracefully
+  - **Data Mapping** – Mapping user input to corresponding phonetic code words
+  - **Error Handling** – Using try/except for robust user experience
 
 ### Features
 
-- List of features for Day 26 project
+- Converts any word into a list of NATO phonetic code words
+- Handles both uppercase and lowercase input
+- Provides clear error messages for invalid characters
+- Reads the NATO alphabet from a CSV file using pandas
 
-### How to Use
+### How It Works
 
-1. Instructions for running or using the Day 26 project.
+1. The program loads a CSV file containing the NATO alphabet.
+2. It creates a dictionary mapping each letter to its code word.
+3. The user enters a word; the program outputs the phonetic code words.
+4. If the input contains non-alphabetic characters, the user is prompted again.
 
 ### Prerequisites
 
 - Python 3.8 or higher
-- Any additional requirements
+- Pandas library (`pip install pandas`)
+- `nato_phonetic_alphabet.csv` file in the project directory
 
 ### Link to Code
 
-[View Code →](Day26/main.py)
+[View Code →](Day26/NATO-alphabet/main.py)
 
 ---
 
