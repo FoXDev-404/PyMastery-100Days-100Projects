@@ -14,3 +14,16 @@ print(short_names)  # Output: ['Alex', 'Beth', 'Dave']
 
 long_names = [name.upper() for name in names if len(name) > 5]
 print(long_names)
+
+
+
+# TODO: =============== Dictionary Comprehension ================== #
+import random
+
+names = ["Alex", "Beth", "Carolina", "Dave", "Elanor", "Freddie"]
+students_scores = {student: random.randint(1, 100) for student in names} # Dictionary comprehension
+print(students_scores)
+passed_students = {student: "pass" for student, score in students_scores.items() if score >= 50} # Dictionary comprehension with condition
+print(passed_students)
+failed_students = {student: "fail" for student, score in students_scores.items() if score < 50}
+print(failed_students)
