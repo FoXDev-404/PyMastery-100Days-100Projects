@@ -40,3 +40,22 @@ print(result)
 weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
 weather_f = {day: temp * 9/5 + 32 for day, temp in weather_c.items()}
 print(weather_f)
+
+
+# How to iterate over a Panda DataFrame
+import pandas as pd
+
+student_dict = {
+    "student": ["Alex", "Beth", "Carolina", "Dave", "Elanor", "Freddie"],
+    "score": [56, 78, 45, 89, 90, 100]
+}
+
+student_df = pd.DataFrame(student_dict)
+
+# Loop through rows of the DataFrame
+for (index, row) in student_df.iterrows():
+    print(index, row)
+    # print(row.student)  # Accessing the student name
+    # print(row.score)    # Accessing the score
+    if row.student == "Alex":
+        print("Alex's score is:", row.score)
