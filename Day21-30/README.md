@@ -10,6 +10,7 @@
 - [Day 23: Turtle Crossing Game](#day-23-turtle-crossing-game)
 - [Day 24: Mail Merge Project](#day-24-mail-merge-project)
 - [Day 25: Pandas Data Analysis](#day-25-pandas-data-analysis)
+- [Day 26: Placeholder Project](#day-26-placeholder-project)
 
 </details>
 
@@ -214,4 +215,31 @@
 
 ---
 
-<!-- Additional sections for Day 26 to Day 30 can follow this structure -->
+<a name="day-26-placeholder-project"></a>
+
+## Day 26: Placeholder Project 🚀
+
+- **Description**: Project description for Day 26 goes here.
+- **What I Learned**:
+  - Key learning points for Day 26
+
+### Features
+
+- List of features for Day 26 project
+
+### How to Use
+
+1. Instructions for running or using the Day 26 project.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Any additional requirements
+
+### Link to Code
+
+[View Code →](Day26/main.py)
+
+---
+
+<!-- Additional sections for Day 27 to Day 30 can follow this structure -->
