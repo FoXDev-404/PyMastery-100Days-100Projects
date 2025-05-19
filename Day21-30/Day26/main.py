@@ -27,3 +27,16 @@ passed_students = {student: "pass" for student, score in students_scores.items()
 print(passed_students)
 failed_students = {student: "fail" for student, score in students_scores.items() if score < 50}
 print(failed_students)
+
+
+# =============== Coding Exercise ================== #
+# 1. Create a dictionary where the keys are the words in the sentence and the values are the lengths of those words.
+sentence = "What is the Airspeed Velocity of an Unladen Swallow?"
+result = {word:len(word) for word in sentence.split()}
+print(result)
+
+# 2. Convert the Celsius temperatures to Fahrenheit using dictionary comprehension.
+# Formula: F = C * 9/5 + 32
+weather_c = {"Monday": 12, "Tuesday": 14, "Wednesday": 15, "Thursday": 14, "Friday": 21, "Saturday": 22, "Sunday": 24}
+weather_f = {day: temp * 9/5 + 32 for day, temp in weather_c.items()}
+print(weather_f)
