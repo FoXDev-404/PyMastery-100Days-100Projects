@@ -11,22 +11,17 @@ label.pack()
 
 # Button
 def button_clicked():
-    label.config(text="Button Clicked!") # Update label text when button is clicked
+    print("I got clicked!")
+    new_text = input.get()
+    label.config(text=new_text) # Update label text when button is clicked
 
-# button = Button(text="Click Me", font=("Arial", 14), command=button_clicked)
-# button.pack()
-
-# Entry
-input = Entry(width=30)
-input.pack()
-input.get() # Get the text from the entry field
-def get_input():
-    user_input = input.get()
-    label.config(text=user_input)
-
-button = Button(text="Submit", font=("Arial", 14), command=get_input)
+button = Button(text="Click Me", font=("Arial", 14), command=button_clicked)
 button.pack()
 
+# Entry+
+input = Entry(width=30)
+input.pack()
+input.get()
 
 
 
