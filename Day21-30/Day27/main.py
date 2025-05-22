@@ -1,34 +1,41 @@
-# Graphical User Interface (GUI) using Tkinter
 from tkinter import *
 
 
-# Button
 def button_clicked():
-    print("I got clicked!")
+    print("I got clicked")
     new_text = input.get()
-    label.config(text=new_text) # Update label text when button is clicked
+    my_label.config(text=new_text)
 
 
 window = Tk()
 window.title("My First GUI Program")
 window.minsize(width=500, height=300)
+window.config(padx=100, pady=200)
 
-# Label
-label = Label(text="Hello, Tkinter!", font=("Arial", 24, "italic"))
-label.config(text="New Text")
-label.pack()
+#Label
+my_label = Label(text="I Am a Label", font=("Arial", 24, "bold"))
+my_label.config(text="New Text")
+my_label.grid(column=0, row=0)
+my_label.config(padx=50, pady=50)
 
-# Button
-button = Button(text="Click Me", font=("Arial", 14), command=button_clicked)
-button.pack()
+#Button
+button = Button(text="Click Me", command=button_clicked)
+button.grid(column=1, row=1)
 
-# Entry
-input = Entry(width=30)
+new_button = Button(text="New Button")
+new_button.grid(column=2, row=0)
+
+#Entry
+input = Entry(width=10)
 print(input.get())
-input.pack()
+input.grid(column=3, row=2)
 
 
 
 
-# Keep the window open
+
+
+
+
+
 window.mainloop()
