@@ -11,6 +11,7 @@
 - [Day 24: Mail Merge Project](#day-24-mail-merge-project)
 - [Day 25: Pandas Data Analysis](#day-25-pandas-data-analysis)
 - [Day 26: NATO Alphabet Project](#day-26-nato-alphabet-project)
+- [Day 27: Tkinter GUI](#day-27-tkinter-gui)
 
 </details>
 
@@ -252,4 +253,47 @@
 
 ---
 
-<!-- Additional sections for Day 27 to Day 30 can follow this structure -->
+<a name="day-27-tkinter-gui"></a>
+
+## Day 27: Tkinter GUI 🖥️
+
+- **Description**: An introduction to GUI programming in Python using Tkinter, culminating in a miles-to-kilometers converter application.
+- **What I Learned**:
+  - **Tkinter Basics** – Creating windows, labels, buttons, and entry fields
+  - **Layout Management** – Using grid layout system for precise widget positioning
+  - **Event Handling** – Connecting buttons to functions and keyboard events
+  - **Input Validation** – Handling user input with error checking
+  - **Variable Classes** – Using StringVar, IntVar for dynamic widget content
+  - **Advanced Args/Kwargs** – Using *args and **kwargs for flexible function parameters
+
+### Features of Miles-to-Kilometers Converter
+
+- Convert between miles and kilometers in both directions
+- Clean, user-friendly interface with proper spacing and alignment
+- Real-time formula display showing the calculation performed
+- History tracking of recent conversions
+- Input validation with error handling
+- Keyboard shortcuts (Enter to convert, Escape to reset)
+- Responsive design with proper padding and margins
+
+### How It Works
+
+1. Select the direction of conversion (miles to km or km to miles)
+2. Enter a numeric value in the input field
+3. Press "Calculate" button or hit Enter to perform the conversion
+4. View the result and the formula used for calculation
+5. Previous conversions are stored in the history box
+6. Press "Reset" button or hit Escape to clear the input
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Tkinter (included with standard Python installation)
+
+### Link to Code
+
+[View Code →](Day27/mile_to_kilo_converter.py)
+
+---
+
+<!-- Additional sections for Day 28 to Day 30 can follow this structure -->
