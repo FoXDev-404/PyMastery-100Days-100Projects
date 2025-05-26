@@ -43,21 +43,29 @@ def start_timer():
             title_label.config(text="Break", fg=PINK)
         else:
             count_down(work_sec)
+            # Set UI to display current Work session
             title_label.config(text="Work", fg=GREEN)
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- # 
 def count_down(count):
+    # Convert total seconds into minutes and seconds for display
     count_min = math.floor(count // 60)
     count_sec = count % 60
 
+    # Update the timer display with formatted time (zero-padded)
     canvas.itemconfig(timer_text, text=f"{count_min:02}:{count_sec:02}")
+    
     if count > 0:
+        # Continue countdown by scheduling the next second
         global timer
         timer = window.after(1000, count_down, count - 1)
     else:
+        # When countdown completes:
         global timer_running
         timer_running = False
+        # Start the next session (work or break)
         start_timer()
+        # Update checkmarks to show completed work sessions
         marks = ""
         work_sessions = math.floor(reps / 2)
         for _ in range(work_sessions):
@@ -67,12 +75,16 @@ def count_down(count):
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
 window.title("Pomodoro")
+# Configure the main window with padding and background color
 window.config(padx=100, pady=50, bg=YELLOW)
 
+# Create the main title label that displays current session type
 title_label = Label(text="Timer", fg=GREEN, bg=YELLOW, font=(FONT_NAME, 50, "bold"))
 title_label.grid(column=1, row=0)
 
+# Create the canvas for displaying the tomato image and timer text
 canvas = Canvas(width=200, height=224, bg=YELLOW, highlightthickness=0)
+# Load and display the tomato image
 tomato_img = PhotoImage(file="tomato.png")
 canvas.create_image(100, 112, image=tomato_img)
 timer_text = canvas.create_text(100, 132, text="00:00", fill="white", font=(FONT_NAME, 26, "bold"))
