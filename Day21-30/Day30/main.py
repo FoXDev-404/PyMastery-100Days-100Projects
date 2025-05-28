@@ -16,8 +16,7 @@ else:
     content = file.read()
     print(content)
 finally:
-    file.close()
-    print("FIle was closed.")
+    raise KeyError("This is a custom KeyError message.") # Raising a custom KeyError
 
 # KeyError
 # my_dict = {"name": "Alice"}
