@@ -30,3 +30,16 @@ finally:
 # def add_numbers(a, b):
 #     return a + b
 # print(add_numbers(5, "10"))
+
+
+
+hight = float(input("Enter your height in meters: "))
+weight = float(input("Enter your weight in kilograms: "))
+
+if hight > 3:
+    raise ValueError("Height cannot be greater than 3 meters.")
+if weight < 0:
+    raise ValueError("Weight cannot be negative.")
+
+bmi = weight / (hight ** 2)
+print(f"Your BMI is: {bmi:.2f}")
