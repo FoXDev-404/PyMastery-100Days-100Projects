@@ -1,7 +1,9 @@
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import messagebox, simpledialog
 import random
 import string
+import json
+import os
 
 # ---------------------------- CONSTANTS ------------------------------- #
 FONT = ("Arial", 10, "bold")
@@ -9,136 +11,195 @@ FONT = ("Arial", 10, "bold")
 MAUVE = "#C599B6"
 PINK = "#E6B2BA"
 PEACH = "#FAD0C4"
-BG_COLOR = "#FFF7F3"  # Light background color
-TEXT_COLOR = "#333333"  # Dark text for contrast
-WHITE = "#FFFFFF"  # White background for entries
-DATA_FILE = "data.txt"
-SEPARATOR = "=" * 50  # Separator for entries in the text file
+BG_COLOR = "#FFF7F3"
+TEXT_COLOR = "#333333"
+WHITE = "#FFFFFF"
+DATA_FILE = "data.json"
+
+# ---------------------------- HELPER FUNCTIONS ------------------------------- #
+def create_button(parent, text, command, bg=PINK, width=None, grid_args=None):
+    """Create a styled button with consistent appearance"""
+    btn = tk.Button(
+        parent, text=text, command=command, font=FONT, bg=bg, fg=TEXT_COLOR,
+        borderwidth=1, cursor="hand2", width=width
+    )
+    if grid_args:
+        btn.grid(**grid_args)
+    return btn
+
+def create_label(parent, text, width=None, grid_args=None):
+    """Create a styled label with consistent appearance"""
+    lbl = tk.Label(
+        parent, text=text, font=FONT, bg=BG_COLOR, fg=TEXT_COLOR, 
+        anchor="e", width=width
+    )
+    if grid_args:
+        lbl.grid(**grid_args)
+    return lbl
+
+def create_entry(parent, width, grid_args=None, initial_text=None):
+    """Create a styled entry with consistent appearance"""
+    entry = tk.Entry(parent, width=width, font=FONT, bg=WHITE, insertbackground="gray")
+    if grid_args:
+        entry.grid(**grid_args)
+    if initial_text:
+        entry.insert(0, initial_text)
+    return entry
+
+def show_message(title, message, is_error=False):
+    """Show a message dialog"""
+    if is_error:
+        messagebox.showerror(title=title, message=message)
+    else:
+        messagebox.showinfo(title=title, message=message)
+
+def ask_question(title, message):
+    """Ask a yes/no question"""
+    return messagebox.askokcancel(title=title, message=message)
 
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
-    """
-    Generates a secure random password containing letters, numbers, and symbols.
-    The password is then inserted into the password entry field.
-    """
-    # Use string module for character sets
+    """Generate a secure random password"""
     letters = list(string.ascii_lowercase + string.ascii_uppercase)
     numbers = list(string.digits)
     symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-    # Create password list with random characters using list comprehensions
     password_letters = [random.choice(letters) for _ in range(random.randint(8, 10))]
     password_symbols = [random.choice(symbols) for _ in range(random.randint(2, 4))]
     password_numbers = [random.choice(numbers) for _ in range(random.randint(2, 4))]
     
-    # Combine and shuffle the password
     password_list = password_letters + password_symbols + password_numbers
     random.shuffle(password_list)
     password = "".join(password_list)
     
-    # Update entry and clipboard
     password_entry.delete(0, tk.END)
     password_entry.insert(0, password)
     window.clipboard_clear()
     window.clipboard_append(password)
 
-# ---------------------------- TEXT FILE FUNCTIONS ------------------------------- #
-def save_to_text_file(data_dict):
-    """Save the data dictionary to a beautifully formatted text file."""
-    with open(DATA_FILE, "w") as data_file:
-        for website, details in data_dict.items():
-            data_file.write(f"Website: {website}\n")
-            data_file.write(f"Email: {details['email']}\n")
-            data_file.write(f"Password: {details['password']}\n")
-            data_file.write(f"{SEPARATOR}\n")
-
-def load_from_text_file():
-    """Load data from the text file into a dictionary."""
-    data_dict = {}
+# ---------------------------- FILE OPERATIONS ------------------------------- #
+def save_data(data):
+    """Save data to file with backup"""
+    if os.path.exists(DATA_FILE):
+        backup_file = f"{DATA_FILE}.bak"
+        try:
+            with open(DATA_FILE, "r") as source, open(backup_file, "w") as target:
+                target.write(source.read())
+        except Exception as e:
+            print(f"Backup creation failed: {e}")
+    
     try:
-        with open(DATA_FILE, "r") as data_file:
-            content = data_file.read().strip()
-            if not content:  # Empty file
-                return {}
-                
-            # Split by separator to get individual entries
-            entries = content.split(SEPARATOR)
-            for entry in entries:
-                if not entry.strip():  # Skip empty entries
-                    continue
-                    
-                lines = entry.strip().split("\n")
-                if len(lines) >= 3:  # Ensure we have website, email, and password
-                    website = lines[0].replace("Website: ", "")
-                    email = lines[1].replace("Email: ", "")
-                    password = lines[2].replace("Password: ", "")
-                    
-                    data_dict[website] = {
-                        "email": email,
-                        "password": password
-                    }
-        return data_dict
-    except FileNotFoundError:
+        with open(DATA_FILE, "w") as data_file:
+            json.dump(data, data_file, indent=4)
+        return True
+    except Exception as e:
+        show_message("Save Error", f"Failed to save data: {e}", is_error=True)
+        return False
+
+def load_data():
+    """Load data from file with fallback to backup"""
+    try:
+        if os.path.exists(DATA_FILE) and os.path.getsize(DATA_FILE) > 0:
+            with open(DATA_FILE, "r") as data_file:
+                return json.load(data_file)
         return {}
+    except json.JSONDecodeError:
+        # Try to load from backup
+        backup_file = f"{DATA_FILE}.bak"
+        if os.path.exists(backup_file):
+            try:
+                with open(backup_file, "r") as backup:
+                    return json.load(backup)
+            except:
+                pass
+        return {}
+    except:
+        return {}
+
+def find_website(website, data=None):
+    """Find website in data (case-insensitive)"""
+    if data is None:
+        data = load_data()
+    
+    # Exact match check (case-insensitive)
+    for site in data.keys():
+        if site.lower() == website.lower():
+            return site
+    
+    # Partial match check
+    partial_matches = {site: info for site, info in data.items() 
+                      if website.lower() in site.lower()}
+    return partial_matches
 
 # ---------------------------- FIND PASSWORD ------------------------------- #
 def find_password():
-    website = website_entry.get()
-    if len(website) == 0:
-        messagebox.showerror(title="Error", message="Please enter a website to search.")
+    """Search for website and display credentials"""
+    website = website_entry.get().strip()
+    if not website:
+        show_message("Error", "Please enter a website to search.", is_error=True)
         return
     
-    try:
-        data = load_from_text_file()
-    except Exception as e:
-        messagebox.showerror(title="Error", message=f"Error reading data file: {str(e)}")
-        return
+    data = load_data()
+    exact_match = find_website(website, data)
     
-    if website in data:
-        email = data[website]["email"]
-        password = data[website]["password"]
-        messagebox.showinfo(title=website, message=f"Email: {email}\nPassword: {password}")
+    if isinstance(exact_match, str):  # Found one exact match
+        credentials = data[exact_match]
+        show_message(exact_match, f"Email: {credentials['email']}\nPassword: {credentials['password']}")
+    elif exact_match:  # Found partial matches
+        if len(exact_match) == 1:
+            site = list(exact_match.keys())[0]
+            credentials = exact_match[site]
+            show_message(f"Found: {site}", f"Email: {credentials['email']}\nPassword: {credentials['password']}")
+        else:
+            # Multiple matches - use simpledialog to choose
+            sites = list(exact_match.keys())
+            choice = simpledialog.askstring(
+                "Multiple Matches", 
+                f"Found {len(sites)} matches. Choose one:\n" + "\n".join([f"{i+1}. {s}" for i, s in enumerate(sites)]),
+                parent=window
+            )
+            if choice and choice.isdigit() and 0 < int(choice) <= len(sites):
+                site = sites[int(choice)-1]
+                credentials = exact_match[site]
+                show_message(f"Details for: {site}", f"Email: {credentials['email']}\nPassword: {credentials['password']}")
     else:
-        messagebox.showinfo(title="Not Found", message=f"No details for {website} exists.")
+        show_message("Not Found", f"No details for '{website}' exists.")
 
 # ---------------------------- SAVE PASSWORD ------------------------------- #
 def save():
-    website = website_entry.get()
-    email = email_entry.get()
-    password = password_entry.get()
+    """Save website credentials"""
+    website = website_entry.get().strip()
+    email = email_entry.get().strip()
+    password = password_entry.get().strip()
     
-    new_data = {
-        website: {
-            "email": email,
-            "password": password,
-        }
-    }
-
-    if len(website) == 0 or len(password) == 0:
-        messagebox.showerror(title="Error", message="Please don't leave any fields empty.")
+    if not website or not password:
+        show_message("Error", "Please don't leave any fields empty.", is_error=True)
         return
     
-    is_ok = messagebox.askokcancel(title=website, 
-                                   message=f"These are the details entered:\nEmail: {email}\n"
-                                           f"Password: {password}\nIs it ok to save?")
-    if not is_ok:
-        return
+    data = load_data()
+    existing_site = find_website(website, data)
     
-    # Load existing data
-    try:
-        data = load_from_text_file()
-    except Exception:
-        data = {}
+    if isinstance(existing_site, str):  # Site exists
+        # Ask what to do
+        if not ask_question("Entry Exists", 
+                          f"An entry for '{existing_site}' already exists.\nDo you want to update it?"):
+            # Ask if user wants to create new entry
+            create_new = ask_question("Create New", 
+                                    f"Would you like to create a new entry instead?")
+            if not create_new:
+                return
+            
+            # Create with different name
+            website = f"{website} ({len([k for k in data.keys() if website.lower() in k.lower()])})"
     
-    # Update the data dictionary with new data
-    data.update(new_data)
+    # Save new or updated entry
+    data[website] = {"email": email, "password": password}
     
-    # Write updated data to file
-    save_to_text_file(data)
-        
-    website_entry.delete(0, tk.END)
-    password_entry.delete(0, tk.END)
-    website_entry.focus()
+    if save_data(data):
+        website_entry.delete(0, tk.END)
+        password_entry.delete(0, tk.END)
+        website_entry.focus()
+        show_message("Success", f"Saved details for '{website}'")
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = tk.Tk()
@@ -152,64 +213,29 @@ logo_img = tk.PhotoImage(file="logo.png")
 canvas.create_image(100, 100, image=logo_img)
 canvas.grid(row=0, column=1, pady=(0, 20))
 
-# Labels with consistent styling
-website_label = tk.Label(text="Website:", font=FONT, bg=BG_COLOR, fg=TEXT_COLOR, anchor="e", width=13)
-website_label.grid(row=1, column=0, sticky="e", pady=5)
+# Labels
+create_label(window, "Website:", width=13, grid_args={"row": 1, "column": 0, "sticky": "e", "pady": 5})
+create_label(window, "Email/Username:", width=13, grid_args={"row": 2, "column": 0, "sticky": "e", "pady": 5})
+create_label(window, "Password:", width=13, grid_args={"row": 3, "column": 0, "sticky": "e", "pady": 5})
 
-email_label = tk.Label(text="Email/Username:", font=FONT, bg=BG_COLOR, fg=TEXT_COLOR, anchor="e", width=13)
-email_label.grid(row=2, column=0, sticky="e", pady=5)
+# Entries
+website_entry = create_entry(window, width=21, 
+                            grid_args={"row": 1, "column": 1, "sticky": "ew", "pady": 5})
+email_entry = create_entry(window, width=38, initial_text="rajpal010304@gmail.com",
+                          grid_args={"row": 2, "column": 1, "columnspan": 2, "sticky": "ew", "pady": 5})
+password_entry = create_entry(window, width=21,
+                             grid_args={"row": 3, "column": 1, "sticky": "ew", "pady": 5})
 
-password_label = tk.Label(text="Password:", font=FONT, bg=BG_COLOR, fg=TEXT_COLOR, anchor="e", width=13)
-password_label.grid(row=3, column=0, sticky="e", pady=5)
+# Buttons
+create_button(window, "Search", find_password, bg=MAUVE, width=13,
+             grid_args={"row": 1, "column": 2, "sticky": "ew", "padx": (5, 0), "pady": 5})
+create_button(window, "Generate Password", generate_password, bg=PINK, width=17,
+             grid_args={"row": 3, "column": 2, "sticky": "ew", "padx": (5, 0), "pady": 5})
+create_button(window, "Add", save, bg=PEACH, width=36,
+             grid_args={"row": 4, "column": 1, "columnspan": 2, "sticky": "ew", "pady": (10, 0)})
 
-# Entry fields with improved styling
-website_entry = tk.Entry(width=21, font=FONT, bg=WHITE, insertbackground="gray")
-website_entry.grid(row=1, column=1, sticky="ew", pady=5)
+# Set focus to website entry
 website_entry.focus()
-
-email_entry = tk.Entry(width=38, font=FONT, bg=WHITE, insertbackground="gray")
-email_entry.grid(row=2, column=1, columnspan=2, sticky="ew", pady=5)
-email_entry.insert(0, "rajpal010304@gmail.com")
-
-password_entry = tk.Entry(width=21, font=FONT, bg=WHITE, insertbackground="gray")
-password_entry.grid(row=3, column=1, sticky="ew", pady=5)
-
-# Buttons with improved styling and new color palette
-search_button = tk.Button(
-    text="Search", 
-    command=find_password,
-    width=13, 
-    font=FONT,
-    bg=MAUVE,
-    fg=TEXT_COLOR,  # Dark text color for better visibility
-    borderwidth=1,
-    cursor="hand2"
-)
-search_button.grid(row=1, column=2, sticky="ew", padx=(5, 0), pady=5)
-
-generate_password_button = tk.Button(
-    text="Generate Password", 
-    command=generate_password,
-    width=17,  # Increased from 13 to 17 for better text fit
-    font=FONT,
-    bg=PINK,
-    fg=TEXT_COLOR,  # Dark text color for better visibility
-    borderwidth=1,
-    cursor="hand2"
-)
-generate_password_button.grid(row=3, column=2, sticky="ew", padx=(5, 0), pady=5)
-
-add_password_button = tk.Button(
-    text="Add", 
-    width=36, 
-    command=save,
-    font=FONT,
-    bg=PEACH,
-    fg=TEXT_COLOR,  # Dark text color for better visibility
-    borderwidth=1,
-    cursor="hand2"
-)
-add_password_button.grid(row=4, column=1, columnspan=2, sticky="ew", pady=(10, 0))
 
 # Configure grid column weights for proper resizing
 window.columnconfigure(1, weight=1)
