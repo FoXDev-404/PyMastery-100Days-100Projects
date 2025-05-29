@@ -13,6 +13,7 @@
 - [Day 26: NATO Alphabet Project](#day-26-nato-alphabet-project)
 - [Day 27: Tkinter GUI](#day-27-tkinter-gui)
 - [Day 28: Pomodoro Timer](#day-28-pomodoro-timer)
+- [Day 29: Password Manager](#day-29-password-manager)
 
 </details>
 
@@ -340,4 +341,51 @@
 
 ---
 
-<!-- Additional sections for Day 29 to Day 30 can follow this structure -->
+<a name="day-29-password-manager"></a>
+
+## Day 29: Password Manager 🔐
+
+- **Description**: A secure password manager application built with Tkinter that helps generate, store, and retrieve website login credentials.
+- **What I Learned**:
+  - **Secure Password Generation** - Creating strong random passwords with Python
+  - **Formatted Text File Storage** - Reading from and writing to beautifully formatted JSON files
+  - **Tkinter UI Design** - Building an attractive user interface with custom color palette
+  - **Clipboard Integration** - Copying generated passwords to the clipboard
+  - **Data Structure Design** - Organizing and storing credentials efficiently
+  - **Error Handling** - Implementing robust error handling for file operations
+
+### Features
+
+- Generate strong random passwords with letters, numbers, and symbols
+- Store website credentials (website, email, password) in a beautifully formatted JSON file
+- Search for saved credentials by website name
+- Elegant UI with a soft pastel color palette (Mauve, Pink, Peach, and Light background)
+- High contrast text for better readability
+- Automatic copying of generated passwords to clipboard
+- Input validation to prevent saving incomplete credentials
+- Confirmation dialog before saving new credentials
+- Error handling for file operations and data retrieval
+
+### How to Use
+
+1. Run the script using `python main.py` in the `Day29` directory
+2. Enter the website name in the "Website" field
+3. Enter or use the pre-filled email in the "Email/Username" field
+4. Either enter a password manually or click "Generate Password"
+5. Click "Add" to save the credentials
+6. To retrieve credentials, enter a website name and click "Search"
+7. Generated passwords are automatically copied to your clipboard
+  
+### Prerequisites
+
+- Python 3.8 or higher
+- Tkinter (included with standard Python installation)
+- "logo.png" image file in the project directory
+
+### Link to Code
+
+[View Code →](Day29/main.py)
+
+---
+
+<!-- Additional sections for Day 30 can follow this structure -->
