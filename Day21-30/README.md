@@ -14,6 +14,7 @@
 - [Day 27: Tkinter GUI](#day-27-tkinter-gui)
 - [Day 28: Pomodoro Timer](#day-28-pomodoro-timer)
 - [Day 29: Password Manager](#day-29-password-manager)
+- [Day 30: Error Handling and JSON Data](#day-30-error-handling)
 
 </details>
 
@@ -375,7 +376,7 @@
 5. Click "Add" to save the credentials
 6. To retrieve credentials, enter a website name and click "Search"
 7. Generated passwords are automatically copied to your clipboard
-  
+
 ### Prerequisites
 
 - Python 3.8 or higher
@@ -388,4 +389,45 @@
 
 ---
 
-<!-- Additional sections for Day 30 can follow this structure -->
+<a name="day-30-error-handling"></a>
+
+## Day 30: Error Handling and JSON Data 🐛
+
+- **Description**: A deep dive into Python's exception handling mechanisms and working with JSON data to improve application robustness.
+- **What I Learned**:
+  - **Exception Handling** - Using try/except/else/finally blocks effectively
+  - **Custom Exceptions** - Creating and raising custom exception messages
+  - **Multiple Exception Types** - Handling different exception types separately
+  - **Input Validation** - Using exceptions for data validation
+  - **JSON Data Management** - Reading from and writing to JSON files
+  - **Error Recovery** - Implementing graceful error recovery strategies
+
+### Features
+
+- Exception handling for various error types (FileNotFoundError, KeyError, etc.)
+- Automatic file creation when files don't exist
+- Custom exception raising with meaningful error messages
+- Graceful error recovery with appropriate user feedback
+- Input validation using exceptions (BMI calculator example)
+- Enhanced Password Manager with JSON data storage and search functionality
+
+### Concepts Covered
+
+1. **Try/Except Pattern**: Properly structured error handling
+2. **Exception Types**: Handling specific exception types differently
+3. **Else/Finally Blocks**: Executing code conditionally after try blocks
+4. **Custom Exceptions**: Raising exceptions with custom messages
+5. **Input Validation**: Using exceptions to validate user input
+6. **File Handling**: Dealing with missing files gracefully
+7. **JSON Data**: Converting between Python objects and JSON format
+
+### Prerequisites
+
+- Python 3.8 or higher
+- JSON module (included in standard Python library)
+
+### Link to Code
+
+[View Code →](Day30/main.py)
+
+---
