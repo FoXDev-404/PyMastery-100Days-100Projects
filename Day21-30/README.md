@@ -18,7 +18,7 @@
 
 </details>
 
-## 📅 Day 21–30 Projects [🚧 In Progress]
+## 📅 Day 21–30 Projects [10/10 Completed]
 
 ---
 
