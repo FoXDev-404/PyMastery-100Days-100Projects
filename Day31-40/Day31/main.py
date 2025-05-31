@@ -1,1 +1,2 @@
-# Capstone Project - Flash Card Program
+BACKGROUND_COLOR = "#B1DDC6"
+
