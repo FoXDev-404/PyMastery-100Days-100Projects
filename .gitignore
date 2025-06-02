@@ -1,0 +1,61 @@
+# ========================
+# Environment Variables
+# ========================
+.env
+.env.*
+!.env.example
+
+# ========================
+# Python Bytecode & Cache
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# =========================
+# Distribution / Packaging
+# =========================
+.Python
+build/
+dist/
+downloads/
+develop-eggs/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# =================
+# Virtual Environments
+# =================
+venv/
+env/
+ENV/
+.venv/
+.env/
+env.bak/
+venv.bak/
+
+# =================
+# Editor Files
+# =================
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# =================
+# Project Specific
+# =================
+data/words_to_learn.csv
