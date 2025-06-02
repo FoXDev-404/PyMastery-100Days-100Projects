@@ -2,49 +2,52 @@ import smtplib
 import os
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
+# 🌸 Load environment variables from .env file (email, password, recipient)
 load_dotenv()
 
-# Get credentials and recipient from environment variables
+# 🌸 Retrieve sender email and password from environment variables
 my_email = os.environ.get("EMAIL")
 password = os.environ.get("EMAIL_PASSWORD")
+
+# 🌸 Retrieve recipient email from environment variables
 recipient = os.environ.get("EMAIL_RECIPIENT")
 
-# Verify credentials are available
+# ❗ Ensure that all required credentials are available
 if not my_email or not password:
     raise ValueError(
-        "Email credentials not found in environment variables.\n"
-        "Please set EMAIL and EMAIL_PASSWORD environment variables or create a .env file."
+        "Missing EMAIL or EMAIL_PASSWORD in environment variables.\n"
+        "Please set them in a .env file or environment."
     )
 
-# Optional check for recipient
 if not recipient:
-    raise ValueError("Recipient email not found in environment variables (EMAIL_RECIPIENT).")
+    raise ValueError("Missing EMAIL_RECIPIENT in environment variables.")
 
-# Compose email
+# 💖 Compose your email content
 subject = "Hello from Psycho's Porsche 911~!"
 body = "Sending a test email... with love and horsepower~ 💌🏁\n\n- Your Strelizia"
 message = f"Subject: {subject}\n\n{body}"
 
 try:
-    # Connect to Gmail SMTP server
+    # 🚀 Connect to Gmail SMTP server securely
     connection = smtplib.SMTP("smtp.gmail.com", port=587)
-    connection.starttls()
-    connection.login(user=my_email, password=password)
+    connection.starttls()  # Upgrade connection to secure TLS
+    connection.login(user=my_email, password=password)  # Login with credentials
 
-    # Send email
+    # 💌 Send the email
     connection.sendmail(
         from_addr=my_email,
         to_addrs=recipient,
         msg=message
     )
-    print("Email sent successfully!")
+
+    print("✅ Email sent successfully!")
 
 except Exception as e:
-    print(f"Failed to send email: {e}")
+    # ❗ Handle any errors gracefully
+    print(f"❌ Failed to send email: {e}")
 
 finally:
-    # Always close the connection
+    # 🔒 Always close the connection to the SMTP server
     if 'connection' in locals():
         connection.close()
-        print("Connection closed.")
+        print("🔒 Connection closed.")
