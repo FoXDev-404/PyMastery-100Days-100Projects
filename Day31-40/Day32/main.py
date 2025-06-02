@@ -39,8 +39,3 @@ finally:
     if 'connection' in locals():
         connection.close()
         print("Connection closed.")
-# Note: Replace 'your_email@example.com' and 'your_password' with your actual email and password.
-# Make sure to enable "Less secure app access" in your Google account settings if using Gmail.
-# Also, consider using environment variables or a secure vault for storing sensitive information like email and password.
-# Ensure you have the smtplib library available in your Python environment.
-# Make sure to handle exceptions and errors in production code for better reliability.
