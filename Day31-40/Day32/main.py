@@ -5,40 +5,52 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-def send_email(subject, body, to_email=None):
-    # Get credentials from environment variables
-    sender_email = os.environ.get("EMAIL")
-    password = os.environ.get("EMAIL_PASSWORD")
-    recipient = to_email or os.environ.get("EMAIL_RECIPIENT")
+def send_email(subject, body, to_email=None, from_email=None, password=None):
+    """
+    Send a simple email using SMTP.
+    
+    Args:
+        subject (str): Email subject
+        body (str): Email body
+        to_email (str, optional): Recipient email. Defaults to environment variable.
+        from_email (str, optional): Sender email. Defaults to environment variable.
+        password (str, optional): Sender password. Defaults to environment variable.
+    
+    Returns:
+        bool: True if email was sent successfully, False otherwise
+    """
+    # Get credentials from environment variables if not provided
+    from_email = from_email or os.environ.get("EMAIL")
+    password = password or os.environ.get("EMAIL_PASSWORD")
+    to_email = to_email or os.environ.get("EMAIL_RECIPIENT")
     
     # Validate credentials
-    if not sender_email:
-        raise ValueError("Sender email address not found in environment variables")
+    if not from_email:
+        raise ValueError("Sender email address not provided")
     if not password:
-        raise ValueError("Email password not found in environment variables")
-    if not recipient:
-        raise ValueError("Recipient email address not found in environment variables")
+        raise ValueError("Email password not provided")
+    if not to_email:
+        raise ValueError("Recipient email address not provided")
     
-    # Compose the email message
+    # Format the email message
     message = f"Subject: {subject}\n\n{body}"
     
     try:
         # Connect to Gmail SMTP server
-        with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
-            # Secure the connection
-            connection.starttls()
-            
-            # Login to sender account
-            connection.login(user=sender_email, password=password)
-            
-            # Send email
-            connection.sendmail(
-                from_addr=sender_email,
-                to_addrs=recipient,
-                msg=message
-            )
-            
-        print(f"Email sent successfully to {recipient}")
+        connection = smtplib.SMTP("smtp.gmail.com", port=587)
+        connection.starttls()  # Secure the connection
+        
+        # Login to sender account
+        connection.login(user=from_email, password=password)
+        
+        # Send email
+        connection.sendmail(
+            from_addr=from_email,
+            to_addrs=to_email,
+            msg=message
+        )
+        
+        print("Email sent successfully!")
         return True
         
     except smtplib.SMTPAuthenticationError:
@@ -50,11 +62,22 @@ def send_email(subject, body, to_email=None):
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
         return False
+        
+    finally:
+        # Always close the connection
+        if 'connection' in locals():
+            connection.close()
+            print("Connection closed.")
 
 
 if __name__ == "__main__":
     # Example usage
-    subject = "Test Email from Python"
-    body = "Hello from Python!\n\nThis is a test email sent using smtplib.\n\nBest regards,\nPython Script"
+    subject = "Hello from Python Email Sender"
+    body = "This is a test email sent from the Python Email Sender application.\n\nRegards,\nPython Script"
     
-    send_email(subject, body)
+    success = send_email(subject, body)
+    
+    if success:
+        print("Email sent successfully!")
+    else:
+        print("Failed to send email. Check the error messages for details.")
