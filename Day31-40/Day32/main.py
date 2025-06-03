@@ -6,19 +6,6 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def send_email(subject, body, to_email=None, from_email=None, password=None):
-    """
-    Send a simple email using SMTP.
-    
-    Args:
-        subject (str): Email subject
-        body (str): Email body
-        to_email (str, optional): Recipient email. Defaults to environment variable.
-        from_email (str, optional): Sender email. Defaults to environment variable.
-        password (str, optional): Sender password. Defaults to environment variable.
-    
-    Returns:
-        bool: True if email was sent successfully, False otherwise
-    """
     # Get credentials from environment variables if not provided
     from_email = from_email or os.environ.get("EMAIL")
     password = password or os.environ.get("EMAIL_PASSWORD")
