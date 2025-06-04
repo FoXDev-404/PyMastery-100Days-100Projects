@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 now = dt.datetime.now()
-year = now.weekday()  # Monday is 0, Sunday is 6
+weekday = now.weekday()  # Monday is 0, Sunday is 6
 if weekday == 1:
     with open("quotes.txt") as quote_file:
         all_quotes = quote_file.readlines()
