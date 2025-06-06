@@ -6,10 +6,11 @@
 <summary>📋 Table of Contents</summary>
 
 - [Day 31: Flash Card App](#day-31-flash-card-app)
+- [Day 32: Birthday Wisher](#day-32-birthday-wisher)
 <!-- Add more days as they are completed -->
 </details>
 
-## 📅 Day 31–40 Projects [1/10 Completed]
+## 📅 Day 31–40 Projects [2/10 Completed]
 
 ---
 
@@ -55,6 +56,47 @@
 ### Link to Code
 
 [View Code →](Day31/main.py)
+
+---
+
+<a name="day-32-birthday-wisher"></a>
+
+## Day 32: Birthday Wisher 📧
+
+- **Description**: An automated email system that sends birthday wishes to contacts on their special day.
+- **What I Learned**:
+  - **Email Automation** – Using SMTP protocol to programmatically send emails
+  - **Environment Variables** – Securing sensitive information like passwords
+  - **Date & Time Handling** – Working with datetime to check for birthdays
+  - **String Templates** – Creating personalized email content with dynamic data
+  - **CSV Data Processing** – Reading and filtering data from structured files
+
+### Features
+
+- Automatic birthday checks against the current date
+- Personalized email messages using letter templates
+- Secure credential handling via environment variables
+- CSV-based contact management system
+- Support for multiple email templates for variety
+
+### How to Use
+
+1. Run the script using `python main.py` in the `Day32` directory.
+2. The app will automatically check if anyone in your contacts has a birthday today.
+3. If there's a match, it will send a personalized birthday email from your account.
+4. Add new contacts to the birthdays.csv file to include them in future checks.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- smtp library (included with Python)
+- python-dotenv for environment variable management (`pip install python-dotenv`)
+- Gmail account (or other email provider) with app password configured
+- CSV file with birthday information
+
+### Link to Code
+
+[View Code →](Day32/birthday-wisher/main.py)
 
 ---
 
