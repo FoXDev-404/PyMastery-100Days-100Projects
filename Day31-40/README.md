@@ -7,10 +7,11 @@
 
 - [Day 31: Flash Card App](#day-31-flash-card-app)
 - [Day 32: Birthday Wisher](#day-32-birthday-wisher)
-<!-- Add more days as they are completed -->
-</details>
+- [Day 33: ISS Tracker](#day-33-iss-tracker)
+  <!-- Add more days as they are completed -->
+  </details>
 
-## 📅 Day 31–40 Projects [2/10 Completed]
+## 📅 Day 31–40 Projects [3/10 Completed]
 
 ---
 
@@ -97,6 +98,45 @@
 ### Link to Code
 
 [View Code →](Day32/birthday-wisher/main.py)
+
+---
+
+<a name="day-33-iss-tracker"></a>
+
+## Day 33: ISS Tracker 🛰️
+
+- **Description**: An application that tracks the real-time location of the International Space Station using public APIs.
+- **What I Learned**:
+  - **API Integration** – Making HTTP requests to external APIs to fetch real-time data
+  - **JSON Parsing** – Processing and extracting information from JSON responses
+  - **Error Handling** – Implementing robust exception handling for network requests
+  - **HTTP Status Codes** – Understanding and properly handling different response codes
+  - **Alternative Solutions** – Finding and implementing fallback options when primary APIs fail
+
+### Features
+
+- Real-time tracking of the ISS's current latitude and longitude
+- Proper error handling for connection issues
+- Clean display of tracking data including timestamps
+- Implementation of robust API request patterns
+- Fallback to alternative data sources when needed
+
+### How to Use
+
+1. Run the script using `python main.py` in the `Day33` directory.
+2. The application will connect to the ISS tracking API and retrieve the current location.
+3. The latitude, longitude, and timestamp will be displayed in the console.
+4. The data refreshes each time you run the script, giving you the latest position.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests library (`pip install requests`)
+- Internet connection to access the API
+
+### Link to Code
+
+[View Code →](Day33/main.py)
 
 ---
 
