@@ -8,10 +8,11 @@
 - [Day 31: Flash Card App](#day-31-flash-card-app)
 - [Day 32: Birthday Wisher](#day-32-birthday-wisher)
 - [Day 33: ISS Tracker](#day-33-iss-tracker)
+- [Day 34: Quiz App](#day-34-quiz-app)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [3/10 Completed]
+## 📅 Day 31–40 Projects [4/10 Completed]
 
 ---
 
@@ -137,6 +138,49 @@
 ### Link to Code
 
 [View Code →](Day33/main.py)
+
+---
+
+<a name="day-34-quiz-app"></a>
+
+## Day 34: Quiz App 🧠
+
+- **Description**: A Trivia Quiz application that fetches questions from an API and tests the user's knowledge through a GUI interface.
+- **What I Learned**:
+  - **API Integration with UI** – Combining API requests with Tkinter for a complete application
+  - **Object-Oriented Design** – Creating a well-structured multi-class application
+  - **Quiz Logic** – Implementing scoring, question progression, and feedback systems
+  - **UI/UX Design** – Building an intuitive and responsive quiz interface
+  - **State Management** – Tracking quiz progress and user performance
+
+### Features
+
+- Dynamic quiz questions pulled from a trivia question API
+- Multiple-choice answer interface with immediate feedback
+- Score tracking throughout the quiz session
+- Visual feedback for correct and incorrect answers
+- Progress tracking to show completion percentage
+- Final score display with performance summary
+
+### How to Use
+
+1. Run the script using `python main.py` in the `Day34` directory.
+2. The app will load quiz questions from the Open Trivia Database API.
+3. Answer each question by clicking "True" or "False" buttons.
+4. Receive immediate feedback on your answers.
+5. View your final score at the end of the quiz.
+6. Option to restart the quiz with new questions.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Tkinter (included with Python)
+- Requests library (`pip install requests`)
+- Internet connection to access the quiz API
+
+### Link to Code
+
+[View Code →](Day34/main.py)
 
 ---
 
