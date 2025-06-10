@@ -17,8 +17,8 @@ if not all([api_key, account_sid, auth_token]):
     raise ValueError("Missing required environment variables. Please check your .env file.")
 
 weather_params = {
-    "lat": 8.373140,  # Replace with your latitude
-    "lon": -62.642799,  # Replace with your longitude
+    "lat": 28.6139,  # New Delhi latitude
+    "lon": 77.2090,  # New Delhi longitude
     "appid": api_key,
     "cnt": 4,
 }

@@ -9,10 +9,11 @@
 - [Day 32: Birthday Wisher](#day-32-birthday-wisher)
 - [Day 33: ISS Tracker](#day-33-iss-tracker)
 - [Day 34: Quiz App](#day-34-quiz-app)
+- [Day 35: Weather Alert System](#day-35-weather-alert-system)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [4/10 Completed]
+## 📅 Day 31–40 Projects [5/10 Completed]
 
 ---
 
@@ -181,6 +182,54 @@
 ### Link to Code
 
 [View Code →](Day34/main.py)
+
+---
+
+<a name="day-35-weather-alert-system"></a>
+
+## Day 35: Weather Alert System ☔
+
+- **Description**: A weather monitoring application that sends SMS alerts when rain is forecasted in your area using OpenWeatherMap API and Twilio.
+- **What I Learned**:
+  - **Weather API Integration** – Fetching and processing forecast data from OpenWeatherMap
+  - **SMS Notification System** – Using Twilio API to send automated text messages
+  - **Environment Variables** – Securing API keys and sensitive credentials
+  - **Error Handling** – Implementing robust exception handling for API requests
+  - **Weather Data Analysis** – Interpreting weather condition codes to determine rain probability
+
+### Features
+
+- Real-time weather forecast retrieval for New Delhi, India
+- Automated SMS notifications when rain is expected
+- Secure credential management using environment variables
+- Robust error handling for API failures
+- Weather condition analysis using OpenWeatherMap condition codes
+- Customizable alert messages with emojis
+
+### How to Use
+
+1. Set up environment variables in a `.env` file:
+   - `OWM_API_KEY` (OpenWeatherMap API key)
+   - `TWILIO_ACCOUNT_SID` (Twilio account SID)
+   - `TWILIO_AUTH_TOKEN` (Twilio auth token)
+   - `TWILIO_MESSAGING_SERVICE_SID` (Twilio messaging service)
+   - `PHONE_NUMBER` (Your phone number for alerts)
+2. Run the script using `python main.py` in the `Day35` directory.
+3. The app will check the weather forecast for the next 12 hours.
+4. If rain is detected, you'll receive an SMS alert automatically.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests library (`pip install requests`)
+- Twilio library (`pip install twilio`)
+- python-dotenv (`pip install python-dotenv`)
+- OpenWeatherMap API account
+- Twilio account with SMS credits
+
+### Link to Code
+
+[View Code →](Day35/main.py)
 
 ---
 
