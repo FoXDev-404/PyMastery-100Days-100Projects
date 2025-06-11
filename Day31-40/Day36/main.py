@@ -1,8 +1,44 @@
+import requests
+import os
+from twilio.rest import Client
+
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
+STOCK_ENDPOINT = "https://www.alphavantage.co/query"
+NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
+
+STOCK_API_KEY="your_stock_api_key_here"
+
 ## STEP 1: Use https://www.alphavantage.co
-# When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
+# Use intraday data as daily is now premium-only.
+stock_params = {
+    "function": "TIME_SERIES_INTRADAY",
+    "symbol": STOCK,
+    "interval": "60min",
+    "apikey": STOCK_API_KEY
+}
+
+response = requests.get(STOCK_ENDPOINT, params=stock_params)
+json_response = response.json()
+if "Time Series (60min)" not in json_response:
+    print("Error: 'Time Series (60min)' not found in response.")
+    print("Response:", json_response)
+    exit(1)
+data = json_response["Time Series (60min)"]
+data_list = [value for (key, value) in data.items()]
+if len(data_list) < 2:
+    print("Not enough data points returned.")
+    exit(1)
+# Use the last two closes as a proxy for "yesterday" and "day before yesterday"
+latest_close = float(data_list[0]["4. close"])
+previous_close = float(data_list[1]["4. close"])
+percentage_change = ((latest_close - previous_close) / previous_close) * 100
+print(f"{STOCK}: {percentage_change:.2f}%")
+
+if abs(percentage_change) < 5:
+    print("No significant change in stock price.")
+    exit(0)
 
 ## STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
