@@ -1,6 +1,7 @@
 import requests
 import os
 from twilio.rest import Client
+from dotenv import load_dotenv
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -10,6 +11,8 @@ NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 STOCK_API_KEY="Z72NEXXTX2KXFX8P"
 NEWS_API_KEY="82dad75514ec47719b0964c28c07e6c1"
+
+load_dotenv()
 
 ## STEP 1: Use https://www.alphavantage.co
 # Use intraday data as daily is now premium-only.
@@ -39,7 +42,7 @@ print(f"{STOCK}: {percentage_change:.2f}%")
 
 ## STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
-if abs(percentage_change) > 1:
+if abs(percentage_change) > 0.05:
     news_params = {
         "apiKey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME,
@@ -51,11 +54,29 @@ if abs(percentage_change) > 1:
     articles = news_response.json()["articles"]
     
     three_articles = articles[:3]
-    print(three_articles)    
+    formatted_articles = [
+        f"{STOCK}: {'🔺' if percentage_change > 0 else '🔻'}{abs(percentage_change):.2f}%\n"
+        f"Headline: {article['title']}\n"
+        f"Brief: {article['description']}\n"
+        for article in three_articles
+    ]
+    print("\n".join(formatted_articles))
 
-## STEP 3: Use https://www.twilio.com
-# Send a seperate message with the percentage change and each article's title and description to your phone number.
+    ## STEP 3: Use https://www.twilio.com
+    # Send a separate message for each article.
+    TWILIO_SID = os.getenv("TWILIO_ACCOUNT_SID")
+    TWILIO_AUTH_TOKEN = os.getenv("TWILIO_AUTH_TOKEN")
+    TWILIO_FROM_NUMBER = os.getenv("TWILIO_MESSAGING_SERVICE_SID")  # Use Messaging Service SID
+    TO_NUMBER = os.getenv("PHONE_NUMBER")
 
+    client = Client(TWILIO_SID, TWILIO_AUTH_TOKEN)
+    for message_body in formatted_articles:
+        message = client.messages.create(
+            body=message_body,
+            messaging_service_sid=TWILIO_FROM_NUMBER,
+            to=TO_NUMBER
+        )
+        print(f"Sent message SID: {message.sid}")
 
 #Optional: Format the SMS message like this:
 """
