@@ -42,7 +42,7 @@ print(f"{STOCK}: {percentage_change:.2f}%")
 
 ## STEP 2: Use https://newsapi.org
 # Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
-if abs(percentage_change) > 0.05:
+if abs(percentage_change) > 1:
     news_params = {
         "apiKey": NEWS_API_KEY,
         "qInTitle": COMPANY_NAME,
