@@ -10,10 +10,11 @@
 - [Day 33: ISS Tracker](#day-33-iss-tracker)
 - [Day 34: Quiz App](#day-34-quiz-app)
 - [Day 35: Weather Alert System](#day-35-weather-alert-system)
+- [Day 36: Stock News SMS Alert](#day-36-stock-news-sms-alert)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [5/10 Completed]
+## 📅 Day 31–40 Projects [6/10 Completed]
 
 ---
 
@@ -230,6 +231,54 @@
 ### Link to Code
 
 [View Code →](Day35/main.py)
+
+---
+
+<a name="day-36-stock-news-sms-alert"></a>
+
+## Day 36: Stock News SMS Alert 📈
+
+- **Description**: A stock monitoring application that sends SMS alerts with the latest news headlines when a significant price change is detected for a given stock (e.g., Tesla Inc).
+- **What I Learned**:
+  - **Stock API Integration** – Fetching and analyzing intraday stock data from Alpha Vantage
+  - **News API Integration** – Retrieving relevant news articles using NewsAPI
+  - **SMS Notification System** – Sending formatted news alerts via Twilio SMS
+  - **Environment Variables** – Managing sensitive API keys and credentials securely
+  - **Data Analysis** – Calculating percentage changes and filtering news
+  - **Error Handling** – Managing API errors and missing data gracefully
+
+### Features
+
+- Monitors stock price changes using Alpha Vantage intraday data
+- Fetches top 3 relevant news headlines if a significant price change is detected
+- Sends each news headline as a separate SMS using Twilio
+- Secure credential management with environment variables
+- Clear and concise SMS formatting with stock movement indicators
+
+### How to Use
+
+1. Set up environment variables in a `.env` file:
+   - `STOCK_API_KEY` (Alpha Vantage API key)
+   - `NEWS_API_KEY` (NewsAPI key)
+   - `TWILIO_ACCOUNT_SID` (Twilio account SID)
+   - `TWILIO_AUTH_TOKEN` (Twilio auth token)
+   - `TWILIO_MESSAGING_SERVICE_SID` (Twilio messaging service SID)
+   - `PHONE_NUMBER` (Your phone number for alerts)
+2. Run the script using `python main.py` in the `Day36` directory.
+3. The app will check the latest stock price and send SMS news alerts if a significant change is detected.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests library (`pip install requests`)
+- Twilio library (`pip install twilio`)
+- python-dotenv (`pip install python-dotenv`)
+- Alpha Vantage and NewsAPI accounts
+- Twilio account with SMS credits
+
+### Link to Code
+
+[View Code →](Day36/main.py)
 
 ---
 
