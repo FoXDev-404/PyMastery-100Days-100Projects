@@ -11,10 +11,11 @@
 - [Day 34: Quiz App](#day-34-quiz-app)
 - [Day 35: Weather Alert System](#day-35-weather-alert-system)
 - [Day 36: Stock News SMS Alert](#day-36-stock-news-sms-alert)
+- [Day 37: Habit Tracker](#day-37-habit-tracker)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [6/10 Completed]
+## 📅 Day 31–40 Projects [7/10 Completed]
 
 ---
 
@@ -279,6 +280,49 @@
 ### Link to Code
 
 [View Code →](Day36/main.py)
+
+---
+
+<a name="day-37-habit-tracker"></a>
+
+## Day 37: Habit Tracker 📊
+
+- **Description**: A habit tracking application that visualizes daily coding hours using the Pixela API to create a GitHub-like contribution graph.
+- **What I Learned**:
+  - **HTTP Methods** – Using GET, POST, PUT, and DELETE methods for API interaction
+  - **Request Headers** – Adding authentication tokens to secure API requests
+  - **Date Handling** – Converting and formatting dates for API compatibility
+  - **User Input Processing** – Taking and validating user input for data entry
+  - **API Documentation** – Reading and implementing features from API documentation
+
+### Features
+
+- Pixel-based visual habit tracking similar to GitHub's contribution graph
+- Create, update, and delete tracking entries
+- Record daily coding hours with precision (floating point values)
+- Automatic date handling with option for manual date entry
+- Secure API authentication using token-based headers
+- Web-based visualization through Pixela's hosted graphs
+
+### How to Use
+
+1. Run the script using `python main.py` in the `Day37` directory.
+2. Choose whether to use today's date or specify a different date.
+3. Enter the number of hours you've coded for the selected date.
+4. The application will create or update the data point on your habit graph.
+5. View your progress visually by visiting your Pixela graph URL.
+6. Uncomment different sections of the code to create a new user, graph, or delete entries.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests library (`pip install requests`)
+- Internet connection to access the Pixela API
+- A Pixela account (or create one using the script)
+
+### Link to Code
+
+[View Code →](Day37/main.py)
 
 ---
 
