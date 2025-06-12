@@ -4,7 +4,7 @@ from datetime import datetime
 pixela_endpoint = "https://pixe.la/v1/users"
 
 USERNAME = "foxdev"
-TOKEN = "asd55g45sdexabmyg"
+TOKEN = "amnmfdasf5makodold"
 GRAPH_ID = "graph1"
 
 user_params = {
@@ -47,5 +47,20 @@ pixel_data = {
     "quantity": "5.1",
 }
 
-response = requests.post(pixel_creation_endpoint, json=pixel_data, headers=headers)
+# response = requests.post(pixel_creation_endpoint, json=pixel_data, headers=headers)
+# print(response.text)
+
+update_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+
+new_pixel_data = {
+    "quantity": "4.5"
+}
+
+# response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+# print(response.text)
+
+
+delete_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}/{today.strftime('%Y%m%d')}"
+
+response = requests.delete(url=delete_endpoint, headers=headers)
 print(response.text)
