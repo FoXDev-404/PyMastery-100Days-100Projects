@@ -3,7 +3,8 @@ import requests
 pixela_endpoint = "https://pixe.la/v1/users"
 
 USERNAME = "foxdev"
-TOKEN = "asdaskj4kljk8dkj"
+TOKEN = "adasdas89fd0sdsr"
+GRAPH_ID = "graph1"
 
 user_params = {
     "token": TOKEN,
@@ -30,7 +31,17 @@ headers = {
     "X-USER-TOKEN": TOKEN
 }
 
-response = requests.post(graph_endpoint, json=graph_config, headers=headers)
-print(response.text)
+# response = requests.post(graph_endpoint, json=graph_config, headers=headers)
+# print(response.text)
 
-# Link to the graph: https://pixela.v1/users/foxdev/graphs/graph1.html
+# Link to the graph: https://pixe.la/v1/users/foxdev/graphs/graph1.html
+
+pixel_creation_endpoint = f"{pixela_endpoint}/{USERNAME}/graphs/{GRAPH_ID}"
+
+pixel_data = {
+    "date": "20250612",
+    "quantity": "1.9",
+}
+
+response = requests.post(pixel_creation_endpoint, json=pixel_data, headers=headers)
+print(response.text)
