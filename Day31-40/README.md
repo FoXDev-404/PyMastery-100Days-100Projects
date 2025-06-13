@@ -12,10 +12,11 @@
 - [Day 35: Weather Alert System](#day-35-weather-alert-system)
 - [Day 36: Stock News SMS Alert](#day-36-stock-news-sms-alert)
 - [Day 37: Habit Tracker](#day-37-habit-tracker)
+- [Day 38: Workout Tracker](#day-38-workout-tracker)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [7/10 Completed]
+## 📅 Day 31–40 Projects [8/10 Completed]
 
 ---
 
@@ -323,6 +324,46 @@
 ### Link to Code
 
 [View Code →](Day37/main.py)
+
+---
+
+<a name="day-38-workout-tracker"></a>
+
+## Day 38: Workout Tracker 🏋️‍♂️
+
+- **Description**: An automated workout tracker that logs exercise stats from natural language input and saves them to Google Sheets using Nutritionix and Sheety APIs.
+- **What I Learned**:
+  - **API Integration** – Making authenticated POST requests to Nutritionix and Sheety
+  - **Natural Language Processing** – Using plain text to extract exercise data
+  - **Environment Variables** – Securing API keys and endpoints
+  - **Datetime Handling** – Formatting and logging timestamps
+  - **Google Sheets Automation** – Using Sheety to update spreadsheets programmatically
+
+### Features
+
+- Accepts natural language exercise descriptions (e.g., "Ran 3km and cycled 20 minutes")
+- Fetches exercise stats (duration, calories, etc.) from Nutritionix
+- Logs each exercise with date and time to a Google Sheet via Sheety
+- Secures sensitive data using environment variables
+- Supports both Basic and Bearer authentication for Sheety
+
+### How to Use
+
+1. Set up environment variables for all API keys, endpoints, and authentication tokens.
+2. Run the script using `python main.py` in the `Day38` directory.
+3. Enter your exercise details in plain English when prompted.
+4. Check your Google Sheet for the new workout entries.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests library (`pip install requests`)
+- Nutritionix and Sheety accounts
+- Google Sheet set up with Sheety
+
+### Link to Code
+
+[View Code →](Day38/main.py)
 
 ---
 
