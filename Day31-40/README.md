@@ -13,10 +13,11 @@
 - [Day 36: Stock News SMS Alert](#day-36-stock-news-sms-alert)
 - [Day 37: Habit Tracker](#day-37-habit-tracker)
 - [Day 38: Workout Tracker](#day-38-workout-tracker)
+- [Day 39: Flight Deals Project](#day-39-flight-deals-project)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [8/10 Completed]
+## 📅 Day 31–40 Projects [9/10 Completed]
 
 ---
 
@@ -364,6 +365,44 @@
 ### Link to Code
 
 [View Code →](Day38/main.py)
+
+---
+
+<a name="day-39-flight-deals-project"></a>
+
+## Day 39: Flight Deals Project ✈️
+
+- **Description**: Automates searching for the cheapest flights from a specified origin to multiple destinations and notifies you via SMS or WhatsApp when a lower price is found. Uses the Amadeus API for flight data, Google Sheets (via Sheety API) for storing destination and price data, and Twilio for notifications.
+- **What I Learned**:
+  - **API Chaining** – Integrating multiple APIs (Amadeus, Sheety, Twilio) in a workflow
+  - **Flight Data Parsing** – Extracting and comparing flight offers for best deals
+  - **Automated Notifications** – Sending SMS/WhatsApp alerts for price drops
+  - **Google Sheets Automation** – Updating and reading data programmatically
+  - **Error Handling & Rate Limiting** – Managing API rate limits and fallback logic
+
+### Features
+
+- Automatically fetches and updates IATA codes for destinations
+- Searches for the cheapest round-trip flights within a 6-month window
+- Notifies you via SMS or WhatsApp if a cheaper flight is found
+- Updates the lowest price in your Google Sheet
+
+### How to Use
+
+1. Set up environment variables for Sheety, Amadeus, and Twilio credentials in a `.env` file.
+2. Prepare your Google Sheet with columns: `city`, `iataCode`, `lowestPrice`, and `id`.
+3. Run the script using `python main.py` in the `Day39` directory.
+4. The script will update IATA codes, search for flights, and send notifications if cheaper flights are found.
+
+### Prerequisites
+
+- Python 3.8 or higher
+- Requests, python-dotenv, and Twilio libraries (`pip install requests python-dotenv twilio`)
+- Accounts for Amadeus, Twilio, and Sheety (Google Sheets API)
+
+### Link to Code
+
+[View Code →](Day39/main.py)
 
 ---
 
