@@ -14,10 +14,11 @@
 - [Day 37: Habit Tracker](#day-37-habit-tracker)
 - [Day 38: Workout Tracker](#day-38-workout-tracker)
 - [Day 39: Flight Deals Project](#day-39-flight-deals-project)
+- [Day 40: Flight Deals Pro](#day-40-flight-deals-pro)
   <!-- Add more days as they are completed -->
   </details>
 
-## 📅 Day 31–40 Projects [9/10 Completed]
+## 📅 Day 31–40 Projects [10/10 Completed]
 
 ---
 
@@ -403,6 +404,28 @@
 ### Link to Code
 
 [View Code →](Day39/main.py)
+
+---
+
+<a name="day-40-flight-deals-pro"></a>
+
+## Day 40: Flight Deals Pro ✈️
+
+- **Description**: An advanced flight deals tracker that searches for the cheapest flights from a specified origin to multiple destinations, updates Google Sheets with the latest prices, and sends notifications via WhatsApp and email when a lower price is found.
+- **What I Learned**:
+  - **API Integration** – Working with Amadeus, Sheety, and Twilio APIs
+  - **Automation** – Automating data retrieval, updates, and notifications
+  - **Error Handling** – Managing API rate limits and missing data
+- **Features**:
+  - Fetches and updates IATA codes for destinations
+  - Searches for the cheapest round-trip flights within a 6-month window
+  - Notifies users via WhatsApp and email if a cheaper flight is found
+  - Updates the lowest price in Google Sheets
+- **How to Use**:
+  1. Set up your `.env` file with all required API credentials.
+  2. Add your destinations and initial prices to the Google Sheet.
+  3. Run the script using `python main.py` in the `Day40` directory.
+- **Link to Code**: [View Code →](Day40/main.py)
 
 ---
 
