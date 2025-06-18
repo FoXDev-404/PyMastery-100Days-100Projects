@@ -5,14 +5,15 @@
 <details>
 <summary>📋 Table of Contents</summary>
 
-- [Day 41: HTML Anime Ranking Project](#day-41-html-anime-ranking-project)
-- [Day 42: HTML Birthday Invite Project](#day-42-html-birthday-invite-project)
-<!-- Add days 42-50 as it complete -->
+  - [Day 41: HTML Anime Ranking Project 🌸](#day-41-html-anime-ranking-project-)
+  - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
+  - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
+
 </details>
 
 ---
 
-## 📅 Day 41–50 Projects [2/10 Completed]
+## 📅 Day 41–50 Projects [3/10 Completed]
 
 <a name="day-41-html-anime-ranking-project"></a>
 
@@ -62,6 +63,39 @@
 ### Link to Code
 
 [View Code →](Day42/Birthday%20Invite%20Project/index.html)
+
+---
+
+<a name="day-43-css-selectors--color-vocabulary"></a>
+
+## Day 43: CSS Selectors & Color Vocabulary 🎨
+
+- **Description**: This day covers two projects focused on learning and applying CSS selectors and styling:
+  1. **CSS Selectors** – Practice using element, class, id, attribute, and universal selectors to style HTML elements.
+  2. **Color Vocabulary** – Style a vocabulary list of Spanish color names, matching each color word to its meaning using CSS.
+- **What I Learned**:
+  - **Element, Class, and ID Selectors** – Targeting HTML elements in different ways
+  - **Attribute Selectors** – Styling elements based on attributes and values
+  - **Universal Selector** – Applying styles to all elements
+  - **External, Internal, and Inline CSS** – Three ways to add CSS to HTML
+  - **Image Styling** – Setting image dimensions with CSS
+- **How to Use**:
+  1. Open the `index.html` files in the `Day43/CSS Selectors` and `Day43/Color-Vocab-Project` folders to see the styled pages.
+  2. Review the corresponding CSS files to understand how selectors are used.
+- **Prerequisites**:
+  - Any modern web browser
+  - No additional dependencies required
+
+### Link to Code
+
+- [CSS Selectors Project](Day43/CSS%20Selectors/index.html)
+- [Color Vocabulary Project](Day43/Color-Vocab-Project/index.html)
+
+---
+
+<!-- Add days 42-50 as it complete -->
+
+- [Color Vocabulary Project](Day43/Color-Vocab-Project/index.html)
 
 ---
 
