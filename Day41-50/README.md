@@ -95,8 +95,6 @@
 
 <!-- Add days 42-50 as it complete -->
 
-- [Color Vocabulary Project](Day43/Color-Vocab-Project/index.html)
-
 ---
 
 <!-- Add days 42-50 as it complete -->
