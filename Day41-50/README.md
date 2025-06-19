@@ -6,19 +6,10 @@
 <summary>📋 Table of Contents</summary>
 
 - [Days 41–50: Web Foundation - Intermediate](#days-4150-web-foundation---intermediate)
-  - [📅 Day 41–50 Projects \[3/10 Completed\]](#-day-4150-projects-310-completed)
   - [Day 41: HTML Anime Ranking Project 🌸](#day-41-html-anime-ranking-project-)
-    - [How to Use](#how-to-use)
-    - [Prerequisites](#prerequisites)
-    - [Link to Code](#link-to-code)
   - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
-    - [Link to Code](#link-to-code-1)
   - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
-    - [Link to Code](#link-to-code-2)
   - [Day 44: HTML Movie Ranking Project 🎬](#day-44-html-movie-ranking-project-)
-    - [How to Use](#how-to-use-1)
-    - [Prerequisites](#prerequisites-1)
-    - [Link to Code](#link-to-code-3)
 
 </details>
 
