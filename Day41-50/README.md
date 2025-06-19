@@ -5,9 +5,11 @@
 <details>
 <summary>📋 Table of Contents</summary>
 
+- [Days 41–50: Web Foundation - Intermediate](#days-4150-web-foundation---intermediate)
   - [Day 41: HTML Anime Ranking Project 🌸](#day-41-html-anime-ranking-project-)
   - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
   - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
+  - [Day 44: HTML Movie Ranking Project 🎬](#day-44-html-movie-ranking-project-)
 
 </details>
 
@@ -87,14 +89,30 @@
   - No additional dependencies required
 
 ### Link to Code
-
-- [CSS Selectors Project](Day43/CSS%20Selectors/index.html)
 - [Color Vocabulary Project](Day43/Color-Vocab-Project/index.html)
 
 ---
+<a name="day-44-html-movie-ranking-project"></a>
 
-<!-- Add days 42-50 as it complete -->
+## Day 44: HTML Movie Ranking Project 🎬
 
----
+- **Description**: A simple HTML project that displays a personal ranking of favorite movies. This project demonstrates the use of HTML headings, ordered lists, and basic structure to present information clearly.
+- **What I Learned**:
+  - **Ordered Lists** – Using `<ol>` and `<li>` to create ranked lists
+  - **Semantic HTML** – Structuring content for clarity and accessibility
+  - **Page Layout** – Organizing sections with headings and paragraphs
 
+### How to Use
+
+1. Open the `index.html` file in your browser to view the movie ranking.
+2. Review the HTML code to learn about ordered lists and semantic structure.
+
+### Prerequisites
+
+- Any modern web browser
+- No additional dependencies required
+
+### Link to Code
+
+[View Code →](./Day44/Motivation%20Meme%20Project/index.html)
 <!-- Add days 42-50 as it complete -->
