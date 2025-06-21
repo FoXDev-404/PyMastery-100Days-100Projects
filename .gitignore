@@ -1,6 +1,7 @@
 # ========================
 # Environment Variables
 # ========================
+venv/
 .env
 .env.*
 !.env.example
