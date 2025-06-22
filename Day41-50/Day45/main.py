@@ -1,4 +1,4 @@
-from bs4 import BeautifulSoup
+# from bs4 import BeautifulSoup
 # import lxml
 
 
@@ -26,10 +26,10 @@ from bs4 import BeautifulSoup
 
 
 # ===========Test in index.html website===============
-with open("./index.html") as file:
-    content = file.read()
-    
-soup = BeautifulSoup(content, "html.parser")
+# with open("./index.html") as file:
+#     content = file.read()
+#
+# soup = BeautifulSoup(content, "html.parser")
 
 # fruit = soup.select_one(selector="#fruits")
 # print(fruit)
@@ -38,9 +38,24 @@ soup = BeautifulSoup(content, "html.parser")
 # print(veg)
 
 # Parse table rows
-print("\nUser Table:")
-rows = soup.select("#user-table tbody tr")
-for row in rows:
-    cols = row.find_all("td")
-    name, email, age = [col.text for col in cols]
-    print(f"  - {name} ({email}) is {age} years old.")
+# print("\nUser Table:")
+# rows = soup.select("#user-table tbody tr")
+# for row in rows:
+#     cols = row.find_all("td")
+#     name, email, age = [col.text for col in cols]
+#     print(f"  - {name} ({email}) is {age} years old.")
+
+
+
+# ===========Scraping a Live Website==============
+from bs4 import BeautifulSoup
+
+import requests
+
+response = requests.get("https://news.ycombinator.com/news")
+
+yc_web_page = response.text
+soup = BeautifulSoup(yc_web_page, "html.parser")
+
+artical_text = soup.find(name="span", class_="titleline")
+print(artical_text.getText())
