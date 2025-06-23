@@ -10,12 +10,13 @@
   - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
   - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
   - [Day 44: HTML Movie Ranking Project 🎬](#day-44-html-movie-ranking-project-)
+  - [Day 45: 100 Movies to Watch Web Scraper 🎥](#day-45-100-movies-to-watch-web-scraper-)
 
 </details>
 
 ---
 
-## 📅 Day 41–50 Projects [4/10 Completed]
+## 📅 Day 41–50 Projects [5/10 Completed]
 
 <a name="day-41-html-anime-ranking-project"></a>
 
@@ -117,4 +118,25 @@
 [View Code →](./Day44/Motivation%20Meme%20Project/index.html)
 
 ---
-<!-- Add days 45-50 as it complete -->
+<a name="day-45-100-movies-to-watch-web-scraper"></a>
+
+## Day 45: 100 Movies to Watch Web Scraper 🎥
+
+- **Description**: Scrape the top 100 movies of all time from a preserved web page using BeautifulSoup and Requests. The script extracts movie titles and writes them in ascending order to a text file.
+- **What I Learned**:
+  - **Web Scraping** – Using Requests to fetch web content and BeautifulSoup to parse HTML
+  - **HTML Parsing** – Locating elements by tag and class
+  - **Data Extraction** – Collecting and reversing lists to match required order
+  - **File Writing** – Outputting results to a `.txt` file with proper encoding
+- **How to Use**:
+  1. Run `main.py` in the `Day45/100 movies to watch start` folder.
+  2. Check the generated `movies.txt` file for the list of movies.
+- **Prerequisites**:
+  - Python 3.x
+  - `requests` and `beautifulsoup4` libraries
+
+### Link to Code
+
+[View Code →](./Day45/100%20movies%20to%20watch%20start/main.py)
+
+---
