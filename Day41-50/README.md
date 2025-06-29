@@ -6,11 +6,23 @@
 <summary>📋 Table of Contents</summary>
 
 - [Days 41–50: Web Foundation - Intermediate](#days-4150-web-foundation---intermediate)
+  - [📅 Day 41–50 Projects \[5/10 Completed\]](#-day-4150-projects-510-completed)
   - [Day 41: HTML Anime Ranking Project 🌸](#day-41-html-anime-ranking-project-)
+    - [How to Use](#how-to-use)
+    - [Prerequisites](#prerequisites)
+    - [Link to Code](#link-to-code)
   - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
+    - [Link to Code](#link-to-code-1)
   - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
+    - [Link to Code](#link-to-code-2)
   - [Day 44: HTML Movie Ranking Project 🎬](#day-44-html-movie-ranking-project-)
+    - [How to Use](#how-to-use-1)
+    - [Prerequisites](#prerequisites-1)
+    - [Link to Code](#link-to-code-3)
   - [Day 45: 100 Movies to Watch Web Scraper 🎥](#day-45-100-movies-to-watch-web-scraper-)
+    - [Link to Code](#link-to-code-4)
+  - [Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵](#day-46-spotify-playlist-from-billboard-hot-100-scraper-)
+    - [Link to Code](#link-to-code-5)
 
 </details>
 
@@ -138,6 +150,33 @@
 ### Link to Code
 
 [View Code →](./Day45/100%20movies%20to%20watch%20start/main.py)
+
+---
+<a name="day-46-spotify-playlist-from-billboard-hot-100-scraper-"></a>
+
+## Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵
+
+- **Description**: Scrape the Billboard Hot 100 chart for a given date and automatically create a Spotify playlist with the top 100 songs. Includes a variant for the Billboard India chart.
+- **What I Learned**:
+  - **Web Scraping** – Extracting song titles from Billboard using BeautifulSoup and Requests
+  - **Spotify API** – Authenticating and interacting with Spotify using Spotipy
+  - **OAuth2 Authentication** – Handling user login and permissions for playlist creation
+  - **Error Handling** – Managing missing songs and API search failures
+  - **Environment Variables** – Securing API credentials with dotenv
+- **How to Use**:
+  1. Set up a `.env` file with your Spotify API credentials.
+  2. Run `main.py` to create a playlist from the US Billboard Hot 100 for any date.
+  3. Run `hot_hindi.py` to create a playlist from the Billboard India chart for any date.
+  4. Check your Spotify account for the new playlist.
+- **Prerequisites**:
+  - Python 3.x
+  - `requests`, `beautifulsoup4`, `spotipy`, `python-dotenv`
+  - Spotify Developer account and app credentials
+
+### Link to Code
+
+- [US Billboard Hot 100 Scraper](Day46/main.py)
+- [Billboard India Scraper](Day46/hot_hindi.py)
 
 ---
 
