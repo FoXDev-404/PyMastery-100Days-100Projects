@@ -15,7 +15,6 @@
 - [Day 38: Workout Tracker](#day-38-workout-tracker)
 - [Day 39: Flight Deals Project](#day-39-flight-deals-project)
 - [Day 40: Flight Deals Pro](#day-40-flight-deals-pro)
-  <!-- Add more days as they are completed -->
   </details>
 
 ## 📅 Day 31–40 Projects [10/10 Completed]
@@ -428,5 +427,3 @@
 - **Link to Code**: [View Code →](Day40/main.py)
 
 ---
-
-<!-- Content for additional days will be added as projects are completed -->
