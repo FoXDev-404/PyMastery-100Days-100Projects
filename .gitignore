@@ -60,3 +60,4 @@ venv.bak/
 # Project Specific
 # =================
 data/words_to_learn.csv
+token.txt
