@@ -6,23 +6,13 @@
 <summary>📋 Table of Contents</summary>
 
 - [Days 41–50: Web Foundation - Intermediate](#days-4150-web-foundation---intermediate)
-  - [📅 Day 41–50 Projects \[5/10 Completed\]](#-day-4150-projects-510-completed)
   - [Day 41: HTML Anime Ranking Project 🌸](#day-41-html-anime-ranking-project-)
-    - [How to Use](#how-to-use)
-    - [Prerequisites](#prerequisites)
-    - [Link to Code](#link-to-code)
   - [Day 42: HTML Birthday Invite Project 🎂](#day-42-html-birthday-invite-project-)
-    - [Link to Code](#link-to-code-1)
   - [Day 43: CSS Selectors \& Color Vocabulary 🎨](#day-43-css-selectors--color-vocabulary-)
-    - [Link to Code](#link-to-code-2)
   - [Day 44: HTML Movie Ranking Project 🎬](#day-44-html-movie-ranking-project-)
-    - [How to Use](#how-to-use-1)
-    - [Prerequisites](#prerequisites-1)
-    - [Link to Code](#link-to-code-3)
   - [Day 45: 100 Movies to Watch Web Scraper 🎥](#day-45-100-movies-to-watch-web-scraper-)
-    - [Link to Code](#link-to-code-4)
   - [Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵](#day-46-spotify-playlist-from-billboard-hot-100-scraper-)
-    - [Link to Code](#link-to-code-5)
+  - [Day 47: Amazon Price Tracker 📉](#day-47-amazon-price-tracker-)
 
 </details>
 
@@ -177,6 +167,32 @@
 
 - [US Billboard Hot 100 Scraper](Day46/main.py)
 - [Billboard India Scraper](Day46/hot_hindi.py)
+
+---
+<a name="day-47-amazon-price-tracker-"></a>
+
+## Day 47: Amazon Price Tracker 📉
+
+- **Description**: Track the price of a product on Amazon and receive an email notification when the price drops below a target value. Includes a demo for a sample site and a script for Amazon India.
+- **What I Learned**:
+  - **Web Scraping** – Extracting product prices from Amazon and demo sites using BeautifulSoup and Requests
+  - **Email Automation** – Sending email alerts with SMTP when price conditions are met
+  - **Environment Variables** – Managing sensitive credentials with dotenv
+  - **Error Handling** – Handling missing elements and connection issues gracefully
+- **How to Use**:
+  1. Set up a `.env` file with your email credentials and recipient.
+  2. Adjust the target price and product URL as needed in the scripts.
+  3. Run `main.py` for the demo site or `amazon.py` for Amazon India.
+  4. Receive an email alert if the price drops below your target.
+- **Prerequisites**:
+  - Python 3.x
+  - `requests`, `beautifulsoup4`, `python-dotenv`
+  - Gmail or compatible SMTP email account
+
+### Link to Code
+
+- [Demo Price Tracker](Day47/main.py)
+- [Amazon India Price Tracker](Day47/amazon.py)
 
 ---
 
