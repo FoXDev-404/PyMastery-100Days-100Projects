@@ -9,10 +9,20 @@ headers = {
 }
 
 response = requests.get(URL, headers=headers)
-webpage = response.text
+soup = BeautifulSoup(response.text, "html.parser")
 
-soup = BeautifulSoup(webpage, "html.parser")
+# Extract only the top 100 songs
+song_elements = soup.select("li.o-chart-results-list__item h3.c-title")
+songs = [song.get_text(strip=True) for song in song_elements]
+top_100 = songs[:100]
 
-# Scrape song titles - as of now Billboard uses h3 tags with specific classes
-songs = []
-song_elements = soup.select("li ul li h3")  # Billboard titles are in h3 under nested lists
+# Print top 100
+for i, song in enumerate(top_100, start=1):
+    print(f"{i}. {song}")
+
+# Save to a file
+with open(f"top_100_songs_{date}.txt", "w", encoding="utf-8") as file:
+    for i, song in enumerate(top_100, start=1):
+        file.write(f"{i}. {song}\n")
+
+print(f"\nTop 100 songs saved to top_100_songs_{date}.txt")
