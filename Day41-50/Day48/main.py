@@ -1,19 +1,32 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
 
-chrome_options = webdriver.ChromeOptions()
+# Keeps Chrome open after execution
+chrome_options = Options()
 chrome_options.add_experimental_option("detach", True)
-chrome_options.add_argument(
-    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"
-)
 
-driver = webdriver.Chrome(options=chrome_options)
-driver.get("https://www.amazon.in/iQOO-Snapdragon-Processor-SuperComputing-Smartphone/dp/B0F83LL1D2/")
+# Initialize driver
+driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=chrome_options)
 
-price_element = WebDriverWait(driver, 15).until(
-    EC.presence_of_element_located((By.CLASS_NAME, "a-price-whole"))
-)
-price_text = price_element.get_attribute("innerText").strip()
-print(f"[CLASS_NAME] Price is ₹{price_text}")
+def test_eight_components():
+    driver.get("https://www.selenium.dev/selenium/web/web-form.html")
+    assert driver.title == "Web form"
+
+    driver.implicitly_wait(5)
+
+    text_box = driver.find_element(by=By.NAME, value="my-text")
+    submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
+
+    text_box.send_keys("Selenium")
+    submit_button.click()
+
+    message = driver.find_element(by=By.ID, value="message")
+    assert message.text == "Received!"
+
+    driver.quit()
+
+if __name__ == "__main__":
+    test_eight_components()
