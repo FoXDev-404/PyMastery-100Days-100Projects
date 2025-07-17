@@ -13,12 +13,13 @@
   - [Day 45: 100 Movies to Watch Web Scraper 🎥](#day-45-100-movies-to-watch-web-scraper-)
   - [Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵](#day-46-spotify-playlist-from-billboard-hot-100-scraper-)
   - [Day 47: Amazon Price Tracker 📉](#day-47-amazon-price-tracker-)
+  - [Day 48: Cookie Clicker Automation Bot 🍪](#day-48-cookie-clicker-automation-bot-)
 
 </details>
 
 ---
 
-## 📅 Day 41–50 Projects [5/10 Completed]
+## 📅 Day 41–50 Projects [8/10 Completed]
 
 <a name="day-41-html-anime-ranking-project"></a>
 
@@ -92,9 +93,11 @@
   - No additional dependencies required
 
 ### Link to Code
+
 - [Color Vocabulary Project](Day43/Color-Vocab-Project/index.html)
 
 ---
+
 <a name="day-44-html-movie-ranking-project"></a>
 
 ## Day 44: HTML Movie Ranking Project 🎬
@@ -120,6 +123,7 @@
 [View Code →](./Day44/Motivation%20Meme%20Project/index.html)
 
 ---
+
 <a name="day-45-100-movies-to-watch-web-scraper"></a>
 
 ## Day 45: 100 Movies to Watch Web Scraper 🎥
@@ -142,6 +146,7 @@
 [View Code →](./Day45/100%20movies%20to%20watch%20start/main.py)
 
 ---
+
 <a name="day-46-spotify-playlist-from-billboard-hot-100-scraper-"></a>
 
 ## Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵
@@ -169,6 +174,7 @@
 - [Billboard India Scraper](Day46/hot_hindi.py)
 
 ---
+
 <a name="day-47-amazon-price-tracker-"></a>
 
 ## Day 47: Amazon Price Tracker 📉
@@ -196,4 +202,31 @@
 
 ---
 
+<a name="day-48-cookie-clicker-automation-bot-"></a>
 
+---
+
+<a name="day-48-cookie-clicker-automation-bot-"></a>
+
+## Day 48: Cookie Clicker Automation Bot 🍪
+
+- **Description**: A Selenium-based automation bot that plays the Cookie Clicker game autonomously, maximizing cookies per second (CPS) by implementing intelligent clicking and purchasing strategies.
+- **What I Learned**:
+  - **Browser Automation** – Using Selenium WebDriver to control Chrome browser interactions
+  - **Dynamic Element Selection** – Finding and interacting with web elements using various selection methods
+  - **Game Strategy Algorithms** – Implementing logic to buy the most expensive affordable item
+  - **Error Handling** – Managing exceptions and browser issues in automation scripts
+- **How to Use**:
+  1. Run `main.py` in the `Day48/Cookie Clicker Project` folder to start the bot.
+  2. The bot will automatically click the cookie and purchase upgrades for 5 minutes.
+  3. Final cookie count is displayed at the end.
+- **Prerequisites**:
+  - Python 3.x
+  - `selenium` for web automation
+  - Chrome browser and ChromeDriver
+
+### Link to Code
+
+- [Cookie Clicker Bot](Day48/Cookie%20Clicker%20Project/main.py)
+
+---
