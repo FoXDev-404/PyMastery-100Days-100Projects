@@ -35,3 +35,18 @@ password.send_keys(Keys.ENTER)
 #Switch back to Tinder window
 driver.switch_to.window(base_window)
 print(driver.title)
+
+#Delay by 5 seconds to allow page to load.
+sleep(5)
+
+#Allow location
+allow_location_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[1]')
+allow_location_button.click()
+
+#Disallow notifications
+notifications_button = driver.find_element(By.XPATH, value='//*[@id="modal-manager"]/div/div/div/div/div[3]/button[2]')
+notifications_button.click()
+
+#Allow cookies
+cookies = driver.find_element(By.XPATH, value='//*[@id="content"]/div/div[2]/div/div/div[1]/button')
+cookies.click()
