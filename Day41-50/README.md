@@ -14,6 +14,7 @@
   - [Day 46: Spotify Playlist from Billboard Hot 100 Scraper 🎵](#day-46-spotify-playlist-from-billboard-hot-100-scraper-)
   - [Day 47: Amazon Price Tracker 📉](#day-47-amazon-price-tracker-)
   - [Day 48: Cookie Clicker Automation Bot 🍪](#day-48-cookie-clicker-automation-bot-)
+  - [Day 49: LinkedIn Job Application Bot 🤖](#day-49-linkedin-job-application-bot-)
 
 </details>
 
@@ -204,10 +205,6 @@
 
 <a name="day-48-cookie-clicker-automation-bot-"></a>
 
----
-
-<a name="day-48-cookie-clicker-automation-bot-"></a>
-
 ## Day 48: Cookie Clicker Automation Bot 🍪
 
 - **Description**: A Selenium-based automation bot that plays the Cookie Clicker game autonomously, maximizing cookies per second (CPS) by implementing intelligent clicking and purchasing strategies.
@@ -228,5 +225,33 @@
 ### Link to Code
 
 - [Cookie Clicker Bot](Day48/Cookie%20Clicker%20Project/main.py)
+
+---
+
+<a name="day-49-linkedin-job-application-bot"></a>
+
+## Day 49: LinkedIn Job Application Bot 🤖
+
+- **Description**: An automation bot built with Selenium that logs into LinkedIn, navigates to job listings, and can automate the application process for jobs matching specific criteria. The script demonstrates browser automation, form filling, and handling pop-ups for a real-world job search scenario.
+- **What I Learned**:
+  - **Selenium WebDriver** – Automating browser actions and navigation
+  - **Element Selection** – Using CSS selectors, class names, and IDs to interact with web elements
+  - **Form Automation** – Filling out login and application forms programmatically
+  - **Error Handling** – Managing exceptions and modal dialogs during automation
+  - **User Interaction** – Pausing for manual CAPTCHA solving
+- **How to Use**:
+  1. Install required packages: `pip install selenium webdriver-manager`.
+  2. Set your LinkedIn credentials and ChromeDriver path in `main.py`.
+  3. Run `main.py` in the `Day49` folder.
+  4. Manually solve any CAPTCHA if prompted, then let the bot proceed with job applications.
+- **Prerequisites**:
+  - Python 3.x
+  - `selenium`, `webdriver-manager` libraries
+  - Chrome browser and ChromeDriver
+  - LinkedIn account
+
+### Link to Code
+
+- [LinkedIn Job Application Bot](Day49/main.py)
 
 ---
