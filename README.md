@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Progress](https://img.shields.io/badge/Progress-40%25-yellow.svg)](Day21-30/README.md)
+[![Progress](https://img.shields.io/badge/Progress-50%25-yellow.svg)](Day41-50/README.md)
 [![Maintenance](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects/graphs/commit-activity)
 [![GitHub stars](https://img.shields.io/github/stars/FoXDev-404/PyMastery-100Days-100Projects?style=social)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects)
 
@@ -29,21 +29,45 @@ Join me as I strengthen my Python skills by solving real-world problems through 
 
 - Python 3.11 or higher
 - pip (Python package manager)
+- Git (for cloning the repository)
+
+### Installation & Setup
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/FoXDev-404/PyMastery-100Days-100Projects.git
+   cd PyMastery-100Days-100Projects
+   ```
 
 ### Running the Projects
 
-Each project is self-contained in its own folder:
+Each project is self-contained in its respective day folder:
 
 ```bash
-# Clone the repository
-git clone https://github.com/FoXDev-404/PyMastery-100Days-100Projects.git
+# Navigate to a specific day
+cd Day01-10/Day01/
 
-# Navigate to a specific project
-cd PyMastery-100Days-100Projects/Day01/
-
-# Run a project
+# Run the main project file
 python projectDay1.py
+
+# Or explore individual concept files
+python hello.py
+python var.py
 ```
+
+### Project Structure
+
+```
+PyMastery-100Days-100Projects/
+├── Day01-10/          # Days 1-10 projects
+│   ├── Day01/         # Basic Python concepts
+│   ├── Day02/         # Data types & strings
+│   └── ...
+├── Day11-20/          # Days 11-20 projects
+├── Day21-30/          # Days 21-30 projects
+└── ...
+```
+
 
 ---
 
@@ -55,7 +79,8 @@ python projectDay1.py
 | Day 11-20  | [View Projects →](Day11-20/README.md) |
 | Day 21-30  | [View Projects →](Day21-30/README.md) |
 | Day 31-40  | [View Projects →](Day31-40/README.md)   |
-| Day 41-50  | [In Progress →](Day41-50/README.md)   |
+| Day 41-50  | [View Projects →](Day41-50/README.md)   |
+| Day 51-60  | [In Progress →](Day51-60/README.md)   |
 | ...        | ...                                   |
 | Day 91-100 | [Coming Soon](Day91-100/README.md)    |
 
