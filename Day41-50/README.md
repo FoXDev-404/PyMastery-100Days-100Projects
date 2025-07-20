@@ -15,12 +15,13 @@
   - [Day 47: Amazon Price Tracker 📉](#day-47-amazon-price-tracker-)
   - [Day 48: Cookie Clicker Automation Bot 🍪](#day-48-cookie-clicker-automation-bot-)
   - [Day 49: LinkedIn Job Application Bot 🤖](#day-49-linkedin-job-application-bot-)
+  - [Day 50: Tinder Auto Swipe Bot 💕](#day-50-tinder-auto-swipe-bot-)
 
 </details>
 
 ---
 
-## 📅 Day 41–50 Projects [8/10 Completed]
+## 📅 Day 41–50 Projects [10/10 Completed]
 
 <a name="day-41-html-anime-ranking-project"></a>
 
@@ -255,3 +256,33 @@
 - [LinkedIn Job Application Bot](Day49/main.py)
 
 ---
+
+<a name="day-50-tinder-auto-swipe-bot-"></a>
+
+## Day 50: Tinder Auto Swipe Bot 💕
+
+- **Description**: A Selenium-based bot that automates swiping on Tinder profiles. The bot can be configured to swipe right (like) or left (pass) based on user preferences and profile information.
+- **What I Learned**:
+  - **Selenium WebDriver** – Advanced browser automation techniques
+  - **XPath and CSS Selectors** – Locating elements with precision
+  - **Randomization in Automation** – Introducing variability in swipe patterns
+  - **Handling Dynamic Content** – Dealing with AJAX-loaded elements and infinite scrolling
+  - **Ethical Considerations** – Understanding the implications of automating interactions on dating platforms
+- **How to Use**:
+  1. Install required packages: `pip install selenium webdriver-manager`.
+  2. Set your Tinder login credentials and ChromeDriver path in `main.py`.
+  3. Configure swipe preferences (right/left) and profile filters in the script.
+  4. Run `main.py` in the `Day50` folder to start the bot.
+  5. Monitor the bot's activity and intervene if necessary (e.g., to solve CAPTCHAs).
+- **Prerequisites**:
+  - Python 3.x
+  - `selenium`, `webdriver-manager` libraries
+  - Chrome browser and ChromeDriver
+  - Tinder account
+
+### Link to Code
+
+- [Tinder Auto Swipe Bot](Day50/main.py)
+
+---
+
