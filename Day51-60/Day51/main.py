@@ -16,8 +16,8 @@ load_dotenv()
 TWITTER_EMAIL = os.getenv("TWITTER_EMAIL")
 TWITTER_USERNAME = os.getenv("TWITTER_USERNAME")
 TWITTER_PASSWORD = os.getenv("TWITTER_PASSWORD")
-PROMISED_DOWN = 150
-PROMISED_UP = 10
+PROMISED_DOWN = 40
+PROMISED_UP = 40
 
 class InternetSpeedTwitterBot:
     def __init__(self):
@@ -84,12 +84,25 @@ class InternetSpeedTwitterBot:
         post_input.send_keys(f"Hey Internet Provider, why is my internet speed {self.down}down/{self.up}up when I pay for {PROMISED_DOWN}down/{PROMISED_UP}up?")
 
         post_button = self.driver.find_element(By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/div[2]/div[1]/div/div/div/div[2]/div[2]/div[2]/div/div/div/button/div/span/span')
-        # post_button.click()
+        post_button.click()
 
 
 
 bot = InternetSpeedTwitterBot()
 bot.get_internet_speed()
-bot.tweet_at_provider()
+
+# Convert speeds to float for comparison
+try:
+    down_speed = float(bot.down)
+    up_speed = float(bot.up)
+except ValueError:
+    print("Could not parse speed values. No tweet will be sent.")
+    down_speed = up_speed = 0
+
+if down_speed < PROMISED_DOWN or up_speed < PROMISED_UP:
+    print("Speeds are below promised. Sending tweet...")
+    bot.tweet_at_provider()
+else:
+    print("Speeds are as promised or better. No tweet will be sent.")
 
 input("✅ Done. Press Enter to exit (and manually close browser)...")
