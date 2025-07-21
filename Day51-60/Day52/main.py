@@ -1,75 +1,133 @@
-from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.common.by import By
 import time
+import os
+import random
+from selenium import webdriver
+from selenium.common.exceptions import NoSuchElementException
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+from dotenv import load_dotenv
 
-SIMILAR_ACCOUNT = 'INSTAGRAM ACCOUNT YOU WANT TO BECOME'
-USERNAME = 'YOUR INSTAGRAM EMAIL'
-PASSWORD = 'YOUR INSTAGRAM PASSWORD'
+load_dotenv()
 
+# Login information
+EMAIL = os.getenv("INSTA_EMAIL")
+USERNAME = os.getenv("INSTA_USER")
+PASSWORD = os.getenv("INSTA_PASS")
+INSTAGRAM_URL = "https://www.instagram.com/"
 
 class InstaFollower:
 
     def __init__(self):
-        # Optional - Keep browser open (helps diagnose issues during a crash)
-        chrome_options = webdriver.ChromeOptions()
-        chrome_options.add_experimental_option("detach", True)
-        self.driver = webdriver.Chrome(options=chrome_options)
+        service = Service(ChromeDriverManager().install())
+        self.chrome_options = webdriver.ChromeOptions()
+        self.chrome_options.add_experimental_option("detach", True)
+        self.driver = webdriver.Chrome(service=service, options=self.chrome_options)
+        self.driver.get(INSTAGRAM_URL)
 
     def login(self):
-        url = "https://www.instagram.com/accounts/login/"
-        self.driver.get(url)
-        time.sleep(4.2)
+        time.sleep(5)
+        # Enter username
+        username_input = self.driver.find_element(By.NAME, "username")
+        username_input.send_keys(USERNAME)
 
-        # Check if the cookie warning is present on the page
-        decline_cookies_xpath = "/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/button[2]"
-        cookie_warning = self.driver.find_elements(By.XPATH, decline_cookies_xpath)
-        if cookie_warning:
-            # Dismiss the cookie warning by clicking an element or button
-            cookie_warning[0].click()
+        # Enter password
+        password_input = self.driver.find_element(By.NAME, "password")
+        password_input.send_keys(PASSWORD)
 
-        username = self.driver.find_element(by=By.NAME, value="username")
-        password = self.driver.find_element(by=By.NAME, value="password")
+        # Click login button
+        login_button = self.driver.find_element(By.XPATH, "//button[@type='submit']")
+        login_button.click()
 
-        username.send_keys(USERNAME)
-        password.send_keys(PASSWORD)
+        self.delay()
 
-        time.sleep(2.1)
-        password.send_keys(Keys.ENTER)
+        # Handle "Save Your Login Info" popup
+        try:
+            not_now_button = self.driver.find_element(By.XPATH, "//button[contains(text(), 'Not Now')]")
+            not_now_button.click()
+            self.delay()
+        except NoSuchElementException:
+            print("No 'Save Login Info' popup found")
 
-        time.sleep(4.3)
-        # Click "Not now" and ignore Save-login info prompt
-        save_login_prompt = self.driver.find_element(by=By.XPATH, value="//div[contains(text(), 'Not now')]")
-        if save_login_prompt:
-            save_login_prompt.click()
+        # Handle notifications popup
+        try:
+            not_now_button = self.driver.find_element(By.XPATH, "//button[contains(text(), 'Not Now')]")
+            not_now_button.click()
+            self.delay()
+        except NoSuchElementException:
+            print("No notifications popup found")
 
-        time.sleep(3.7)
-        # Click "not now" on notifications prompt
-        notifications_prompt = self.driver.find_element(by=By.XPATH, value="// button[contains(text(), 'Not Now')]")
-        if notifications_prompt:
-            notifications_prompt.click()
+    def delay(self):
+        wait_time = random.uniform(2, 5)
+        time.sleep(wait_time)
 
     def find_followers(self):
-        time.sleep(5)
-        # Show followers of the selected account.
-        self.driver.get(f"https://www.instagram.com/{SIMILAR_ACCOUNT}/followers")
+        # Navigate to search
+        search_icon = self.driver.find_element(By.XPATH, "//span[contains(@class, 'x1lliihq') and contains(@class, 'x1plvlek')]//span[text()='Search']")
+        search_icon.click()
+        self.delay()
 
-        time.sleep(5.2)
-        # The xpath of the modal that shows the followers will change over time. Update yours accordingly.
-        modal_xpath = "/html/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]"
-        modal = self.driver.find_element(by=By.XPATH, value=modal_xpath)
-        for i in range(10):
-            # In this case we're executing some Javascript, that's what the execute_script() method does.
-            # The method can accept the script as well as an HTML element.
-            # The modal in this case, becomes the arguments[0] in the script.
-            # Then we're using Javascript to say: "scroll the top of the modal (popup) element by the height of the modal (popup)"
-            self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", modal)
-            time.sleep(2)
+        # Search for the target account
+        search_input = self.driver.find_element(By.XPATH, "//input[@placeholder='Search']")
+        search_input.send_keys("mad_about_food")
+        time.sleep(3)
+
+        # Click on the first result
+        first_result = self.driver.find_element(By.XPATH, "//div[@role='button']//span[contains(text(), 'mad_about_food')]")
+        first_result.click()
+        self.delay()
+
+        # Click on followers
+        followers_link = self.driver.find_element(By.XPATH, "//a[contains(@href, '/followers/')]")
+        followers_link.click()
+        self.delay()
 
     def follow(self):
-        pass
+        # Scroll and follow users
+        for i in range(10):
+            try:
+                # Find follow buttons (more reliable selector)
+                follow_buttons = self.driver.find_elements(By.XPATH, "//button[text()='Follow']")
 
-bot = InstaFollower()
-bot.login()
-bot.find_followers()
-bot.follow()
+                if follow_buttons:
+                    follow_buttons[0].click()
+                    print(f"Followed user {i + 1}")
+                    self.delay()
+
+                    # Scroll down to load more users
+                    self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight",
+                                             self.driver.find_element(By.XPATH, "//div[@role='dialog']"))
+                    time.sleep(2)
+                else:
+                    print("No more follow buttons found")
+                    break
+
+            except NoSuchElementException as e:
+                print(f"Error following user {i + 1}: {e}")
+                continue
+            except Exception as e:
+                print(f"Unexpected error: {e}")
+                break
+
+    def quit(self):
+        self.driver.quit()
+
+if __name__ == "__main__":
+    if not all([EMAIL, USERNAME, PASSWORD]):
+        print("Please set INSTA_EMAIL, INSTA_USER, and INSTA_PASS environment variables")
+        exit(1)
+
+    insta_bot = InstaFollower()
+    try:
+        insta_bot.login()
+        time.sleep(10)
+        insta_bot.find_followers()
+        time.sleep(5)
+        insta_bot.follow()
+        print("Well done, Congrats!")
+    except Exception as e:
+        print(f"An error occurred: {e}")
+    finally:
+        input("Press Enter to close the browser...")
+        insta_bot.quit()
