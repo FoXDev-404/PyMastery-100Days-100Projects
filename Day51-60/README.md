@@ -1,11 +1,11 @@
 <a name="day-51-60"></a>
 
-# Days 51–60: Web Automation & API Integration - Intermediate+
+# Days 51–60: Web Automation & Web Development - Intermediate+
 
 <details>
 <summary>📋 Table of Contents</summary>
 
-- [Days 51–60: Web Automation & API Integration - Intermediate+](#days-5160-web-automation--api-integration---advanced)
+- [Days 51–60: Web Automation & Web Development - Intermediate+](#days-5160-web-automation--web-development---intermediate)
   - [Day 51: Internet Speed Twitter Bot 🌐](#day-51-internet-speed-twitter-bot-)
   - [Day 52: Instagram Follower Bot 📸](#day-52-instagram-follower-bot-)
 
