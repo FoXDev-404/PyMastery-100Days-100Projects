@@ -8,12 +8,13 @@
 - [Days 51–60: Web Automation & Web Development - Intermediate+](#days-5160-web-automation--web-development---intermediate)
   - [Day 51: Internet Speed Twitter Bot 🌐](#day-51-internet-speed-twitter-bot-)
   - [Day 52: Instagram Follower Bot 📸](#day-52-instagram-follower-bot-)
+  - [Day 53: Automated Data Entry with Web Scraping 📊](#day-53-automated-data-entry-with-web-scraping-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [2/10 Completed]
+## 📅 Day 51–60 Projects [3/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -89,6 +90,42 @@
 ### Link to Code
 
 [View Code →](Day52/main.py)
+
+---
+
+<a name="day-53-automated-data-entry-with-web-scraping"></a>
+
+## Day 53: Automated Data Entry with Web Scraping 📊
+
+- **Description**: A project that automates the process of logging into a website and entering data into a form using information scraped from another website. This project demonstrates the integration of web scraping and web automation to automate repetitive data entry tasks.
+- **What I Learned**:
+  - **Data Scraping** – Extracting data from websites using BeautifulSoup and Requests
+  - **Form Automation** – Automating form filling and submission on websites
+  - **Session Management** – Managing user sessions and cookies for authenticated requests
+  - **Error Handling** – Implementing robust error handling for network requests and form submissions
+  - **Data Parsing** – Parsing and processing scraped data for automated input
+- **How to Use**:
+  1. Install required packages: `pip install requests beautifulsoup4 selenium webdriver-manager python-dotenv`.
+  2. Create a `.env` file with your website login credentials (`SITE_EMAIL`, `SITE_USER`, `SITE_PASS`).
+  3. Set the target URL and form data in the script.
+  4. Run `main.py` in the `Day53` folder.
+  5. The script will scrape data from the source website and submit it to the target website.
+- **Prerequisites**:
+  - Python 3.x
+  - `requests`, `beautifulsoup4`, `selenium`, `webdriver-manager`, `python-dotenv` libraries
+  - Chrome browser and ChromeDriver (automatically managed)
+  - Accounts on the source and target websites
+
+### Features
+- Automated data scraping and parsing
+- Form filling and submission automation
+- Session and cookie management
+- Comprehensive error handling and logging
+- Configurable target URL and form data
+
+### Link to Code
+
+[View Code →](Day53/main.py)
 
 ---
 
