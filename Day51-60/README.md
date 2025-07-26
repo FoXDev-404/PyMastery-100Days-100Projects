@@ -9,12 +9,13 @@
   - [Day 51: Internet Speed Twitter Bot 🌐](#day-51-internet-speed-twitter-bot-)
   - [Day 52: Instagram Follower Bot 📸](#day-52-instagram-follower-bot-)
   - [Day 53: Automated Data Entry with Web Scraping 📊](#day-53-automated-data-entry-with-web-scraping-)
+  - [Day 54: Flask Hello World Web App 🌐](#day-54-flask-hello-world-web-app-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [3/10 Completed]
+## 📅 Day 51–60 Projects [4/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -126,6 +127,36 @@
 ### Link to Code
 
 [View Code →](Day53/main.py)
+
+---
+
+<a name="day-54-flask-hello-world-web-app"></a>
+
+## Day 54: Flask Hello World Web App 🌐
+
+- **Description**: A simple web application built using Flask, demonstrating the basics of web development with Python. The app displays a "Hello, World!" message and introduces routing and running a local development server.
+- **What I Learned**:
+  - **Flask Basics** – Setting up a Flask project and running a local server
+  - **Routing** – Creating routes and handling HTTP requests
+  - **Templates** – Rendering simple responses
+  - **Development Server** – Running and testing a Flask app locally
+- **How to Use**:
+  1. Install Flask: `pip install flask`.
+  2. Run `main.py` in the `Day54` folder.
+  3. Open your browser and go to `http://127.0.0.1:5000/` to see the app in action.
+- **Prerequisites**:
+  - Python 3.x
+  - `flask` library
+
+### Features
+- Simple Flask web server
+- Basic route handling
+- "Hello, World!" web page
+- Easy to extend for more features
+
+### Link to Code
+
+[View Code →](Day54/main.py)
 
 ---
 
