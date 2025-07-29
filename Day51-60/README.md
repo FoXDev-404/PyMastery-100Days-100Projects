@@ -10,12 +10,13 @@
   - [Day 52: Instagram Follower Bot 📸](#day-52-instagram-follower-bot-)
   - [Day 53: Automated Data Entry with Web Scraping 📊](#day-53-automated-data-entry-with-web-scraping-)
   - [Day 54: Flask Hello World Web App 🌐](#day-54-flask-hello-world-web-app-)
+  - [Day 55: Higher-Lower Server Game 🕹️](#day-55-higher-lower-server-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [4/10 Completed]
+## 📅 Day 51–60 Projects [5/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -157,6 +158,36 @@
 ### Link to Code
 
 [View Code →](Day54/main.py)
+
+---
+
+<a name="day-55-higher-lower-server"></a>
+
+## Day 55: Higher-Lower Server Game 🕹️
+
+- **Description**: A web-based version of the classic Higher-Lower game, implemented using Python and Flask. The server hosts the game logic, allowing users to guess whether the next number will be higher or lower. The project demonstrates server-side state management and basic web interaction.
+- **What I Learned**:
+  - **Flask Routing** – Handling multiple routes and user input
+  - **Server State** – Managing game state between requests
+  - **Web Forms** – Accepting and processing user guesses
+  - **Basic Game Logic** – Implementing the Higher-Lower rules
+- **How to Use**:
+  1. Install Flask: `pip install flask`.
+  2. Run `server.py` in the `Day55/higher-lower` folder.
+  3. Open your browser and go to `http://127.0.0.1:5000/` to play the game.
+- **Prerequisites**:
+  - Python 3.x
+  - `flask` library
+
+### Features
+- Interactive Higher-Lower game in the browser
+- Server-side game logic and state
+- Simple web interface for user input
+- Easy to extend for more features
+
+### Link to Code
+
+[View Code →](Day55/higher-lower/server.py)
 
 ---
 
