@@ -11,12 +11,13 @@
   - [Day 53: Automated Data Entry with Web Scraping 📊](#day-53-automated-data-entry-with-web-scraping-)
   - [Day 54: Flask Hello World Web App 🌐](#day-54-flask-hello-world-web-app-)
   - [Day 55: Higher-Lower Server Game 🕹️](#day-55-higher-lower-server-)
+  - [Day 56: Personal Portfolio Website 🎨](#day-56-personal-portfolio-website-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [5/10 Completed]
+## 📅 Day 51–60 Projects [6/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -188,6 +189,40 @@
 ### Link to Code
 
 [View Code →](Day55/higher-lower/server.py)
+
+---
+
+<a name="day-56-personal-portfolio-website"></a>
+
+## Day 56: Personal Portfolio Website 🎨
+
+- **Description**: A personal portfolio website to showcase projects, skills, and experiences. The website is built using HTML, CSS, and JavaScript, and is hosted on GitHub Pages. This project demonstrates the fundamentals of web development and deployment.
+- **What I Learned**:
+  - **HTML Basics** – Structuring web content with HTML
+  - **CSS Styling** – Applying styles and layouts with CSS
+  - **JavaScript Basics** – Adding interactivity with JavaScript
+  - **Responsive Design** – Making the website mobile-friendly
+  - **GitHub Pages** – Hosting websites directly from a GitHub repository
+- **How to Use**:
+  1. Fork the repository to your GitHub account.
+  2. Customize the content in `index.html` and `styles.css`.
+  3. Add your projects and update your skills.
+  4. Commit and push the changes to GitHub.
+  5. Enable GitHub Pages in the repository settings to publish your site.
+- **Prerequisites**:
+  - A GitHub account
+  - Basic knowledge of HTML, CSS, and JavaScript
+
+### Features
+- Personal project showcase
+- Skills and experience highlights
+- Contact information section
+- GitHub repository links
+- Responsive and mobile-friendly design
+
+### Link to Code
+
+[View Code →](Day56/name-card/server.py)
 
 ---
 
