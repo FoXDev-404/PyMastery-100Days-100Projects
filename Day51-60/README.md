@@ -11,13 +11,14 @@
   - [Day 53: Automated Data Entry with Web Scraping 📊](#day-53-automated-data-entry-with-web-scraping-)
   - [Day 54: Flask Hello World Web App 🌐](#day-54-flask-hello-world-web-app-)
   - [Day 55: Higher-Lower Server Game 🕹️](#day-55-higher-lower-server-)
-  - [Day 56: Personal Portfolio Website 🎨](#day-56-personal-portfolio-website-)
+  - [Day 56: Personal Portfolio Website Using Flask Server 🎨](#day-56-personal-portfolio-website-using-flask-server-)
+  - [Day 57: Flask Blog Templating 📝](#day-57-flask-blog-templating-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [6/10 Completed]
+## 📅 Day 51–60 Projects [7/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -203,26 +204,57 @@
   - **JavaScript Basics** – Adding interactivity with JavaScript
   - **Responsive Design** – Making the website mobile-friendly
   - **GitHub Pages** – Hosting websites directly from a GitHub repository
+  - **Flask Web Server** – Serving dynamic content using Python and Flask
 - **How to Use**:
-  1. Fork the repository to your GitHub account.
-  2. Customize the content in `index.html` and `styles.css`.
-  3. Add your projects and update your skills.
-  4. Commit and push the changes to GitHub.
-  5. Enable GitHub Pages in the repository settings to publish your site.
+  1. Install Flask: `pip install flask`.
+  2. Run `server.py` in the `Day56` or `Day56/name-card` folder.
+  3. Open your browser and go to `http://127.0.0.1:5000/` to view your portfolio website.
+  4. Customize the content in the `templates/index.html` file and update images or styles in the `static/` folder as needed.
 - **Prerequisites**:
-  - A GitHub account
-  - Basic knowledge of HTML, CSS, and JavaScript
+  - Python 3.x
+  - Flask library (`pip install flask`)
+  - Basic knowledge of HTML and CSS (for customization)
 
 ### Features
-- Personal project showcase
+- Personal project showcase powered by Flask
 - Skills and experience highlights
 - Contact information section
-- GitHub repository links
 - Responsive and mobile-friendly design
+- Easy to extend with new routes or pages
 
 ### Link to Code
 
 [View Code →](Day56/name-card/server.py)
+
+---
+
+<a name="day-57-flask-blog-templating"></a>
+
+## Day 57: Flask Blog Templating 📝
+
+- **Description**: A simple blog website built with Flask that demonstrates dynamic page rendering using Jinja templating. Blog post data is fetched from an external API and displayed on the homepage. Each post can be viewed individually by clicking the "Read" button, which uses dynamic routing to show the full content of the selected post.
+- **What I Learned**:
+  - **Flask Routing** – Creating dynamic routes with URL parameters
+  - **Jinja Templating** – Rendering HTML templates with variables and control structures
+  - **API Integration** – Fetching and parsing JSON data from an external API
+  - **Separation of Concerns** – Organizing code and templates for maintainability
+- **How to Use**:
+  1. Install Flask and Requests: `pip install flask requests`.
+  2. Run `main.py` in the `Day57/blog-templating-v1` folder.
+  3. Open your browser and go to `http://127.0.0.1:5000/` to view the blog homepage.
+  4. Click the "Read" button on any post to view its full content.
+- **Prerequisites**:
+  - Python 3.x
+  - `flask`, `requests` libraries
+- **Features**
+  - Blog homepage with a list of posts
+  - Individual post pages using dynamic routing
+  - Jinja2 template rendering
+  - Data fetched from an external API
+
+### Link to Code
+
+[View Code →](Day57/blog-templating-v1/main.py)
 
 ---
 
