@@ -13,12 +13,13 @@
   - [Day 55: Higher-Lower Server Game 🕹️](#day-55-higher-lower-server-)
   - [Day 56: Personal Portfolio Website Using Flask Server 🎨](#day-56-personal-portfolio-website-using-flask-server-)
   - [Day 57: Flask Blog Templating 📝](#day-57-flask-blog-templating-)
+  - [Day 58: Bootstrap & TinDog Website 🎨](#day-58-bootstrap--tindog-website-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [7/10 Completed]
+## 📅 Day 51–60 Projects [8/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -255,6 +256,36 @@
 ### Link to Code
 
 [View Code →](Day57/blog-templating-v1/main.py)
+
+---
+
+<a name="day-58-bootstrap--tindog-website"></a>
+
+## Day 58: Bootstrap & TinDog Website 🎨
+
+- **Description**: A responsive website for a fictional dog adoption agency, built using Bootstrap. The website showcases the use of Bootstrap components, grid system, and utilities to create a modern, mobile-first website.
+- **What I Learned**:
+  - **Bootstrap Framework** – Utilizing Bootstrap for responsive web design
+  - **Grid System** – Implementing responsive layouts with Bootstrap's grid system
+  - **Components** – Using pre-built components like navbars, cards, and modals
+  - **Utilities** – Leveraging Bootstrap utilities for spacing, alignment, and visibility
+  - **Custom CSS** – Overriding Bootstrap styles and adding custom styles
+- **How to Use**:
+  1. Download or clone the repository.
+  2. Open `index.html` in your web browser to view the website.
+  3. Customize content and styles as desired.
+- **Prerequisites**:
+  - None
+
+### Features
+- Fully responsive website design
+- Bootstrap 5 components and grid system
+- Customizable content and styles
+- Modern and clean design
+
+### Link to Code
+
+[View Code →](Day58/TinDog%20Project/index.html)
 
 ---
 
