@@ -15,12 +15,13 @@
   - [Day 57: Flask Blog Templating 📝](#day-57-flask-blog-templating-)
   - [Day 58: Bootstrap & TinDog Website 🎨](#day-58-bootstrap--tindog-website-)
   - [Day 59: Advanced Flask Blog with API Integration 🚀](#day-59-advanced-flask-blog-with-api-integration-)
+  - [Day 60: Flask Blog with Email Contact Form 📧](#day-60-flask-blog-with-email-contact-form-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [9/10 Completed]
+## 📅 Day 51–60 Projects [10/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -331,4 +332,46 @@
 
 ---
 
-*More days coming soon...*
+<a name="day-60-flask-blog-with-email-contact-form"></a>
+
+## Day 60: Flask Blog with Email Contact Form 📧
+
+- **Description**: An enhanced version of the Day 59 Flask blog that adds a fully functional contact form with real email sending capabilities. Users can submit contact forms on the website, and the form data is automatically sent to the blog owner's email address using smtplib. This project demonstrates combining Flask form handling with email functionality from Day 32.
+- **What I Learned**:
+  - **Flask Form Handling** – Processing POST requests and form data validation
+  - **HTTP Methods** – Using request.method to handle both GET and POST requests in a single route
+  - **Email Integration** – Implementing smtplib email sending functionality from Day 32
+  - **Environment Variables** – Securing email credentials using .env files and python-dotenv
+  - **Conditional Template Rendering** – Using Jinja2 if statements for dynamic page content
+  - **SMTP Configuration** – Setting up Gmail SMTP with App Passwords for secure authentication
+  - **Error Handling** – Graceful handling of email sending failures
+- **How to Use**:
+  1. Install required packages: `pip install flask requests python-dotenv`.
+  2. Create a `.env` file with your email credentials (`EMAIL`, `EMAIL_PASSWORD`).
+  3. Set up Gmail App Password for secure authentication.
+  4. Run `main.py` in the `Day60/upgraded-blog-v2` folder.
+  5. Navigate to the contact page and submit the form to send real emails.
+- **Prerequisites**:
+  - Python 3.x
+  - `flask`, `requests`, `python-dotenv` libraries
+  - Gmail account with 2-Factor Authentication and App Password
+  - JSON API endpoint for blog posts
+
+### Features
+- Enhanced Day 59 blog with email functionality
+- Contact form that sends real emails to blog owner
+- Combined GET/POST route handling for contact page
+- Conditional rendering showing success message after form submission
+- Secure email credential management with environment variables
+- Gmail SMTP integration with proper authentication
+- Clean, production-ready code without debug statements
+- Dynamic blog content with pagination and custom backgrounds
+- Fully branded "Psyko Ind" design
+
+### Link to Code
+
+[View Code →](Day60/upgraded-blog-v2/main.py)
+
+---
+
+*Days 51-60 Complete! 🎉*
