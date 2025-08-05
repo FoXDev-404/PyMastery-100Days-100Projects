@@ -4,7 +4,7 @@
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://www.python.org/downloads/)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Progress](https://img.shields.io/badge/Progress-50%25-yellow.svg)](Day41-50/README.md)
+[![Progress](https://img.shields.io/badge/Progress-60%25-orange.svg)](Day51-60/README.md)
 [![Maintenance](https://img.shields.io/badge/Maintained-yes-brightgreen.svg)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects/graphs/commit-activity)
 [![GitHub stars](https://img.shields.io/github/stars/FoXDev-404/PyMastery-100Days-100Projects?style=social)](https://github.com/FoXDev-404/PyMastery-100Days-100Projects)
 
@@ -80,7 +80,8 @@ PyMastery-100Days-100Projects/
 | Day 21-30  | [View Projects →](Day21-30/README.md) |
 | Day 31-40  | [View Projects →](Day31-40/README.md)   |
 | Day 41-50  | [View Projects →](Day41-50/README.md)   |
-| Day 51-60  | [In Progress →](Day51-60/README.md)   |
+| Day 51-60  | [View Projects →](Day51-60/README.md)   |
+| Day 61-70  | [In Progress →](Day61-70/README.md)     |
 | ...        | ...                                   |
 | Day 91-100 | [Coming Soon](Day91-100/README.md)    |
 
