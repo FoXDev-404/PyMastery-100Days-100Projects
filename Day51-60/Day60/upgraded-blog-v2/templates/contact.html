@@ -1,0 +1,52 @@
+{% include "header.html" %}
+        <!-- Page Header-->
+        <header class="masthead" style="background-image: url('../static/assets/img/contact-bg.jpg')">
+            <div class="container position-relative px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <div class="page-heading">
+                            {% if msg_sent %}
+                            <h1>Successfully sent your message</h1>
+                            {% else %}
+                            <h1>Contact Psyko Ind</h1>
+                            {% endif %}
+                            <span class="subheading">Let's connect! I love to hear from fellow coders and learners.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>If you have questions, suggestions, or just want to say hi, fill out the form below. I'll get back to you as soon as possible. You can also reach out to me about Python, Flask, or any tech topic!</p>
+                        <div class="my-5">
+                            <form method="POST" action="{{ url_for('contact') }}">
+                                <div class="form-floating">
+                                    <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name..." required />
+                                    <label for="name">Name</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" name="email" id="email" type="email" placeholder="Enter your email..." required />
+                                    <label for="email">Email address</label>
+                                </div>
+                                <div class="form-floating">
+                                    <input class="form-control" name="phone" id="phone" type="tel" placeholder="Enter your phone number..." required />
+                                    <label for="phone">Phone Number</label>
+                                </div>
+                                <div class="form-floating">
+                                    <textarea class="form-control" name="message" id="message" placeholder="Enter your message here..." style="height: 12rem" required></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                                <br />
+                                <button class="btn btn-primary text-uppercase" type="submit">Send</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+<!-- Footer-->
+{% include "footer.html" %}
