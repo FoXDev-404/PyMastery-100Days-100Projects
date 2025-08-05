@@ -14,12 +14,13 @@
   - [Day 56: Personal Portfolio Website Using Flask Server 🎨](#day-56-personal-portfolio-website-using-flask-server-)
   - [Day 57: Flask Blog Templating 📝](#day-57-flask-blog-templating-)
   - [Day 58: Bootstrap & TinDog Website 🎨](#day-58-bootstrap--tindog-website-)
+  - [Day 59: Advanced Flask Blog with API Integration 🚀](#day-59-advanced-flask-blog-with-api-integration-)
 
 </details>
 
 ---
 
-## 📅 Day 51–60 Projects [8/10 Completed]
+## 📅 Day 51–60 Projects [9/10 Completed]
 
 <a name="day-51-internet-speed-twitter-bot"></a>
 
@@ -286,6 +287,47 @@
 ### Link to Code
 
 [View Code →](Day58/TinDog%20Project/index.html)
+
+---
+
+<a name="day-59-advanced-flask-blog-with-api-integration"></a>
+
+## Day 59: Advanced Flask Blog with API Integration 🚀
+
+- **Description**: An advanced Flask blog application featuring dynamic content from JSON API, pagination, individual post pages with custom backgrounds, and a fully customized design branded as "Psyko Ind Blog". The project demonstrates advanced Flask concepts including template inheritance, url_for routing, and dynamic image backgrounds from Unsplash.
+- **What I Learned**:
+  - **Advanced Flask Templating** – Template inheritance with includes for header and footer
+  - **API Integration** – Fetching blog data from npoint.io JSON API endpoints
+  - **Pagination Logic** – Implementing "Older Posts" functionality with page-based navigation
+  - **Dynamic Routing** – Creating individual post pages with URL parameters
+  - **Jinja2 Advanced Features** – Using dot notation, for loops, and conditional rendering
+  - **Custom Branding** – Personalizing templates and styling for consistent brand identity
+  - **Dynamic Backgrounds** – Implementing post-specific background images from Unsplash
+- **How to Use**:
+  1. Install required packages: `pip install flask requests`.
+  2. Create your own JSON blog data at npoint.io and update the API URL in `main.py`.
+  3. Run `main.py` in the `Day59/upgraded blog` folder.
+  4. Open your browser and go to `http://127.0.0.1:5000/` to view the blog.
+  5. Navigate through posts using pagination and click on individual posts to view them.
+- **Prerequisites**:
+  - Python 3.x
+  - `flask`, `requests` libraries
+  - JSON API endpoint (npoint.io or similar)
+
+### Features
+- Dynamic blog content from JSON API
+- Pagination with "Older Posts" functionality (4 posts per page)
+- Individual post pages with custom Unsplash backgrounds
+- Template inheritance with reusable header and footer
+- Fully branded "Psyko Ind" design
+- About and Contact pages with personalized content
+- GitHub profile link in footer
+- Responsive Bootstrap-based design
+- Clean, organized code structure
+
+### Link to Code
+
+[View Code →](Day59/upgraded%20blog/main.py)
 
 ---
 

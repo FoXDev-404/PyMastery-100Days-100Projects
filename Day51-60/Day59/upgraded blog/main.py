@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 POSTS_PER_PAGE = 5
-POSTS_API_URL = "https://api.npoint.io/c42f38472aa8916eb6a3"
+POSTS_API_URL = " https://api.npoint.io/bd1a4eac9c8740415a56"
 
 posts = requests.get(POSTS_API_URL).json()
 
