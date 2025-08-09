@@ -12,16 +12,16 @@
   - [Day 64: My Top 10 Movies Website 🎬](#day-64-my-top-10-movies-website-)
   - [Day 65: Web Design School - How to Create a Website that People will Love 🎨](#day-65-web-design-school---how-to-create-a-website-that-people-will-love-)
   - [Day 66: Building Your Own API with RESTful Routing 🔌](#day-66-building-your-own-api-with-restful-routing-)
-  - [Day 67: Blog Capstone Project Part 3 - RESTful Blog 📰](#day-67-blog-capstone-project-part-3---restful-blog-)
+  - [Day 67: Blog Capstone Project Part 3 - RESTful Blog 📚](#day-67-blog-capstone-project-part-3---restful-blog-)
   - [Day 68: Authentication with Flask 🔐](#day-68-authentication-with-flask-)
   - [Day 69: Blog Capstone Project Part 4 - Adding Users 👥](#day-69-blog-capstone-project-part-4---adding-users-)
-  - [Day 70: Git, Github and Version Control 🔄](#day-70-git-github-and-version-control-)
+  - [Day 70: Git, Github and Version Control 📊](#day-70-git-github-and-version-control-)
 
 </details>
 
 ---
 
-## 📅 Day 61–70 Projects [0/10 Completed]
+## 📅 Day 61–70 Projects [1/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -31,9 +31,36 @@
 
 ## Day 61: Advanced Forms with Flask-WTF 📝
 
-- **Status**: 🚧 Coming Soon
-- **Focus**: Flask-WTF, Form Validation, CSRF Protection
-- **Skills**: Advanced form handling, security, user input validation
+**What I Built:** Secret Login Page with Advanced Form Validation
+
+**Key Learning Points:**
+- **Flask-WTF Forms**: Creating secure forms with CSRF protection
+- **WTForms Validators**: Email validation, length validation, and custom error messages
+- **Bootstrap Integration**: Using Flask-Bootstrap for responsive form styling
+- **Form Validation**: Server-side validation with proper error handling
+- **User Authentication**: Basic login system with credential checking
+
+**Technologies Used:**
+- Flask & Flask-WTF
+- WTForms with validators (Email, Length, DataRequired)
+- Bootstrap 5 integration
+- Jinja2 templating
+
+**Features Implemented:**
+- Secure login form with CSRF protection
+- Email format validation (requires @ and .)
+- Password length validation (minimum 8 characters)
+- Custom error messages for invalid inputs
+- Responsive Bootstrap styling
+- Success/Access denied pages with animated GIFs
+
+**What I Learned:**
+- How to create secure web forms using Flask-WTF
+- Implementing client and server-side form validation
+- Using WTForms validators for email and password validation
+- Integrating Bootstrap with Flask for better UI
+- Handling form submission and validation errors
+- Creating a basic authentication system
 
 ---
 
