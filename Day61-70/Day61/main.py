@@ -1,18 +1,27 @@
-from flask import Flask, render_template  # Import Flask and render_template for web app and HTML rendering
+from flask import Flask, render_template
+from flask_wtf import FlaskForm
+from wtforms import StringField
 
-app = Flask(__name__)  # Create a Flask application instance
+
+class LoginForm(FlaskForm):
+    email = StringField('Email')
+    password = StringField('Password')
 
 
-@app.route("/")  # Define the route for the home page
+app = Flask(__name__)
+app.secret_key = "my super secret key"
+
+
+@app.route("/")
 def home():
-    # Render the index.html template when accessing the root URL
-    return render_template('index.html')
+    return render_template("index.html")
 
-@app.route("/login")  # Define the route for the login page
+
+@app.route("/login")
 def login():
-    # Render the login.html template when accessing /login
-    return render_template('login.html')
+    login_form = LoginForm()
+    return render_template('login.html', form=login_form)
+
 
 if __name__ == '__main__':
-    # Run the Flask development server if this file is executed directly
     app.run(debug=True)
