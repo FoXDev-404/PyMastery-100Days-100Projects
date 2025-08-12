@@ -8,10 +8,16 @@
     />
 
     {% block styles %}
-    <!-- Load Bootstrap-Flask CSS here -->
+    <!-- Load Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaR0yU7R0zY+8z+1p1LwJ6TA5a5Q6euz5eC5H9jK9z+8z+1p1LwJ6TA5a5Q6euz5eC5H9jK9z"
+      crossorigin="anonymous"
+    />
 
-    <!-- Link to the styles.css here to apply styling to all the child templates.-->
-
+    <!-- Link to the styles.css file -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
     {% endblock %}
     <title>{% block title %}{% endblock %}</title>
   </head>
