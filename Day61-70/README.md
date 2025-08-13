@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [1/10 Completed]
+## 📅 Day 61–70 Projects [2/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -72,9 +72,56 @@
 
 ## Day 62: Flask, WTForms, Bootstrap & CSV 💼
 
-- **Status**: 🚧 Coming Soon  
-- **Focus**: Coffee & WiFi Website with CSV Data
-- **Skills**: CSV file operations, Bootstrap styling, form processing
+**What I Built:** Coffee & Wifi Directory - A web app for remote workers to find cafes with good coffee, reliable wifi, and power outlets
+
+**Key Learning Points:**
+- **CSV File Operations**: Reading and writing data to CSV files with Python
+- **Flask-WTF Forms**: Advanced form creation with multiple field types
+- **Bootstrap 5 Integration**: Responsive design with modern Bootstrap components
+- **Form Validation**: Comprehensive validation including URL validation
+- **File Path Management**: Proper handling of file paths for deployment
+- **Rating Systems**: Visual rating systems using emojis
+
+**Technologies Used:**
+- Flask & Flask-WTF
+- WTForms with SelectField and validation
+- Bootstrap 5 with custom CSS
+- CSV module for data persistence
+- URL validation for location links
+
+**Features Implemented:**
+- **Home Page**: Welcome interface with project introduction
+- **View Cafes**: Browse all cafes in a responsive table format
+- **Add New Cafe**: Form to add cafes with comprehensive details
+- **Rating System**: 
+  - ☕ Coffee Quality (1-5 cups)
+  - 💪 Wifi Strength (1-5 strength levels) 
+  - 🔌 Power Socket Availability (1-5 socket levels)
+- **Data Persistence**: CSV file storage for cafe information
+- **Responsive Design**: Mobile-friendly interface with Bootstrap
+- **Input Validation**: URL validation for Google Maps links
+
+**What I Learned:**
+- How to integrate CSV files with Flask applications
+- Creating dropdown selection fields with visual indicators
+- Implementing proper file path handling for web applications
+- Building rating systems with emoji-based visual feedback
+- Combining Bootstrap with custom CSS for enhanced styling
+- Form validation techniques for URL and text inputs
+- Creating user-friendly interfaces for data entry and display
+
+**Project Structure:**
+```
+coffee-and-wifi/
+├── main.py              # Main Flask application
+├── cafe-data.csv       # Data storage
+├── static/css/styles.css # Custom styling
+└── templates/          # HTML templates
+```
+
+**Link to Code**
+
+[View Code →](Day62/coffee-and-wifi/main.py)
 
 ---
 
