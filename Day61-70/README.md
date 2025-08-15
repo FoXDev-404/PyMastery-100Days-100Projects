@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [2/10 Completed]
+## 📅 Day 61–70 Projects [3/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -110,15 +110,6 @@
 - Form validation techniques for URL and text inputs
 - Creating user-friendly interfaces for data entry and display
 
-**Project Structure:**
-```
-coffee-and-wifi/
-├── main.py              # Main Flask application
-├── cafe-data.csv       # Data storage
-├── static/css/styles.css # Custom styling
-└── templates/          # HTML templates
-```
-
 **Link to Code**
 
 [View Code →](Day62/coffee-and-wifi/main.py)
@@ -129,9 +120,24 @@ coffee-and-wifi/
 
 ## Day 63: Databases and SQLite with Flask ☕
 
-- **Status**: 🚧 Coming Soon
+**What I Built:** Virtual Bookshelf - a small Flask app that lets you store, view, edit ratings, and delete books using SQLite.
+
+- **Status**: ✅ Completed
 - **Focus**: Virtual Bookshelf with SQLite
-- **Skills**: Database design, SQL operations, Flask-SQLAlchemy
+- **Skills**: Database design, SQL operations, Flask (sqlite3/flask-sqlalchemy patterns), CRUD
+
+**Technologies Used:** Flask, SQLite (database stored in `instance/`), Jinja2 templates
+
+**Features Implemented:**
+- View all books
+- Add new books via a form
+- Edit book ratings
+- Delete books
+- Persistent SQLite database (`instance/books.db`)
+
+**Link to Code**
+
+[View Code →](Day63/main.py)
 
 ---
 
