@@ -4,8 +4,12 @@ from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 from sqlalchemy import Integer, String, Float, select
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField
-from wtforms.validators import DataRequired
+from wtforms import StringField, SubmitField, FloatField
+from wtforms.validators import DataRequired, NumberRange
+class RateMovieForm(FlaskForm):
+    rating = FloatField('Your Rating out of 10 e.g. 7.5', validators=[DataRequired(), NumberRange(min=0, max=10)])
+    review = StringField('Your Review', validators=[DataRequired()])
+    submit = SubmitField('Submit')
 import requests
 
 
@@ -84,6 +88,21 @@ def home():
     movies = db.session.execute(stmt).scalars().all()
     return render_template("index.html", movies=movies)
 
+@app.route("/edit", methods=["GET", "POST"])
+def update():
+    form = RateMovieForm()
+    movie_id = request.args.get("id")
+    movie = db.session.get(Movie, movie_id) if movie_id else None
+    if form.validate_on_submit() and movie:
+        movie.rating = form.rating.data
+        movie.review = form.review.data
+        db.session.commit()
+        return redirect(url_for("home"))
+    # Pre-fill form with current values if GET
+    if request.method == "GET" and movie:
+        form.rating.data = movie.rating
+        form.review.data = movie.review
+    return render_template('edit.html', form=form, movie=movie)
 
 if __name__ == '__main__':
     app.run(debug=True)
