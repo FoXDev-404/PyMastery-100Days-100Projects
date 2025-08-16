@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [3/10 Completed]
+## 📅 Day 61–70 Projects [4/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -141,13 +141,41 @@
 
 ---
 
+
 <a name="day-64-my-top-10-movies-website"></a>
 
 ## Day 64: My Top 10 Movies Website 🎬
 
-- **Status**: 🚧 Coming Soon
-- **Focus**: Movie database with API integration
-- **Skills**: External API consumption, database relationships, CRUD operations
+**What I Built:** My Top 10 Movies Website – a Flask app to manage your favorite movies, rate them, and edit or delete entries. Uses SQLite for storage and a clean Bootstrap UI.
+
+**Key Learning Points:**
+- **Flask CRUD**: Add, edit, and delete movies from a database
+- **SQLite Integration**: Persistent storage using SQLite (`instance/movies.db`)
+- **Jinja2 Templating**: Dynamic HTML rendering for movie lists and forms
+- **Bootstrap Styling**: Responsive, modern UI with custom CSS
+- **Form Handling**: Add/edit movies with validation
+- **Database Relationships**: Practice with table design and relationships
+
+**Technologies Used:** Flask, SQLite, Jinja2, Bootstrap, WTForms
+
+**Features Implemented:**
+- View all movies in a ranked list
+- Add new movies with title, year, description, and rating
+- Edit movie ratings and details
+- Delete movies
+- Persistent SQLite database (`instance/movies.db`)
+- Responsive design with Bootstrap and custom CSS
+
+**What I Learned:**
+- How to build a full CRUD web app with Flask and SQLite
+- Using WTForms for form validation and user input
+- Integrating Bootstrap for a better user experience
+- Managing database records and relationships
+- Building a clean, user-friendly interface
+
+**Link to Code**
+
+[View Code →](Day64/main.py)
 
 ---
 
