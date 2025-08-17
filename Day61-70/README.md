@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [4/10 Completed]
+## 📅 Day 61–70 Projects [5/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -181,11 +181,25 @@
 
 <a name="day-65-web-design-school"></a>
 
+
 ## Day 65: Web Design School - How to Create a Website that People will Love 🎨
 
-- **Status**: 🚧 Coming Soon
+- **Status**: ✅ Completed
 - **Focus**: UI/UX principles and web design
 - **Skills**: Design theory, user experience, responsive design principles
+
+**What I Learned:**
+- Web design fundamentals: color theory, typography, UI/UX basics
+- How to manage user attention and create user-friendly interfaces
+- Practical application of design principles
+
+**What I Did:**
+- Wrote detailed notes in `learn.txt` covering all key web design concepts
+- Created a simple reference PDF (`web-design.pdf`) summarizing the main ideas
+
+**Project Files:**
+- [learn.txt](Day65/learn.txt)
+- [web-design.pdf](Day65/web-design.pdf)
 
 ---
 
