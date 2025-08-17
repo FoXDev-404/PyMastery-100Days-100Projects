@@ -1,0 +1,43 @@
+Day 65: Web Design Fundamentals
+
+1. Introduction to Web Design
+Web design is the process of planning, conceptualizing, and arranging content online. It encompasses both the aesthetic (look and feel) and functional (usability, accessibility) aspects of websites. Good web design ensures that a site is visually appealing, easy to navigate, and provides a positive user experience.
+
+2. Understanding Color Theory
+Color theory is the study of how colors interact and the visual effects of color combinations. In web design, color theory helps create visually harmonious and effective designs. Key concepts include:
+- Primary, secondary, and tertiary colors
+- Color wheel and color schemes (complementary, analogous, triadic, etc.)
+- Color psychology: how colors influence emotions and behavior
+- Contrast and accessibility: ensuring text is readable against backgrounds
+
+3. Understanding Typography and How to Choose Fonts
+Typography is the art of arranging type to make written language legible, readable, and visually appealing. In web design:
+- Choose fonts that match the website's tone and purpose
+- Use a limited number of font families (usually 2-3)
+- Consider font size, weight, line spacing, and hierarchy
+- Ensure readability on all devices
+- Use web-safe and accessible fonts
+
+4. Manage ATTENTION with Effective User Interface (UI) Design
+UI design focuses on the layout and interactive elements of a website. To manage user attention:
+- Use visual hierarchy (size, color, placement) to guide users
+- Keep interfaces clean and uncluttered
+- Use whitespace effectively
+- Highlight important actions (buttons, links)
+- Ensure consistency in design elements
+
+5. User Experience (UX) Design
+UX design is about creating products that provide meaningful and relevant experiences to users. In web design, this means:
+- Understanding user needs and behaviors
+- Designing intuitive navigation and structure
+- Ensuring fast load times and mobile responsiveness
+- Gathering feedback and iterating on design
+- Making the site accessible to all users
+
+6. Web Design in Practice - Let's Apply What We've Learnt!
+- Start with wireframes or mockups to plan layout
+- Choose a color palette and fonts based on your brand and audience
+- Build a simple, clean UI with clear navigation
+- Test your design on different devices and browsers
+- Gather user feedback and make improvements
+- Focus on both aesthetics and usability for a successful website
