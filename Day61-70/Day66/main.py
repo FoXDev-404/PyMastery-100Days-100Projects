@@ -137,6 +137,24 @@ def post_new_cafe():
 
 
 # HTTP PUT & PATCH
+@app.route("/update-price/<int:cafe_id>", methods=["PATCH"])
+def patch_new_price(cafe_id):
+    new_price = request.args.get("new_price")
+    if not new_price:
+        return jsonify(error="Missing required parameter: new_price"), 400
+    
+    try:
+        cafe = db.session.get(Cafe, cafe_id)
+        if cafe:
+            cafe.coffee_price = new_price
+            db.session.commit()
+            return jsonify(success="Successfully updated the price.")
+        else:
+            return jsonify(error={"Not Found": "Sorry a cafe with that id was not found in the database."}), 404
+    except Exception as e:
+        db.session.rollback()
+        return jsonify(error="Database error during update.", details=str(e)), 500
+
 
 if __name__ == '__main__':
     with app.app_context():
