@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [5/10 Completed]
+## 📅 Day 61–70 Projects [6/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -207,9 +207,32 @@
 
 ## Day 66: Building Your Own API with RESTful Routing 🔌
 
-- **Status**: 🚧 Coming Soon
-- **Focus**: Cafe API with RESTful endpoints
-- **Skills**: API development, REST principles, JSON responses
+- **Status**: ✅ Completed
+- **What I Built:** Cafe API with RESTful endpoints and a small web UI to browse cafes.
+
+**Key Learning Points:**
+- Building JSON API endpoints with Flask (RESTful routing)
+- Integrating Flask with a lightweight SQLite database (`instance/cafes.db`)
+- Returning JSON responses and rendering Jinja2 templates for simple pages
+- Exposing a "random cafe" endpoint and a page to view all cafes
+
+**Technologies Used:**
+- Flask
+- SQLite (database stored in `instance/`)
+- Jinja2 templates
+
+**Features Implemented:**
+- Web pages: Home/index and a Random Cafe page (`/all, /random....)
+- JSON API endpoints to fetch all cafes and a random cafe
+- Persistent cafe data stored in `instance/cafes.db`
+
+**What I Learned:**
+- How to design and implement RESTful routes in Flask
+- How to combine API responses with simple server-rendered pages
+
+**Link to Code**
+
+[View Code →](Day66/main.py)
 
 ---
 
