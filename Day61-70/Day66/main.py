@@ -30,7 +30,9 @@ class Cafe(db.Model):
     can_take_calls: Mapped[bool] = mapped_column(Boolean, nullable=False)
     coffee_price: Mapped[str] = mapped_column(String(250), nullable=True)
 
-
+    def to_dict(self):  # This is a dictionary comprehension function created inside the Cafe class definition. It will be used to turn rows into a dictionary before sending it to jsonify.
+        return {column.name: getattr(self, column.name) for column in self.__table__.columns}
+    
 with app.app_context():
     db.create_all()
 
@@ -49,9 +51,13 @@ def get_random_cafe():
 
 
 # HTTP GET - Read Record
-# @app.route("/all", methods = ["GET", "POST"])
-# def read_record():
-#     pass
+@app.route("/all")
+def get_all_cafe():
+    result = db.session.execute(db.select(Cafe).order_by(Cafe.name))
+    all_cafes = result.scalars().all()
+    # This uses a List Comprehension but you could also split in into 3 lines.
+    return jsonify(cafes=[cafe.to_dict() for cafe in all_cafes])
+    
 
 
 # HTTP POST - Create Record
