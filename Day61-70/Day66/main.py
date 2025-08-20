@@ -156,6 +156,26 @@ def patch_new_price(cafe_id):
         return jsonify(error="Database error during update.", details=str(e)), 500
 
 
+# HTTP DELETE - Delete Record
+@app.route("/report-closed/<int:cafe_id>", methods=["DELETE"])
+def delete_cafe(cafe_id):
+    api_key = request.args.get("api-key")
+    if api_key != "TopSecretAPIKey":
+        return jsonify(error="Sorry, that's not allowed. Make sure you have the correct api_key."), 403
+    
+    try:
+        cafe = db.session.get(Cafe, cafe_id)
+        if cafe:
+            db.session.delete(cafe)
+            db.session.commit()
+            return jsonify(response={"success": f"Successfully deleted the cafe with id {cafe_id}."})
+        else:
+            return jsonify(error={"Not Found": "Sorry a cafe with that id was not found in the database."}), 404
+    except Exception as e:
+        db.session.rollback()
+        return jsonify(error="Database error during delete.", details=str(e)), 500
+
+
 if __name__ == '__main__':
     with app.app_context():
         db.create_all()
