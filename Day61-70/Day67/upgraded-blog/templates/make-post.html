@@ -24,7 +24,25 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <!-- TODO:-Add CKEditor and render the form here -->
+        {{ ckeditor.load() }} {{ ckeditor.config(name='body') }}
+        <form method="POST">
+          {{ form.hidden_tag() }}
+          <div class="form-group">
+            {{ form.title.label }} {{ form.title(class="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.subtitle.label }} {{ form.subtitle(class="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.author.label }} {{ form.author(class="form-control") }}
+          </div>
+          <div class="form-group">
+            {{ form.img_url.label }} {{ form.img_url(class="form-control") }}
+          </div>
+          <div class="form-group">{{ form.body.label }} {{ form.body() }}</div>
+          <br />
+          {{ form.submit(class="btn btn-primary") }}
+        </form>
       </div>
     </div>
   </div>
