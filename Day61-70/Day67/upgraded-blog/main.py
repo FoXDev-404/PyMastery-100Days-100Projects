@@ -17,6 +17,36 @@ app.config['CKEDITOR_PKG_TYPE'] = 'standard'
 app.config['CKEDITOR_CDN'] = 'https://cdn.ckeditor.com/4.25.1/standard/ckeditor.js'
 Bootstrap5(app)
 ckeditor = CKEditor(app)
+
+# Route to edit an existing post
+@app.route('/edit-post/<int:post_id>', methods=["GET", "POST"])
+def edit_post(post_id):
+    post = db.session.get(BlogPost, post_id)
+    edit_form = CreatePostForm(
+        title=post.title,
+        subtitle=post.subtitle,
+        img_url=post.img_url,
+        author=post.author,
+        body=post.body
+    )
+    if edit_form.validate_on_submit():
+        post.title = edit_form.title.data
+        post.subtitle = edit_form.subtitle.data
+        post.img_url = edit_form.img_url.data
+        post.author = edit_form.author.data
+        post.body = edit_form.body.data
+        db.session.commit()
+        return redirect(url_for('show_post', post_id=post.id))
+    return render_template("make-post.html", form=edit_form, is_edit=True)
+
+
+app = Flask(__name__)
+app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+# Use the latest CKEditor from CDN
+app.config['CKEDITOR_PKG_TYPE'] = 'standard'
+app.config['CKEDITOR_CDN'] = 'https://cdn.ckeditor.com/4.25.1/standard/ckeditor.js'
+Bootstrap5(app)
+ckeditor = CKEditor(app)
 # TODO: add_new_post() to create a new blog post
 
 # WTForm for creating a new post
@@ -86,11 +116,27 @@ def show_post(post_id):
     return render_template("post.html", post=requested_post)
 
 
-# TODO: add_new_post() to create a new blog post
 
-# TODO: edit_post() to change an existing blog post
-
-# TODO: delete_post() to remove a blog post from the database
+# Route to edit an existing post
+@app.route('/edit-post/<int:post_id>', methods=["GET", "POST"])
+def edit_post(post_id):
+    post = db.session.get(BlogPost, post_id)
+    edit_form = CreatePostForm(
+        title=post.title,
+        subtitle=post.subtitle,
+        img_url=post.img_url,
+        author=post.author,
+        body=post.body
+    )
+    if edit_form.validate_on_submit():
+        post.title = edit_form.title.data
+        post.subtitle = edit_form.subtitle.data
+        post.img_url = edit_form.img_url.data
+        post.author = edit_form.author.data
+        post.body = edit_form.body.data
+        db.session.commit()
+        return redirect(url_for('show_post', post_id=post.id))
+    return render_template("make-post.html", form=edit_form, is_edit=True)
 
 # Below is the code from previous lessons. No changes needed.
 @app.route("/about")
