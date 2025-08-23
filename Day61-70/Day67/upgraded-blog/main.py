@@ -1,4 +1,4 @@
-from flask import Flask, render_template, redirect, url_for
+from flask import Flask, render_template, redirect, url_for, jsonify
 from flask_bootstrap import Bootstrap5
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -114,6 +114,17 @@ def get_all_posts():
 def show_post(post_id):
     requested_post = db.session.get(BlogPost, post_id)
     return render_template("post.html", post=requested_post)
+
+
+# Route to delete a post
+@app.route('/delete/<int:post_id>', methods=['DELETE'])
+def delete_post(post_id):
+    post = db.session.get(BlogPost, post_id)
+    if not post:
+        return jsonify({'error': 'Post not found'}), 404
+    db.session.delete(post)
+    db.session.commit()
+    return jsonify({'success': True}), 200
 
 
 

@@ -38,5 +38,23 @@
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
       <!-- Core theme JS-->
       <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+            <script>
+                // Attach delete handlers to delete icons
+                document.addEventListener('DOMContentLoaded', function () {
+                    document.querySelectorAll('.delete-post').forEach(function (el) {
+                        el.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            const id = this.dataset.id;
+                            if (!confirm('Delete this post?')) return;
+                            fetch('/delete/' + id, { method: 'DELETE' })
+                                .then(res => {
+                                    if (res.ok) window.location.href = '/';
+                                    else alert('Failed to delete post');
+                                })
+                                .catch(() => alert('Failed to delete post'));
+                        });
+                    });
+                });
+            </script>
   </body>
 </html>
