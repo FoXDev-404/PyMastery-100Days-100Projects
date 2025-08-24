@@ -21,7 +21,7 @@
 
 ---
 
-## 📅 Day 61–70 Projects [6/10 Completed]
+## 📅 Day 61–70 Projects [7/10 Completed]
 
 *This section focuses on advanced web development concepts including databases, authentication, API development, and version control. Projects will be added as they are completed.*
 
@@ -240,9 +240,29 @@
 
 ## Day 67: Blog Capstone Project Part 3 - RESTful Blog 📰
 
-- **Status**: 🚧 Coming Soon
-- **Focus**: RESTful blog with full CRUD operations
-- **Skills**: REST API design, HTTP methods, data persistence
+- **Status**: ✅ Completed
+- **What I Built:** An upgraded RESTful blog with full CRUD support: create, read, update and delete posts using Flask, SQLAlchemy, CKEditor for rich text, and Bootstrap for styling.
+
+**Key Learning Points:**
+- Designing RESTful routes (including DELETE) for resource management
+- Integrating Flask with SQLAlchemy for persistence and migrations
+- Using CKEditor for rich-text post content and WTForms for validation
+- Wiring client-side DELETE calls (fetch) to server-side DELETE endpoints
+
+**Technologies Used:**
+- Flask, Flask-Bootstrap, Flask-WTF, Flask-CKEditor
+- SQLAlchemy (SQLite stored in `instance/posts.db`)
+- Jinja2 templates and Bootstrap 5
+
+**Features Implemented:**
+- View all posts on the home page
+- Create new posts with a WYSIWYG editor
+- Edit existing posts
+- Delete posts via a ✘ anchor that calls a DELETE endpoint and redirects home
+
+**Link to Code**
+
+[View Code →](Day67/upgraded-blog/main.py)
 
 ---
 
