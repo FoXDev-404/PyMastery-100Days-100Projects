@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory
+from flask import Flask, render_template, request, url_for, redirect, flash, send_from_directory, session
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
@@ -38,8 +38,28 @@ def home():
     return render_template("index.html")
 
 
-@app.route('/register')
+@app.route('/register', methods=['GET', 'POST'])
 def register():
+    if request.method == 'POST':
+        name = request.form.get('name')
+        email = request.form.get('email')
+        password = request.form.get('password')
+
+        # check if user already exists
+        existing_user = db.session.query(User).filter_by(email=email).first()
+        if existing_user:
+            flash('An account with that email already exists. Please log in.', 'warning')
+            return redirect(url_for('login'))
+
+        hashed_pw = generate_password_hash(password, method='pbkdf2:sha256', salt_length=8)
+        new_user = User(email=email, name=name, password=hashed_pw)
+        db.session.add(new_user)
+        db.session.commit()
+
+        # store name in session so secrets page can greet the user
+        session['name'] = name
+        return redirect(url_for('secrets'))
+
     return render_template("register.html")
 
 
@@ -50,7 +70,8 @@ def login():
 
 @app.route('/secrets')
 def secrets():
-    return render_template("secrets.html")
+    name = session.get('name')
+    return render_template("secrets.html", name=name)
 
 
 @app.route('/logout')
