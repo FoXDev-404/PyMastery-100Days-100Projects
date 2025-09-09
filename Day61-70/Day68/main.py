@@ -81,7 +81,8 @@ def logout():
 
 @app.route('/download')
 def download():
-    pass
+    # Send the cheat_sheet.pdf file to open in browser
+    return send_from_directory(directory='static/files', path='cheat_sheet.pdf')
 
 
 if __name__ == "__main__":
